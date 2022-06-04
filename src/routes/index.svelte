@@ -11,14 +11,16 @@
 	<meta name="description" content="Artist Archive" />
 </svelte:head>
 
-<section>
-	<div class="welcome">
-		<picture>
-			<source srcset="svelte-welcome.webp" type="image/webp" />
-			<img src="svelte-welcome.png" alt="Welcome" />
-		</picture>
-	</div>
-</section>
+<div class="container">
+	<section>
+		<div class="welcome">
+			<picture>
+				<source srcset="svelte-welcome.webp" type="image/webp" />
+				<img src="svelte-welcome.png" alt="Welcome" />
+			</picture>
+		</div>
+	</section>
+</div>
 
 <style>
 	section {
@@ -27,10 +29,6 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
 	}
 
 	.welcome {

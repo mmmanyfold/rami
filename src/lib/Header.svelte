@@ -1,0 +1,45 @@
+<script>
+	import { page } from '$app/stores';
+</script>
+
+<header>
+	<a sveltekit:prefetch class="home-link" href="/">RAMI GEORGE</a>
+	<div class="nav-links">
+		<a sveltekit:prefetch href="/index">INDEX</a>
+		<a sveltekit:prefetch href="/info">INFO</a>
+	</div>
+</header>
+
+<style>
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem;
+		padding-bottom: 0;
+	}
+	@media screen and (min-width: 770px) {
+		header {
+			padding: 1.3rem 1.8rem 0 1.8rem;
+		}
+	}
+
+	.home-link {
+		font-size: 1.75rem;
+		line-height: 1.5;
+	}
+
+	.nav-links {
+		display: none;
+		font-size: 1.25rem;
+	}
+	@media screen and (min-width: 770px) {
+		.nav-links {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+	.nav-links a {
+		margin-bottom: 1px;
+	}
+</style>
