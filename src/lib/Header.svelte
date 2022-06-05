@@ -18,7 +18,7 @@
 		padding-bottom: 0;
 
 		@media screen and (min-width: @mid-break) {
-			padding: 1.3rem 1.8rem 0 1.8rem;
+			padding: 1.25rem 1.8rem 0 1.8rem;
 		}
 	}
 

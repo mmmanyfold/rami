@@ -51,6 +51,9 @@
 
 	.bio {
 		font-size: 1.3rem;
-		margin-top: 2.4rem;
+		
+		@media screen and (min-width: @mid-break) {
+			margin-top: 2.4rem;
+		}
 	}
 </style>

@@ -60,7 +60,15 @@
 		}
 	}
 
-	.row {
+	ul {
+		margin-top: 1.2rem;
+
+		@media screen and (min-width: @mid-break) {
+			margin-top: 0.25rem;
+		}
+	}
+
+	li.row {
 		padding: 1rem 0;
 		border-bottom: 1px solid @accent-color;
 
