@@ -1,6 +1,6 @@
 <script>
 	import Header from '$lib/Header.svelte';
-	import '../app.css';
+	import '../app.less';
 </script>
 
 <Header />
@@ -9,7 +9,7 @@
 	<slot />
 </main>
 
-<style>
+<style lang="less">
 	main {
 		flex: 1;
 		display: flex;
@@ -18,9 +18,8 @@
 		margin: 0 auto;
 		padding: 0;
 		box-sizing: border-box;
-	}
-	@media screen and (min-width: 770px) {
-		main {
+
+		@media screen and (min-width: @mid-break) {
 			padding: 1.2rem 1.8rem;
 		}
 	}

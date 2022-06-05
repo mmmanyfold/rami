@@ -19,13 +19,28 @@
 	<meta name="description" content="Bio and news" />
 </svelte:head>
 
+<div class="page-content">
+	<section>
+		<p class="bio">Rami George (b. 1989, USA) is an interdisciplinary artist currently based on Lenape land in what is now called Philadelphia. They have exhibited and screened broadly and remain motivated by political struggles and fractured narratives.</p>
+		<div>
+			<p>
+				<a sveltekit:prefetch href="/cv">CV</a>
+				<br>
+				<a sveltekit:prefetch href="mailto:ramimgeorge@gmail.com">rami.m.george(at)gmail.com</a>
+			</p>
+		</div>
+	</section>
+	<hr/>
+	<section>
 
-<section>
-	<p>Rami George (b. 1989, USA) is an interdisciplinary artist currently based on Lenape land in what is now called Philadelphia. They have exhibited and screened broadly and remain motivated by political struggles and fractured narratives.</p>
-	<a sveltekit:prefetch href="/cv">CV</a>
-	<a sveltekit:prefetch href="mailto:ramimgeorge@gmail.com">rami.m.george(at)gmail.com</a>
-</section>
+	</section>
+</div>
 
-
-<style>
+<style lang="less">
+	.bio {
+		font-size: 1.3rem;
+	}
+	hr {
+		margin: 1.8rem 0;
+	}
 </style>

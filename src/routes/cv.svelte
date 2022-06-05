@@ -19,10 +19,11 @@
 	<meta name="description" content="EXHIBITIONS & SCREENINGS, PRINT & DIGITAL PROJECTS, READINGS & TALKS, AWARDS & RESIDENCIES, PRESS & EXHIBITION CATALOGUES, ORGANIZING & PROGRAMMING, TEACHING & CLASS VISITS, EDUCATION" />
 </svelte:head>
 
-<section>
-	<h1>EXHIBITIONS & SCREENINGS</h1>
-</section>
+<div class="page-content">
+	<section>
+		<h1>EXHIBITIONS & SCREENINGS</h1>
+	</section>
+</div>
 
-
-<style>
+<style lang="less">
 </style>

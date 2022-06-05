@@ -10,15 +10,14 @@
 	</div>
 </header>
 
-<style>
+<style lang="less">
 	header {
 		display: flex;
 		justify-content: space-between;
 		padding: 0.5rem;
 		padding-bottom: 0;
-	}
-	@media screen and (min-width: 770px) {
-		header {
+		
+		@media screen and (min-width: @mid-break) {
 			padding: 1.3rem 1.8rem 0 1.8rem;
 		}
 	}
@@ -31,14 +30,14 @@
 	.nav-links {
 		display: none;
 		font-size: 1.25rem;
-	}
-	@media screen and (min-width: 770px) {
-		.nav-links {
+
+		@media screen and (min-width: @mid-break) {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
 		}
 	}
+
 	.nav-links a {
 		margin-bottom: 1px;
 	}
