@@ -1,5 +1,5 @@
 /** @type {import('@sveltejs/kit').ParamMatcher} */
 export function match(param) {
-    const tag = param.toLowerCase();
-    return tag === "video" || tag === "installation" || tag === "music";
+    // TODO: check from list of available tags
+    return param === "video" || param === "installation" || param === "music";
 }
