@@ -42,12 +42,6 @@
 
 
 <style lang="less">
-	ul {
-  		list-style-type: none;
-		padding: 0;
-		margin:0;
- 	}
-
 	.title {
 		@media screen and (min-width: @mid-break) {
 			display: flex;

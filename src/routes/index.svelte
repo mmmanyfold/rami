@@ -10,38 +10,49 @@
 	<meta name="description" content="Artist Archive" />
 </svelte:head>
 
-<div>
-	<section>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-	</section>
-</div>
 
-<style>
-	section {
+<ul>
+	<li>
+		<div class="row right">
+			<a class="row-item no-hover" href="#">
+				<sup>(24)</sup>
+				<img src="mapping.png" alt="Untitled (mapping)" />
+			</a>
+		</div>
+	</li>
+</ul>
+
+
+<style lang="less">
+	.row {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
+		margin: 2.5rem 0;
 	}
 
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+	.right {
+		align-items: flex-end;
 	}
 
-	.welcome img {
-		position: absolute;
+	a.row-item {
 		width: 100%;
-		height: 100%;
-		top: 0;
+
+		@media screen and (min-width: @mid-break) {
+			width: 40%;
+		}
+	}
+
+	sup {
 		display: block;
+		margin: 0 0 0.3rem 0.3rem;
+
+		@media screen and (min-width: @mid-break) {
+			margin-left: 0;
+		}
 	}
+
+	img {
+		width: 100%;
+	}
+
 </style>
