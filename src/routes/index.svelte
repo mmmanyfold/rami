@@ -15,12 +15,17 @@
 	<li>
 		<div class="row right">
 			<a class="row-item no-hover" href="#">
-				<sup>(24)</sup>
+				<sup class="middle">(24)</sup>
 				<img src="mapping.png" alt="Untitled (mapping)" />
 			</a>
 		</div>
 	</li>
 </ul>
+
+<section class="footnotes">
+	<a href="#"><sup class="no-hover">(24)</sup> <span>Dog</span></a>
+	<sup>(23)</sup> <span>Untitled (the ashram)</span>
+</section>
 
 
 <style lang="less">
@@ -40,19 +45,36 @@
 		@media screen and (min-width: @mid-break) {
 			width: 40%;
 		}
-	}
 
-	sup {
-		display: block;
-		margin: 0 0 0.3rem 0.3rem;
+		sup {
+			display: block;
+			padding: 0 0 0.3rem 0.3rem;
 
 		@media screen and (min-width: @mid-break) {
-			margin-left: 0;
+			padding-left: 0;
 		}
+	}
 	}
 
 	img {
 		width: 100%;
+	}
+
+	.footnotes {
+		margin-top: 5rem;
+		padding: 0.3rem;
+		
+		@media screen and (min-width: @mid-break) {
+			padding: 2rem;
+		}
+
+		sup {
+			font-size: 0.5rem;
+		}
+
+		span {
+			font-style: italic;
+		}
 	}
 
 </style>

@@ -40,15 +40,19 @@ a {
 
 	&:hover {
 		color: @accent-color;
-		&.no-hover {
-			color: var(--text-color);
-		}
 	}
+}
+
+.no-hover {
+	color: var(--text-color) !important;
 }
 
 sup {
 	font-size: 0.65rem;
-	vertical-align: middle;
+
+	&:middle {
+		vertical-align: middle;
+	}
 }
 
 input,

@@ -15,7 +15,7 @@
 		<li class="row">
 			<div>
 				<div class="title">
-					<sup>(24)</sup>
+					<sup class="middle">(24)</sup>
 					<h1>Dog</h1>
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 		<li class="row">
 			<div>
 				<div class="title">
-					<sup>(24)</sup>
+					<sup class="middle">(24)</sup>
 					<h1>Dog</h1>
 				</div>
 			</div>
