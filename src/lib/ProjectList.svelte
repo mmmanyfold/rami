@@ -74,6 +74,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		text-transform: capitalize;
 
 		@media screen and (min-width: @mid-break) {
 			flex-direction: row;
