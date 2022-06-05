@@ -1,17 +1,7 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
 	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	// export const prerender = true;
 </script>
 
 <svelte:head>
@@ -20,10 +10,89 @@
 </svelte:head>
 
 
-<section>
-	PROJECTS GO HERE
-</section>
+<div class="page-content">
+	<ul>
+		<li class="row">
+			<div>
+				<div class="title">
+					<sup>(24)</sup>
+					<h1>Dog</h1>
+				</div>
+			</div>
+			<div class="tags">
+				<div><a href="#">Video</a></div>
+				<div><a href="#">2021</a></div>
+			</div>
+		</li>
+
+		<li class="row">
+			<div>
+				<div class="title">
+					<sup>(24)</sup>
+					<h1>Dog</h1>
+				</div>
+			</div>
+			<div class="tags">
+				<div><a href="#">Video</a></div>
+				<div><a href="#">2020</a></div>
+			</div>
+		</li>
+	</ul>
+</div>
 
 
-<style>
+<style lang="less">
+	ul {
+  		list-style-type: none;
+		padding: 0;
+		margin:0;
+ 	}
+
+	.title {
+		@media screen and (min-width: @mid-break) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	h1 {
+		margin: 0.3rem 0 0;
+		font-style: italic;
+		font-size: 1.45rem;
+
+		@media screen and (min-width: @mid-break) {
+			margin-top: 0;
+			margin-left: 1rem;
+		}
+	}
+
+	.row {
+		padding: 1rem 0;
+		border-bottom: 1px solid @accent-color;
+
+		@media screen and (min-width: @mid-break) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.tags {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		@media screen and (min-width: @mid-break) {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		div {
+			margin-top: 0.4rem;
+			margin-left: 1.25rem;
+
+			@media screen and (min-width: @mid-break) {
+				margin-top: 0;
+			}
+		}
+	}
 </style>

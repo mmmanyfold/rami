@@ -14,9 +14,9 @@
 	header {
 		display: flex;
 		justify-content: space-between;
-		padding: 0.5rem;
+		padding: 0.5rem 0.6rem;
 		padding-bottom: 0;
-		
+
 		@media screen and (min-width: @mid-break) {
 			padding: 1.3rem 1.8rem 0 1.8rem;
 		}

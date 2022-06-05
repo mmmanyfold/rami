@@ -1,17 +1,7 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
 	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	// export const prerender = true;
 </script>
 
 <svelte:head>
@@ -19,11 +9,57 @@
 	<meta name="description" content="EXHIBITIONS & SCREENINGS, PRINT & DIGITAL PROJECTS, READINGS & TALKS, AWARDS & RESIDENCIES, PRESS & EXHIBITION CATALOGUES, ORGANIZING & PROGRAMMING, TEACHING & CLASS VISITS, EDUCATION" />
 </svelte:head>
 
+
 <div class="page-content">
 	<section>
-		<h1>EXHIBITIONS & SCREENINGS</h1>
+		<h1>Exhibitions & Screenings</h1>
+		<h2>2021</h2>
+		<h2>2020</h2>
+	</section>
+	
+	<hr/>
+	<section>
+		<h1>Print & Digital Projects</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Readings & Talks</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Awards & Residencies</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Press & Exhibition Catalogues</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Organizing & Programming</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Teaching & Class Visits</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Education</h1>
 	</section>
 </div>
 
+
 <style lang="less">
+	h1 {
+		text-transform: uppercase;
+		margin-top: 2.55rem;
+	}
+	h2 {
+		margin-bottom: 0;
+	}
 </style>

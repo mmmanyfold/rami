@@ -13,7 +13,7 @@ const config = {
 	},
 	preprocess: preprocess({
 		less: {
-			prependData: `@import '../variables.less';`
+			prependData: `@import 'src/variables.less';`
 		}
 	})
 };

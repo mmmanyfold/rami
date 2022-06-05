@@ -1,23 +1,14 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
 	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	// export const prerender = true;
 </script>
 
 <svelte:head>
 	<title>INFO</title>
 	<meta name="description" content="Bio and news" />
 </svelte:head>
+
 
 <div class="page-content">
 	<section>
@@ -30,17 +21,36 @@
 			</p>
 		</div>
 	</section>
+
 	<hr/>
 	<section>
+		<h1>Current & Forthcoming</h1>
+	</section>
 
+	<hr/>
+	<section>
+		<h1>News</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Archive</h1>
+	</section>
+
+	<hr/>
+	<section>
+		<h1>Imprint</h1>
 	</section>
 </div>
 
+
 <style lang="less">
+	h1 {
+		text-transform: uppercase;
+	}
+
 	.bio {
 		font-size: 1.3rem;
-	}
-	hr {
-		margin: 1.8rem 0;
+		margin-top: 2.4rem;
 	}
 </style>

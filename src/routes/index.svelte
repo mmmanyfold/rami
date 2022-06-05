@@ -1,5 +1,4 @@
 <script context="module">
-	export const prerender = true;
 </script>
 
 <script>
@@ -11,7 +10,7 @@
 	<meta name="description" content="Artist Archive" />
 </svelte:head>
 
-<div class="container">
+<div>
 	<section>
 		<div class="welcome">
 			<picture>
