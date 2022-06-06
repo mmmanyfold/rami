@@ -1,5 +1,5 @@
 <script context="module">
-	import ProjectList from '$lib/ProjectList.svelte';
+	import ProjectsList from '$lib/ProjectsList.svelte';
 	import { page } from '$app/stores';
 	import { browser, dev } from '$app/env';
 	export const hydrate = dev;
@@ -13,7 +13,7 @@
 
 
 <div class="page-content">
-	PROJECTS by YEAR
+	<ProjectsList tag={$page.params.year} />
 </div>
 
 

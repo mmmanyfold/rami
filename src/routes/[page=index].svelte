@@ -1,5 +1,5 @@
 <script context="module">
-	import ProjectList from '$lib/ProjectList.svelte';
+	import ProjectsList from '$lib/ProjectsList.svelte';
 	import { browser, dev } from '$app/env';
 	export const hydrate = dev;
 	export const router = browser;
@@ -12,7 +12,7 @@
 
 
 <div class="page-content">
-	<ProjectList />
+	<ProjectsList />
 </div>
 
 
