@@ -39,7 +39,7 @@
 
 	<hr/>
 	<section>
-		<h1>Imprint</h1>
+		<a href="imprint"><h1>Imprint</h1></a>
 	</section>
 </div>
 
