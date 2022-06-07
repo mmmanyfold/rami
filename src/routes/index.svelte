@@ -14,7 +14,7 @@
 <ul>
 	<li>
 		<div class="row right">
-			<a class="row-item no-hover" href="untitled-mapping">
+			<a class="row-item no-hover" href="/untitled-mapping">
 				<sup class="middle">(24)</sup>
 				<img src="mapping.png" alt="Untitled (mapping)" />
 			</a>
@@ -23,8 +23,8 @@
 </ul>
 
 <section class="footnotes">
-	<a href="dog"><sup class="no-hover">(24)</sup> <span>Dog</span></a>
-	<a href="untitled-the-ashram"><sup class="no-hover">(23)</sup> <span>Untitled (the ashram)</span></a>
+	<a href="/dog"><sup class="no-hover">(24)</sup> <span>Dog</span></a>
+	<a href="/untitled-the-ashram"><sup class="no-hover">(23)</sup> <span>Untitled (the ashram)</span></a>
 </section>
 
 

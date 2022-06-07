@@ -1,25 +1,31 @@
 <script>
 	import { page } from '$app/stores';
 	export let project;
-    export let hideLinks;
-    export let hideMeta;
-    export let label;
+    export let view = "main";
+
+    const isSubview = view !== "main";
 </script>
 
 
 <aside>
     <sup>(24)</sup>
-    <h1 class="title">Dog</h1>
+    {#if isSubview}
+        <a href={"/" + $page.params.project}>
+            <h1 class="title">Dog</h1>
+        </a>
+    {:else}
+        <h1 class="title">Dog</h1>
+    {/if}
 
-    {#if !hideMeta}
+    {#if !isSubview}
         <div class="meta">
             HD video, color, sound
             <br>
             5:36 min.
             <br>
             <br>
-            <a href="video">Video</a>,
-            <a href="2021">2021</a>
+            <a href="/video">Video</a>,
+            <a href="/2021">2021</a>
 
             <hr />
 
@@ -36,9 +42,11 @@
     <hr />
 
     <div class="links">
-        {#if !hideLinks}
+        {#if isSubview}
+            {view}
+        {:else}
             {#if project.transcript}
-                <a href={$page.params.project + "/transcript"}>
+                <a href={"/" + $page.params.project + "/transcript"}>
                     Transcript
                 </a>
                 <br><br>
@@ -52,12 +60,11 @@
             {/if}
 
             {#if project.press}
-                <a href={$page.params.project + "/press"}>
+                <a href={"/" + $page.params.project + "/press"}>
                     Press
                 </a>
             {/if}
         {/if}
-        {#if label}{label}{/if}
     </div>
 </aside>
 

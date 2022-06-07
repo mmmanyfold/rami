@@ -14,7 +14,7 @@
 </svelte:head>
 
 
-<ProjectView project={project} type="Transcript">
+<ProjectView project={project} view="Transcript">
 	Content
 </ProjectView>
 

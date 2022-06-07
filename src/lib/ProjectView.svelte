@@ -1,12 +1,12 @@
 <script>
 	import ProjectAside from '$lib/ProjectAside.svelte';
     export let project;
-    export let type;
+    export let view;
 </script>
 
 
 <div class="page-content">
-	<ProjectAside project={project} hideLinks={Boolean(type)} hideMeta={Boolean(type)} label={type} />
+	<ProjectAside project={project} view={view} />
 
 	<section class="content">
 		<slot />

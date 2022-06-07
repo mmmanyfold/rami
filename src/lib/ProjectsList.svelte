@@ -9,12 +9,12 @@
         <div>
             <div class="title">
                 <sup class="middle">(24)</sup>
-                <a href="dog"><h1>Dog</h1></a>
+                <a href="/dog"><h1>Dog</h1></a>
             </div>
         </div>
         <div class="tags">
-            <div><a href="video">{tag || "Video"}</a></div>
-            <div><a href="2021">2021</a></div>
+            <div><a href="/video">{tag || "Video"}</a></div>
+            <div><a href="/2021">2021</a></div>
         </div>
     </li>
 
@@ -22,12 +22,12 @@
         <div>
             <div class="title">
                 <sup class="middle">(24)</sup>
-                <a href="dog"><h1>Dog</h1></a>
+                <a href="/dog"><h1>Dog</h1></a>
             </div>
         </div>
         <div class="tags">
-            <div><a href="video">{tag || "Video"}</a></div>
-            <div><a href="2021">2021</a></div>
+            <div><a href="/video">{tag || "Video"}</a></div>
+            <div><a href="/2021">2021</a></div>
         </div>
     </li>
 </ul>
