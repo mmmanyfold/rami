@@ -61,11 +61,11 @@
 	}
 
 	.footnotes {
-		margin-top: 5rem;
-		padding: 0.3rem;
+		display: none;
 		
 		@media screen and (min-width: @mid-break) {
-			padding: 2rem;
+			display: block;
+			margin: 5rem 0 2rem 0;
 		}
 
 		sup {

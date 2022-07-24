@@ -66,7 +66,7 @@
 
 		@media screen and (min-width: @mid-break) {
 			margin-top: 0;
-			margin-left: 1rem;
+			margin-left: 2.4rem;
 		}
 	}
 
@@ -83,7 +83,7 @@
 
 		div {
 			margin-top: 0.4rem;
-			margin-left: 1.25rem;
+			margin-left: 2.5rem;
 
 			@media screen and (min-width: @mid-break) {
 				margin-top: 0;
