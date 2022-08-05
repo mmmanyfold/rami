@@ -2,7 +2,15 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import projectsJson from '/Users/elle/local/rami/src/projects.json';
+	const projects = projectsJson.allProjects.sort((a, b) => a.id < b.id ? 1 : -1);
+	const handleMultiImageHover = (e, url) => {
+		if (e.type === "mouseenter") {
+			e.toElement.setAttribute("src", url);
+		} else if (e.type === "mouseleave") {
+			e.fromElement.setAttribute("src", url);
+		}
+	};
 </script>
 
 <svelte:head>
@@ -12,19 +20,36 @@
 
 
 <ul>
-	<li>
-		<div class="row right">
-			<a class="row-item no-hover" href="/untitled-mapping">
-				<sup class="middle">(24)</sup>
-				<img src="mapping.png" alt="Untitled (mapping)" />
-			</a>
-		</div>
-	</li>
+	{#each projects as { id, title, slug, homePageAssets }, i (id)}
+		{@const { type: assetType, urls } = homePageAssets}
+		{@const alignClass = i % 2 === 0 ? "right" : "left"}
+		<li>
+			<div class={"row " + alignClass}>
+				<a class="row-item no-hover" href={slug}>
+					<sup class="middle">({id})</sup>
+					{#if assetType === "Video"}
+						<video autoplay loop>
+							<source src={urls[0]} type="video/mp4">
+						</video>
+					{:else if assetType === "Image" && urls.length > 1}
+						<img src={urls[0]} alt={title}
+							 on:mouseenter={(e) => handleMultiImageHover(e, urls[1])}
+							 on:mouseleave={(e) => handleMultiImageHover(e, urls[0])} />
+					{:else if assetType === "Image" && urls.length === 1}
+						<img src={urls[0]} alt={title} />
+					{/if}
+				</a>
+			</div>
+		</li>
+	{/each}
 </ul>
 
 <section class="footnotes">
-	<a href="/dog"><sup class="no-hover">(24)</sup> <span>Dog</span></a>
-	<a href="/untitled-the-ashram"><sup class="no-hover">(23)</sup> <span>Untitled (the ashram)</span></a>
+	{#each projects as { id, title, slug } (id)}
+		<a href={slug}>
+			<sup class="no-hover">({id})</sup> <span>{title}</span>
+		</a>
+	{/each}
 </section>
 
 
@@ -35,6 +60,10 @@
 		margin: 2.5rem 0;
 	}
 
+	.left {
+		align-items: flex-start;
+	}
+	
 	.right {
 		align-items: flex-end;
 	}
@@ -42,9 +71,9 @@
 	a.row-item {
 		width: 100%;
 
-		@media screen and (min-width: @mid-break) {
-			width: 40%;
-		}
+		// @media screen and (min-width: @mid-break) {
+
+		// }
 
 		sup {
 			display: block;
@@ -66,6 +95,12 @@
 		@media screen and (min-width: @mid-break) {
 			display: block;
 			margin: 5rem 0 2rem 0;
+		}
+
+		line-height: 1.5rem;
+
+		a {
+			margin-right: 0.45rem;
 		}
 
 		sup {
