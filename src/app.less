@@ -82,6 +82,10 @@ ul {
 	margin: 0;
 }
 
+.inline-block {
+	display: inline-block;
+}
+
 .page-content {
 	padding: 0 1.5rem;
 
@@ -93,5 +97,21 @@ ul {
 .hide-desktop {
 	@media (min-width: @mid-break) {
 		display: none;
+	}
+}
+
+.home-visual img {
+	width: 100%;
+
+	@media screen and (min-width: @mid-break) {
+		
+		&.portrait {
+			height: 800px;
+			width: auto;
+		}
+		
+		&.landscape {
+			width: 70%;
+		}
 	}
 }

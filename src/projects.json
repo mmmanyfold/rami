@@ -1,5 +1,5 @@
 {
-    "lastRefreshed": "2022-08-04 21:34:00.592928 -0400 EDT m=+9.446635712",
+    "lastRefreshed": "2022-08-05 03:45:26.788595426 +0000 UTC m=+2997.847206286",
     "allProjects": [
         {
             "uuid": "aa9733bf-685d-45ad-9aa2-c631554b7659",
@@ -9,15 +9,15 @@
                 "Audio"
             ],
             "year": "2021",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fb7af2c0-ee2d-40aa-baba-ad89e7dd3b97/RamiGeorge_2021_Virtues-Vol-1-EP_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=2cc70a8e0f929b65a01b668c216287b4f19f387ce3d26c270f222dcfc4b8289a&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fb7af2c0-ee2d-40aa-baba-ad89e7dd3b97/RamiGeorge_2021_Virtues-Vol-1-EP_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=ff0dc70ef4adc0cbfbca5d642b11fb01db9da1487a9bd28ce38e7c2e67fc99ca&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Stereo Audio\n24:24 min.",
             "description": "With J. Midden",
             "homePageAssets": {
                 "uuid": "060b8deb-2564-40d2-9ca4-d69c6cf77bb5",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9df181d-ff51-42c4-b767-de7da9a91293/RamiGeorge_2021_Virtues-Vol-1-EP_00a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=47080095f93a28931f684b3cd127afe667e985a3598d3192ed7fe4be983960fc&X-Amz-SignedHeaders=host&x-id=GetObject",
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cc44af53-b263-49cb-85af-7910f4d68255/RamiGeorge_2021_Virtues-Vol-1-EP_00b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=fca7fe2ad09b12b7b67b1d1b8a09937e8c72f1fb2feb21156387974ecf7b5d4f&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9df181d-ff51-42c4-b767-de7da9a91293/RamiGeorge_2021_Virtues-Vol-1-EP_00a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=fe28938696d676887bc50c47fd7f0b48ad3214f427553a943fbc45dfc0d4178f&X-Amz-SignedHeaders=host&x-id=GetObject",
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cc44af53-b263-49cb-85af-7910f4d68255/RamiGeorge_2021_Virtues-Vol-1-EP_00b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=fc9d1817911f03d6c00042d047db6cb3a63106759683883cbea5ee309669b4e7&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -31,14 +31,14 @@
                 "Installation"
             ],
             "year": "2021",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/50a02937-122d-405b-bcb8-52864d9c6d8d/RamiGeorge_2021_Virtues-Vol-1_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=70e91d6cf76e218ec4bc4d6f392db308986a2e0f662aa1fffb0b0fb140c2e7ad&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/50a02937-122d-405b-bcb8-52864d9c6d8d/RamiGeorge_2021_Virtues-Vol-1_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=f4369729c26fb03c98a01abd49c6a12bcfe3526b8976996adc6a2e2136d6b6f8&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Projected video, sound, tiered plywood seating, canvas pillows\n\nProjection: 20 x 90 ft\n6.1 x 27.4 m",
             "description": "With J. Midden & Mak Hepler-Gonzalez\n\nIcebox Project Space\n\nProduction assistance from M. Slater\n\nExhibition text by Sharmyn Cruz Rivera\n\nDesign with YESHI\n\nPhotos by Alina Wang",
             "homePageAssets": {
                 "uuid": "ddd8c01b-1f29-4bd2-aa0c-2b8e1b75ea6e",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e2431db9-9da7-4f25-a535-e6c67c9b68e1/RamiGeorge_2021_Virtues-Vol-1_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=1ad9b934f9b0307ca32ca6e7ee41adfd104496e953baea73d38544a2976f4e85&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e2431db9-9da7-4f25-a535-e6c67c9b68e1/RamiGeorge_2021_Virtues-Vol-1_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=43024bbb4f6284e5e02b43137b397c52f4e6d52fc419db7059c34323baa5dd5b&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -52,7 +52,7 @@
                 "Video"
             ],
             "year": "2021",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5a1a1343-5087-4501-aa13-41dc88fcf89c/VirtuesRef4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=8d01496b5b4c031996b4df9c9c2b96146a022e7a163712b5e5af2a0db2ac7aad&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5a1a1343-5087-4501-aa13-41dc88fcf89c/VirtuesRef4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=7a8d9d5cee572c1eabc042bf7f556909da19ab26205c079252f17cc58a6392c1&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n24:24 min.",
             "description": "With J. Midden & Mak Hepler-Gonzalez",
             "homePageAssets": {
@@ -70,14 +70,14 @@
                 "Video"
             ],
             "year": "2011",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8c3dad00-7496-4042-9953-311443ff7f5e/RamiGeorge_2011_Untitled-family-albums_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=4ea66b4297ff7f8b962a07ab168ad237bdb077c110e8a1f1f8b1e2e00fa34505&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8c3dad00-7496-4042-9953-311443ff7f5e/RamiGeorge_2011_Untitled-family-albums_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=c684ba3c6bbe9a5739ebdc6c07a43448514b96a4a4bde0255caa9dd78faf35d9&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n3:00 min.",
             "description": "With gratitude to Mary Patten",
             "homePageAssets": {
                 "uuid": "b3af7ef0-797a-4961-90dd-3d2fdf8798fe",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/eeee0bed-ce96-47ef-9860-a4dffc20af83/RamiGeorge_2011_Untitled-family-albums_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=f42f3bccffc8ac4a4bb4952bff8a6f326ce16fb2864786b573dd73980fd5aaba&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/eeee0bed-ce96-47ef-9860-a4dffc20af83/RamiGeorge_2011_Untitled-family-albums_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=739735dfa06ef1011ca9bacb34b18b330f1cb1f228f6c4c957249ba70a08d8be&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -94,14 +94,14 @@
                 "Video"
             ],
             "year": "2012",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/51102f62-0a35-4115-9552-98c035c7049f/RamiGeorge_2012_Untitled-two-men-last-scene_2_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=7bf14d18d6259935308103f53ee874d33f70563f97e2de4ee6ea5f2470a13c78&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/51102f62-0a35-4115-9552-98c035c7049f/RamiGeorge_2012_Untitled-two-men-last-scene_2_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=db8f540bdf7a43d04e25aa2ede38d372fb5c03cdf01de0c1c925db5d9bdc866a&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n7:35 min.",
             "description": "Voice of Johnny Knight\n\nWith gratitude to Frederic Moffet & Tirtza Even",
             "homePageAssets": {
                 "uuid": "ba6f53c4-98eb-446d-9043-babe88e18dde",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bcaf4b11-29af-4e96-a399-858567ae6cf6/RamiGeorge_2012_Untitled-two-men-last-scene_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=108b5a7f7c82a1e704c9f90869a8e029cd8ab559a98e51b72c7b3a25e7d8ffab&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bcaf4b11-29af-4e96-a399-858567ae6cf6/RamiGeorge_2012_Untitled-two-men-last-scene_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=3257dc079056eb0de63f23024189ae71b61d2a2355e95a859ba652e283ded1e9&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -118,13 +118,13 @@
                 "Installation"
             ],
             "year": "2012",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d176d84b-49bf-45ce-b613-1ccf5e1bce33/RamiGeorge_2012_Untitled-two-men-last-scene_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=5f782d6d186ba19f5c2492238031b42e0f0697a9702c4312dcf9230ba4b47730&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d176d84b-49bf-45ce-b613-1ccf5e1bce33/RamiGeorge_2012_Untitled-two-men-last-scene_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=291f2f661136fb9ced2b40c27d58fa3114f9d8654d7d9a521ed8f8b5cfb28d62&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Neon text, two-channel projected video, gray paint",
             "homePageAssets": {
                 "uuid": "3c2ed8e1-6524-4007-8bac-0fc4882315cd",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d00ef59c-0ca5-46be-be04-d88a80730428/RamiGeorge_2012_Untitled-two-men-last-scene_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=422bdea9595591bc1fe612508f84d8a3e163565d602f6c64b6860df5b12baf91&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d00ef59c-0ca5-46be-be04-d88a80730428/RamiGeorge_2012_Untitled-two-men-last-scene_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=11f08aa06c4ba5e023f9e6b2452891a0e5af8dde96f43826fee56e1b8f681a4f&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -138,14 +138,14 @@
                 "Video"
             ],
             "year": "2014",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/68fce4b0-2716-4015-a875-4d4519acced6/RamiGeorge_2014_Untitled-Samaritan-Foundation_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=3e177bc618f7413b4fcf4c7e36fbfbf6886f298658f54a3c731667fb33bceaa0&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/68fce4b0-2716-4015-a875-4d4519acced6/RamiGeorge_2014_Untitled-Samaritan-Foundation_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=82d12af54511b22d2bed2f90dae8ceeb165c331c080e4f0819fa280dd3d2919f&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n5:46 min.",
             "description": "Voice of Cáit NíSíomón",
             "homePageAssets": {
                 "uuid": "915376f7-3e9c-4091-8048-45275c3ba3f9",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f37ff78-5dae-491e-8b57-cd05f5fabe01/RamiGeorge_2014_Untitled-Samartian-Foundation_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=36ef8e806091d28c96ed9d795e9ddd6998569ca489f171bcfbf35cc2a1b2c6ad&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f37ff78-5dae-491e-8b57-cd05f5fabe01/RamiGeorge_2014_Untitled-Samartian-Foundation_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=3d88ef9f5c19dc99c47e172ef594d41b0b858bca67a870a7a335756ba3abaf7e&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -162,13 +162,13 @@
                 "Video"
             ],
             "year": "2014",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3e582c95-8af4-4446-b81d-c27889c43e39/RamiGeorge_2014_Untitled-Beyrouth_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=ff5082990ffd0bbfc91df7be8dbbd24fa8c605871a2295eb62328c5de8cbdd0d&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3e582c95-8af4-4446-b81d-c27889c43e39/RamiGeorge_2014_Untitled-Beyrouth_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=a363e1ec01f2836566f4055557d8004ff21df0c446a60538143bee985273a36d&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Video, color, silent\n4:55 min.",
             "homePageAssets": {
                 "uuid": "3c723a14-c5bc-49e4-9393-b58fdf05b9ad",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e2254900-cb95-4c65-a610-b28124b3fc9e/RamiGeorge_2014_Untitled-Beyrouth_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=e2c03772896dff801ef5f464698178c506815b8b861710545cee89e011982133&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e2254900-cb95-4c65-a610-b28124b3fc9e/RamiGeorge_2014_Untitled-Beyrouth_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=ae9494008f4ff27f26d98ab087e6abd93fb31268d021f3556843874b8efcf188&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -185,14 +185,14 @@
                 "Installation"
             ],
             "year": "2015",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/33c44a28-fd44-4229-8c98-5a2fda7b674b/RamiGeorge_2015_Untitled-footnotes_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=09ac6ccad4fa5bc6fcc87d53242190c0716d55f090e001088bc5a4c4e3ad8314&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/33c44a28-fd44-4229-8c98-5a2fda7b674b/RamiGeorge_2015_Untitled-footnotes_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=a4af9f37e185c2e9ee483fd20c07c3620da89e86e14b3438d74465661f6ce605&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Reproduced family and found photos, free newsprint poster, wood pedestal",
-            "description": "Exhibited in Modi Operandi\n\nChicago Artists Coalition\n\nOrganized by Alexandria Eregbu\n\nProduction assistance from Colin Dickson",
+            "description": "Exhibited in Modi Operandi\n\nChicago Artists Coalition\n\nOrganized by Alexandria Eregbu\n\nProduction assistance from Colin Dickson",
             "homePageAssets": {
                 "uuid": "261f0294-5834-4a36-86ed-2817b7ef23a9",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4cadd553-38b3-4dc2-8390-6d5ebc8aecf7/RamiGeorge_2015_Untitled-footnotes_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=7850471bb63aeae1d5b6da8723de93c9d0159baf3665d77c8972642e24e29663&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4cadd553-38b3-4dc2-8390-6d5ebc8aecf7/RamiGeorge_2015_Untitled-footnotes_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=13d372a3878c99ac179dda0cae95c8ddd64b48be41859e87c7d48cd0155ac08a&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -206,14 +206,14 @@
                 "Installation"
             ],
             "year": "2017",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c1420428-4383-4074-90b1-34c61d8ec644/RamiGeorge_2017_let-every-pansy-bloom_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=56d2e0d3c7a64a420685415a64d61602931503e1d55fbb9dcc5d5752ab7f63d1&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c1420428-4383-4074-90b1-34c61d8ec644/RamiGeorge_2017_let-every-pansy-bloom_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=c7bcafd4887e8fa8334a5b6f431b3e107f87a2e4907e9ec39fd822851ae50841&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Plywood, concrete blocks, reproduced family and found photos, publication ephemera, reproduced publication ephemera, black canvas, bleach",
             "description": "Photos by Alina Wang",
             "homePageAssets": {
                 "uuid": "2f15262f-581b-46d5-af20-9676e379adc5",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7b93f092-9391-426e-82f1-ac17db39f305/RamiGeorge_2017_let-every-pansy-bloom_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=a9450bd25bd3a41151d018068f42004c6231cecb1254c20865cd6c5a51e8649e&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7b93f092-9391-426e-82f1-ac17db39f305/RamiGeorge_2017_let-every-pansy-bloom_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=9b071e1d2a2e07695f78c53ddbfcbfd07518a359b60950551f98706cf9f2c12d&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -227,14 +227,14 @@
                 "Video"
             ],
             "year": "2018",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/87dd75ff-5440-49ae-aec1-6d6e755c1e92/RamiGeorge_2018_Untitled-the-wars-in-Lebanon_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=f185f08d288e8bfbdf32376772bb6cbb319368e9b1b87e9991a30688d68d1197&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/87dd75ff-5440-49ae-aec1-6d6e755c1e92/RamiGeorge_2018_Untitled-the-wars-in-Lebanon_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=64d7e29a22b557637f616259036eb940ce33c1ad3d3ecb96dd40c99255278ce3&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n10:00 min.",
             "description": "Voice of Sarah Lily Yassine\n\nWith footage contributed by Giovanni Khoury, Hanno Stecher, Krystel Medawar Khoury, Johanna Breiding, Joshua Mosley, Jason S. Hage, Nicole Massad, Sarah Lily Yassine, Shereen Sheikhhassan, Stephanie Richa\n\nCommissioned by Grand Union\n\nWith gratitude to Sharon Hayes",
             "homePageAssets": {
                 "uuid": "d198b93c-5b31-4eb5-9ab0-74bcce46b21b",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/449f25f7-e8ee-4d2c-b1a0-6ae10cd372a8/RamiGeorge_2018_Untitled-the-wars-in-Lebanon_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=30b9150ec5650f48f92a29b47113a13d5fec3d39d72185149bb5ee7f958e9146&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/449f25f7-e8ee-4d2c-b1a0-6ae10cd372a8/RamiGeorge_2018_Untitled-the-wars-in-Lebanon_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=ea4577b6e372464ce96478db7fcd57cd28dc04fbbd3fc543a8761dc027a1e564&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -251,14 +251,14 @@
                 "Video"
             ],
             "year": "2015",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4c0abc75-9d33-4ece-829e-c21911703559/RamiGeorge_2015_Untitled-Saturday-October-16-1993_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=91da3a50d05eabf954e478d3029d531d9ac5b4629a0a2c30b53ba787c0dd44d7&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4c0abc75-9d33-4ece-829e-c21911703559/RamiGeorge_2015_Untitled-Saturday-October-16-1993_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=29a9e27d5abaf2cbc0641be37e020b86e7060fb2c46653697bc7c971d084abb1&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n5:00 min.",
             "description": "Voice of Cassidy Slaughter-Mason",
             "homePageAssets": {
                 "uuid": "9d8b3388-5fc9-4299-9642-f04e5e35f5e5",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/38daa767-5cfb-4252-8c4c-96c86a4a925a/RamiGeorge_2015_Untitled-Saturday-October-16-1993_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=ec97387515d9bb7aaf3426fff80ba3e2ecce3ed56ca2622eadef03bddeee5919&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/38daa767-5cfb-4252-8c4c-96c86a4a925a/RamiGeorge_2015_Untitled-Saturday-October-16-1993_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=270c797631525797fd589f5d73ce5f3d2becfd66db434adffa7c62fa3a532b6a&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -275,14 +275,14 @@
                 "Video"
             ],
             "year": "2016",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dcc0cca3-a244-4531-9506-1b6253bbef33/RamiGeorge_2016_my-mother-and-her-sister-always-argued-in-arabic-i-never-understood_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=3630a7981ebc78d9d78fed95a0aab74a729b2de08ca76aece5e47adb3a97fea1&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dcc0cca3-a244-4531-9506-1b6253bbef33/RamiGeorge_2016_my-mother-and-her-sister-always-argued-in-arabic-i-never-understood_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=c0da2a724bd4ffd3397eb916e2df17a59c3897ecb421c8a8a98e4f0237a30a13&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n5:04 min.",
             "description": "Voice of Sanaz Sohrabi",
             "homePageAssets": {
                 "uuid": "7a781b26-9b29-439d-8802-66853abc071b",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bb037771-fdc0-4713-b0ba-56788e79c0fc/RamiGeorge_2016_my-mother-and-her-sister_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=34e082b7ffde3715b51410967af8365b561b75168a68af850bf2121b96eb8bcc&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bb037771-fdc0-4713-b0ba-56788e79c0fc/RamiGeorge_2016_my-mother-and-her-sister_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=3e017b109fedde4968eac7f89f8fba7d57a440e03c5077174f2eeee1860ba72b&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -299,14 +299,14 @@
                 "Video"
             ],
             "year": "2016",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e4f5d530-9923-4dff-9a27-7cd0838cd9fc/RamiGeorge_2016_virtually-every-site-one-can-visit-virtually-gaza-strip_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=5e6413fb36dd44d9e8fc5d7a8a32714ae93b8a7b6d00adb0f655a7e2845844bf&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e4f5d530-9923-4dff-9a27-7cd0838cd9fc/RamiGeorge_2016_virtually-every-site-one-can-visit-virtually-gaza-strip_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=4fcf75a4e8fc894d0d334d29611305fab9685af6698429a216699cd5cd617a77&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, silent\n15:00 min.",
             "description": "Footage collected from Google Maps users Abod Abed, BMW X6, Eid Abu Muhammad, Hussam El-Madhoun, Ibrahem Nabeel, Jussi Koivunoro, Majd Alhaj, Moha Ali, Saed Samara, Yahya Khaled",
             "homePageAssets": {
                 "uuid": "928a70d4-4b3b-49ad-b489-ef9410fa1d2a",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bc0a47f7-f3f5-4207-bbf1-2cff111f9fad/RamiGeorge_2016_virtually-every-site-one-can-visit-virtually_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=c08785146fdb30728d876e6283e0ad5a31e1f9e9d5829a3a40aed72c5dd9bbf7&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bc0a47f7-f3f5-4207-bbf1-2cff111f9fad/RamiGeorge_2016_virtually-every-site-one-can-visit-virtually_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=d74badcb61ae03bd5ff0963bfbbf8a4408536ab18cb2555e6c4abf2949030f66&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -320,14 +320,14 @@
                 "Video"
             ],
             "year": "2016",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f2a734e2-c3b7-4f91-8d3d-e8ac81a36fc2/RamiGeorge_2016_the-mediterranean-sea-from-the-banks-of-lebanon-re-ali-krystel_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=a92866d3825ae7a46f6f9491ba681394965b804a63b86bb25394d38d4a481438&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f2a734e2-c3b7-4f91-8d3d-e8ac81a36fc2/RamiGeorge_2016_the-mediterranean-sea-from-the-banks-of-lebanon-re-ali-krystel_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=a10fc5304b31c159aae5c4e75c8558f6870a1904fe3258886e7a8e14399b3844&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n10:00 min.",
             "description": "Footage contributed by Ali, Krystel Medawar Khoury, Nathalie Kreidy ElKhoury, Rasheed Jalloul, Vrouyr Joubanian, Wassim Bassil",
             "homePageAssets": {
                 "uuid": "644080e9-d4ff-427c-abf6-23ca70cbede3",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/88a47c4e-7c54-495d-8b56-5f7cf750f3f4/RamiGeorge_2016_the-mediterranean-sea-from-the-banks-of-lebanon_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=4048a3b4a9066abfe866338cff55b4075fef42d1b05d10082bf99dd8ec92a0ab&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/88a47c4e-7c54-495d-8b56-5f7cf750f3f4/RamiGeorge_2016_the-mediterranean-sea-from-the-banks-of-lebanon_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=e4367015d505e8824ad9301b18232b66a3b7c3ff96bde09fa07c27a662a5d603&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -341,14 +341,14 @@
                 "Installation"
             ],
             "year": "2018",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1b88f0b3-f4f9-48c2-a215-d277703fddac/RamiGeorge_2018_an-ode-to-three_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=ff7dfe3e153c0143d4486ed3a5f9f6b66a456995da93563b4f70e2930fc01ea1&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1b88f0b3-f4f9-48c2-a215-d277703fddac/RamiGeorge_2018_an-ode-to-three_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=174ec4adcf2d45b20b8b17d13085b42c691ee6af7ac6a8dd87add411525f9e18&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Plywood, wood, vinyl sheeting, black house paint, reproduced family and found photos, reproduced publication ephemera",
-            "description": "Production assistance from Willie Udell \n\nPhotos by Alina Wang",
+            "description": "Production assistance from Willie Udell \n\nPhotos by Alina Wang",
             "homePageAssets": {
                 "uuid": "fbfd904e-3d29-44b7-8ce1-c0f5912b8970",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/99653797-5885-482d-bb6d-7e83dd3e48bc/RamiGeorge_2018_an-ode-to-three_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=33479d14db703894c4edb39462c4d70832467e3c7b9b16948a4b1d71872b2bc0&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/99653797-5885-482d-bb6d-7e83dd3e48bc/RamiGeorge_2018_an-ode-to-three_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=395947e6ecad66ed6fa5a08051ec167b0cc9c59d65fcd1a1766022132ab274a1&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -362,14 +362,14 @@
                 "Video"
             ],
             "year": "2019",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4d8f75d2-4122-4854-b86d-49ae746f8c4e/RamiGeorge_2019_Untitled-Donna-Mae-Stemmer_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=8f4ff69cffd532391af05ca5acbbe908896298748350ccc13c8e4270cec5d09b&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4d8f75d2-4122-4854-b86d-49ae746f8c4e/RamiGeorge_2019_Untitled-Donna-Mae-Stemmer_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=2e0377f133e31eab4b2a34fc9583ab31cd04f82f62cedcd16f28b4fc61ee25fc&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, silent\n14:10 min.",
             "description": "Material sourced from the John J. Wilcox, Jr. Archives; with gratitude to John Anderies",
             "homePageAssets": {
                 "uuid": "a0e0d6d1-b646-4ff9-9027-44af77a9876a",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9af8910-5830-4869-884c-b24404c4eb5b/RamiGeorge_2019_Untitled-Donna-Mae-Stemmer_00.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=84635916095a465492a3331c703264eccac72ec6e4a870a171a191af990790e6&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9af8910-5830-4869-884c-b24404c4eb5b/RamiGeorge_2019_Untitled-Donna-Mae-Stemmer_00.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=2a94f21d7f70fc8e7b390b85302c07713f8dfd249de7a951a3b554b5187888c3&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -383,14 +383,14 @@
                 "Installation"
             ],
             "year": "2016",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ed4de0bc-fdc6-4064-be2c-10c6a6d4023d/RamiGeorge_2016_tide-tithe_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=89602dcbe59453231a802280067f61490e11024806a3486fbec51454df59a293&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ed4de0bc-fdc6-4064-be2c-10c6a6d4023d/RamiGeorge_2016_tide-tithe_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=8710fd8abb4e475fe5986f9c5dc171f1b3f7a13ef6d37ccfd136831af0b56e50&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Videos on monitors, video on iPad, inkjet print, framed photo shot by Hamde Abu Rahma, bleached fabric, wood\n\nInkjet print: 44 x 72 in\n111.76 x 182.88 cm\n\nFramed photo: 31 x 41 in\n78.74 x 104.14 cm",
             "description": "Two-person exhibition with Alexandria Eregbu\n\nRoots & Culture Contemporary Art Center\n\nPhotos by Robert Chase Heishman",
             "homePageAssets": {
                 "uuid": "26a0f921-7ba5-4180-9044-9cb940b974ba",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b97d8d44-1bb7-4479-a1b0-e645f28fe518/RamiGeorge_2016_tide-tithe_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=b35f07bedd3ddce18f4d5c796c0c14c6821e5191bed2b1aa511a3402988586c2&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b97d8d44-1bb7-4479-a1b0-e645f28fe518/RamiGeorge_2016_tide-tithe_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=6e66252841bc4cb182cbffc7de8ce1b76dbb5be5408e6453b7363cf6dc7cfe9f&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -404,14 +404,14 @@
                 "Installation"
             ],
             "year": "2018",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/98d214cc-3cbd-41c2-95c1-9b2ece571ccd/RamiGeorge_2018_Inherited-Premises_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=ca400d97e08acb173649d1599723f05a6b79a4d0cbd902190f5b87057599f341&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/98d214cc-3cbd-41c2-95c1-9b2ece571ccd/RamiGeorge_2018_Inherited-Premises_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=7067a0dfddd44778453f01dfb6579e5024f0783a0b6b43e35cef6fdb52506504&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Projected video, wood, plastic sheeting, reproduced family photos, concrete blocks",
             "description": "Two-person exhibiton with Tako Taal\n\nGrand Union\n\nOrganized by Seán Elder\n\nProduction assistance from Matthew James Moore\n\nPhotos by Patrick Dandy",
             "homePageAssets": {
                 "uuid": "aaa01fda-350c-4e31-b15f-cca131cfa98d",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a3295fbd-56fb-472a-a823-a3e2f8421fbc/RamiGeorge_2018_Inherited-Premises_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=f3008a7b26a8216c1fbb7ba319d2520caa204f3416ff7c0c305c113d0ff9a832&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a3295fbd-56fb-472a-a823-a3e2f8421fbc/RamiGeorge_2018_Inherited-Premises_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=c9a8b6ecc5ab9bed651eafa47dbcf80d3eefc16dc55f0825755f5e7baf332060&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -428,15 +428,15 @@
                 "Installation"
             ],
             "year": "2019",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e6093504-8931-4a44-90ac-cb913382804b/RamiGeorge_2019_brotherly-love-sisterly-affection_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=02f431e09d78c50655338b65bfc5d3e55aebac77c86cb3d840aecc314b115e48&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e6093504-8931-4a44-90ac-cb913382804b/RamiGeorge_2019_brotherly-love-sisterly-affection_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=87989a56d1996d74b77079ee6e318a6a75e2f56e73a650a8b09b7d0e558016f5&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Plywood, wood, plastic buckets, poured concrete, black and white house paint, reproduced archival material, projected video, concrete blocks, free Risograph poster",
-            "description": "Exhibited in Analogous to Our Own\n\nIcebox Project Space\n\nOrganized by Sara O'Keeffe\n\nMaterial sourced from John J. Wilcox, Jr. Archives; with gratitude to John Anderies\n\nProduction assistance from Willie Udell\n\nPhotos by Gordon Stillman",
+            "description": "Exhibited in Analogous to Our Own\n\nIcebox Project Space\n\nOrganized by Sara O'Keeffe\n\nMaterial sourced from John J. Wilcox, Jr. Archives; with gratitude to John Anderies\n\nProduction assistance from Willie Udell\n\nPhotos by Gordon Stillman",
             "homePageAssets": {
                 "uuid": "b2ad089a-6a59-4f52-a843-c91e5f0b3d9e",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/126f8322-f26c-4358-82cd-b8c2bc7b51d1/RamiGeorge_2019_brotherly-love-sisterly-affection_00a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=4ff96fdc1a9371c148171f0a73e320d3a4625e8ae65056afbb30e0670c82214a&X-Amz-SignedHeaders=host&x-id=GetObject",
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/190c7bfc-2392-49f6-b7b4-199c63344ddb/RamiGeorge_2019_brotherly-love-sisterly-affection_00b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=2e2df8d0cec4f72305d06759bbc7dea8535cd29e46748b63eaad8af69edcf02e&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/126f8322-f26c-4358-82cd-b8c2bc7b51d1/RamiGeorge_2019_brotherly-love-sisterly-affection_00a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=89e1a6a34789ed57fbb610d9dedf2c9ef7f16a144a43e8f72a9beb561a53eb24&X-Amz-SignedHeaders=host&x-id=GetObject",
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/190c7bfc-2392-49f6-b7b4-199c63344ddb/RamiGeorge_2019_brotherly-love-sisterly-affection_00b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=a39d98cc8e0f8fee458a5cda543e0a732cdb391ae9623f7a8ba3551a7c04f53b&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -450,14 +450,14 @@
                 "Video"
             ],
             "year": "2012",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/40e2f65d-0c94-48fe-bd91-33e21e6f045e/RamiGeorge_2012_Untitled-Stanley-my-second-lover_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=9a60966a2faa7d2c521f1d0d58124809009f545e2983f1fd08f38d7b362d18f5&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/40e2f65d-0c94-48fe-bd91-33e21e6f045e/RamiGeorge_2012_Untitled-Stanley-my-second-lover_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=e99c65c32952f0b92d0d601c8d44d56d29ec414117ae9d72cb7a740ed9dffe39&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Video, color, sound\n8:13 min.",
             "description": "With gratitude to Frederic Moffet & Irina Botea Bucan",
             "homePageAssets": {
                 "uuid": "a152eb01-3142-4477-b441-895128cd6b71",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a98285a5-f634-4018-a392-d8dc1bc2298a/RamiGeorge_2012_Untitled-Stanley-my-second-lover_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=e7e7a9d1d43c38f55f35f4b7174b14e231ed9fe97812bc10a2346791be56d908&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a98285a5-f634-4018-a392-d8dc1bc2298a/RamiGeorge_2012_Untitled-Stanley-my-second-lover_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=cd2c2e05a3acbf60822124200654a000a08c13c690b7c0118bcd156f4157e277&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -474,14 +474,14 @@
                 "Video"
             ],
             "year": "2020",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/225ff059-41b2-4bfb-b731-48d0a67d5cb8/RamiGeorge_2020_Untitled-with-my-father_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=6ff33d68f3d063e15d50bddce70fb2886c933c3ebccf9955278f682baac8bcde&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/225ff059-41b2-4bfb-b731-48d0a67d5cb8/RamiGeorge_2020_Untitled-with-my-father_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=b6eb3a3232cd894dda8767edfd260194e0089e7c1547f4a70e6b88ec45486495&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n20:31 min.",
             "description": "Voice of Jack Marmorstein\n\nWith gratitude to Carolyn Lazard",
             "homePageAssets": {
                 "uuid": "8fec9180-0b9f-4db3-8bea-b9d2c634e6f3",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7ed62140-76af-46a8-9c48-bf2f0388f1d8/RamiGeorge_2020_Untitled-with-my-father_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=5fe4bea24d67fa047ff42e7318b263be2d293549be9e52803e2c87b9bd378ee4&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7ed62140-76af-46a8-9c48-bf2f0388f1d8/RamiGeorge_2020_Untitled-with-my-father_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=115ac979f0c88c1faac6c342e5155422fc0a6ab23b2b5f3f83096bac54f8ae6d&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -498,14 +498,14 @@
                 "Installation"
             ],
             "year": "2020",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cf819fb3-d0a2-4a23-8cce-4dee5ee36660/RamiGeorge_2020_List-Projects-21_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=5621ca84bcdd1743809aea3ec6fe8b2a0b69be759d61fc2fac42bedf9a3363d9&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cf819fb3-d0a2-4a23-8cce-4dee5ee36660/RamiGeorge_2020_List-Projects-21_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=4b64f5a9a23604e473848b07e4f1b482df370dbf0763dc8dda173b895b8932b9&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Plywood, wood, drywall, projected video, video on monitor, art paper, black house paint, reproduced family photos, reproduced publication ephemera",
             "description": "MIT List Visual Arts Center\n\nOrganized by Selby Nimrod\n\nProduction assistance from Jesse Collins, John Osorio-Buck, & Tim Lloyd\n\nPhotos by Peter Harris Studio",
             "homePageAssets": {
                 "uuid": "222e70e0-d93b-4135-bb65-6f679e6abfa0",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/10669d35-5da1-44ee-ac85-20e16bf80e66/RamiGeorge_2020_List-Projects-21_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=3f5e08fa90a740519947c11aab48efa959f27e6e7fee96bd2b6b24371691b28f&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/10669d35-5da1-44ee-ac85-20e16bf80e66/RamiGeorge_2020_List-Projects-21_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=9f890c3be3c402d866cd381da3c75c2a8842bbb7c4c7cef606fec480f7441eb7&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -519,14 +519,14 @@
                 "Installation"
             ],
             "year": "2020",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c6651fa-3d9d-40b3-8f00-c000a068c036/RamiGeorge_2020_Untitled-the-wars-in-Lebanon_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=654388b9859033ed213933b0cc5b1b991433797037c54f5a7b5192a46339cdcb&X-Amz-SignedHeaders=host&x-id=GetObject",
-            "medium": "Three videos on monitor, family photos, expired Lebanese and U.S. passports, abandoned application for U.S. citizenship, Time Magazine: Massacre in Lebanon, Witness of War Crimes in Lebanon, VHS cassettes found in Beirut, Arab Image Foundation postcard, vinyl wall text by Omar Mismar",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c6651fa-3d9d-40b3-8f00-c000a068c036/RamiGeorge_2020_Untitled-the-wars-in-Lebanon_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=d8f4d4a84516b1bafbdbdf0b65b5b459b0c908f03169081ad7295361018c1e4a&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "medium": "Three videos on monitor, family photos, expired Lebanese and U.S. passports, abandoned application for U.S. citizenship, Time Magazine: Massacre in Lebanon, Witness of War Crimes in Lebanon, VHS cassettes found in Beirut, Arab Image Foundation postcard, vinyl wall text by Omar Mismar",
             "description": "David Salkin Creative\n\nPhotos by Aron Gent",
             "homePageAssets": {
                 "uuid": "4e96e8d7-1647-4e3a-afd0-919f0cd8d976",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8a3f1a41-1786-452e-b394-e19cf1599b97/RamiGeorge_2020_Untitled-the-wars-in-Lebanon_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=2d39da480255c7dd7e94559e256e7d2a1207cb50e608f25657c78eff06e5bedd&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8a3f1a41-1786-452e-b394-e19cf1599b97/RamiGeorge_2020_Untitled-the-wars-in-Lebanon_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=b1ff4a658f2f73604ccb6b54dd3a8bc7a106ef16008beb4c58cc40f51ca7688a&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
@@ -540,14 +540,14 @@
                 "Video"
             ],
             "year": "2020",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df5e2cf2-79de-4d95-9c72-de756307b493/RamiGeorge_2020_Untitled-the-ashram_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=e96fe4ba74dc4f34b26e9e565ee358da0acfac3f425028a625978a8bb7655662&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df5e2cf2-79de-4d95-9c72-de756307b493/RamiGeorge_2020_Untitled-the-ashram_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=10f4d61cf377b41cc4a40e634b9b94735511dbbeb303be7d6be32a9cc5621970&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n12:42 min.",
             "description": "Voice of Jack Marmorstein\n\nFootage contributed by Alex Liegel, Chris Cole, David Nokovic, Katherine Bowers, Laurel V. McLaughlin, Selby Nimrod, Sergey Y. Smolin\n\nCommissioned by Center for Contemporary Art & Culture\n\nWith gratitude to Monika Uchiyama",
             "homePageAssets": {
                 "uuid": "b9948f95-bab6-4e2c-8ff4-eeaa87a0d8b1",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8a40561-bf86-4f1a-9ab0-b3fb9f8f1df2/RamiGeorge_2020_Untitled-the-ashram_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=942ba14054ea81912f32bfdefb7ccc5b0f6f678a27aacb3c99697dd88c4f8dec&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8a40561-bf86-4f1a-9ab0-b3fb9f8f1df2/RamiGeorge_2020_Untitled-the-ashram_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=dad61c4fc7db543ad32271e2d6dc6420c9938e6674a2b686acfa8f44da015db3&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -564,14 +564,14 @@
                 "Video"
             ],
             "year": "2021",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/488cd64a-a685-4f84-86a7-54a6f39e23a3/RamiGeorge_2021_Dog_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=2902b7fefa01bf8f93b15cf0704ed2a39635e4f0d7df78d3a20098ef3930ee30&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/488cd64a-a685-4f84-86a7-54a6f39e23a3/RamiGeorge_2021_Dog_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=349fce70a3f3bd6ce67edc98615439f909ac0af7c3667d8c51f230008108be2c&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "HD video, color, sound\n5:36 min.",
             "description": "With Ariel Zetina\n\nMusic by Bastardgeist\n\nFootage contributed by Joel Midden",
             "homePageAssets": {
                 "uuid": "6eb59891-0f73-45bc-b87a-e7f9267f5072",
                 "type": "Video",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11c39796-1b8f-41a5-9e8e-0358ee58bf50/RamiGeorge_2021_Dog_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=09bd432427b82f99a6c54f9fa9de20f299afc4398d85d6d3f68d6baf49891711&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11c39796-1b8f-41a5-9e8e-0358ee58bf50/RamiGeorge_2021_Dog_00.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=85875848242c376af0914466c8f441c56dd54848a17024fed0f6c25ad35367f9&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {
@@ -588,14 +588,14 @@
                 "Installation"
             ],
             "year": "2020",
-            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a00274a1-fe89-4a59-98d3-21c1f4567703/RamiGeorge_2020_Untitled-mapping_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=2e7c359602d4aa0b02309035c9fc6cf160c4e831d1347a1dc03f063a42338bbe&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "thumbnail": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a00274a1-fe89-4a59-98d3-21c1f4567703/RamiGeorge_2020_Untitled-mapping_ref.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45/20220805/us-west-2/s3/aws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=e170c4cfae586f7fcd8b4f73f5993af756f29fbbad02a7286a0a8429b381d613&X-Amz-SignedHeaders=host&x-id=GetObject",
             "medium": "Digital collage (family photos, news clippings, Google Maps screenshots, stickers, postcards, manipulated publication ephemera), foamcore, wood\n\n84 x 96 x 28 in\n213.36 x 243.84 x 71.12 cm",
-            "description": "Exhibited in and one day will tell you so many stories\n\nParagon Arts Gallery\n\nOrganized by Laurel V. McLaughlin\n\nProduction assistance from Aaron McKee & Shana Palmer\n\nPhotos by Mario Gallucci\n\nWith gratitude to Valentina Soto Illanes",
+            "description": "Exhibited in and one day will tell you so many stories\n\nParagon Arts Gallery\n\nOrganized by Laurel V. McLaughlin\n\nProduction assistance from Aaron McKee & Shana Palmer\n\nPhotos by Mario Gallucci\n\nWith gratitude to Valentina Soto Illanes",
             "homePageAssets": {
                 "uuid": "e57fc35e-c58e-4322-a10f-f2999867062e",
                 "type": "Image",
                 "urls": [
-                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e8852ca2-d1f0-4152-85b2-66d4cf7baaa8/RamiGeorge_2020_Untitled-mapping_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T013403Z&X-Amz-Expires=3600&X-Amz-Signature=7caf00cfdcbfa5653d0b201b18dc6032e55c5d898d4f9e2d25b6c0b6f97c2c86&X-Amz-SignedHeaders=host&x-id=GetObject"
+                    "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e8852ca2-d1f0-4152-85b2-66d4cf7baaa8/RamiGeorge_2020_Untitled-mapping_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T034526Z&X-Amz-Expires=3600&X-Amz-Signature=e397a70fcb3da6e385c5a90269b146760e411e6b9f80f7426f037f34babfdbec&X-Amz-SignedHeaders=host&x-id=GetObject"
                 ]
             },
             "transcript": {},
