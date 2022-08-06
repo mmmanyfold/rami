@@ -49,7 +49,7 @@ const getAlignmentClass = (i) => {
 
 <ul class="home-visual">
 	{#each projects as { id, title, slug, homePageAssets }, i (id)}
-	{@const { type: assetType, urls } = homePageAssets}
+	{@const { type: assetType, files } = homePageAssets}
 	<li>
 		<div class={"row"}>
 			<a href={slug} class="no-hover">
@@ -57,16 +57,16 @@ const getAlignmentClass = (i) => {
 				{#if assetType === "Video"}
 					<div class="video-container">
 						<video width="100%" autoplay loop>
-							<source src={urls[0]} type="video/mp4">
+							<source src={files[0].url} type="video/mp4">
 						</video>
 					</div>
-				{:else if assetType === "Image" && urls.length > 1}
-					<img src={urls[0]} alt={title} loading="lazy"
+				{:else if assetType === "Image" && files.length > 1}
+					<img src={files[0].url} alt={title} loading="lazy"
 						 on:load={setImageClass}
-						 on:mouseenter={(e) => handleMultiImageHover(e, urls[1])}
-						 on:mouseleave={(e) => handleMultiImageHover(e, urls[0])} />
-				{:else if assetType === "Image" && urls.length === 1}
-					<img src={urls[0]} alt={title} loading="lazy"
+						 on:mouseenter={(e) => handleMultiImageHover(e, files[1].url)}
+						 on:mouseleave={(e) => handleMultiImageHover(e, files[0].url)} />
+				{:else if assetType === "Image" && files.length === 1}
+					<img src={files[0].url} alt={title} loading="lazy"
 						 on:load={setImageClass} />
 				{/if}
 			</a>

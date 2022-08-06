@@ -13,7 +13,7 @@
 
 
 <div class="page-content">
-	<ProjectsList tag={$page.params.year} />
+	<ProjectsList year={$page.params.year} />
 </div>
 
 
