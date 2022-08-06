@@ -13,7 +13,7 @@
 		<div class="caption">
 			<a href={slug} class="title">{title}</a>
 			<div class="tags">
-				{#each tags as tag, i}
+				{#each tags as tag}
 					<span>
 						<a href={"/tag/" + tag}>{tag}</a>,
 						{""}

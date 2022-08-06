@@ -8,44 +8,43 @@
 
 
 <aside>
-    <sup>(24)</sup>
+    <sup>({project.id})</sup>
     {#if isSubview}
         <a href={"/" + $page.params.project}>
-            <h1 class="title">Dog</h1>
+            <h1 class="title">{project.title}</h1>
         </a>
     {:else}
-        <h1 class="title">Dog</h1>
+        <h1 class="title">{project.title}</h1>
     {/if}
 
     {#if !isSubview}
         <div class="meta">
-            HD video, color, sound
-            <br>
-            5:36 min.
-            <br>
-            <br>
-            <a href="/video">Video</a>,
-            <a href="/2021">2021</a>
+            <pre>{project.medium}</pre>
+            <div class="tags">
+                {#each project.tags as tag}
+                    <span>
+                        <a href={"/tag/" + tag}>{tag}</a>,
+                        {""}
+                    </span>
+                {/each}
+                <a href={"/tag/" + project.year}>{project.year}</a>
+            </div>
 
             <hr />
 
-            <small>
-                With Ariel Zetina
-                <br><br>
-                Music by Bastardgeist
-                <br><br>
-                Footage contributed by Joel Midden
-            </small>
+            <small><pre>{project.description}</pre></small>
         </div>
     {/if}
 
+    {#if project.transcript.uuid || project.exhibitionGuide || project.press}
     <hr />
+    {/if}
 
     <div class="links">
         {#if isSubview}
             {view}
         {:else}
-            {#if project.transcript}
+            {#if project.transcript.uuid}
                 <a href={"/" + $page.params.project + "/transcript"}>
                     Transcript
                 </a>
@@ -92,6 +91,10 @@
 
     .meta {
         margin-top: 1.45rem;
+
+        .tags {
+            text-transform: capitalize;
+        }
     }
 
 	.links {
