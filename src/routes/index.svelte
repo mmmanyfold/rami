@@ -12,30 +12,6 @@ const handleMultiImageHover = (e, url) => {
 		e.fromElement.setAttribute("src", url);
 	}
 };
-const setImageClass = (e) => {
-	const img = e.path[0];
-	if (img.naturalWidth > img.naturalHeight) {
-		img.classList.add("landscape");
-	} else {
-		img.classList.add("portrait");
-	}
-}
-const setVideoClass = (e) => {
-	const video = e.path[0];
-	video.setAttribute("width", "50%");
-}
-const getAlignmentClass = (i) => {
-	const evenLength = projects.length % 2 === 0;
-	if (i === 0) {
-		return "items-right"
-	} else if (i % 5 === 0 || i % 6 === 0) {
-		return "items-center";
-	} else if (evenLength) {
-		return i % 2 === 0 ? "items-right" : "items-left";
-	} else {
-		return i % 2 === 1 ? "items-left" : "items-right";
-	}
-}
 </script>
 
 <svelte:head>
@@ -47,30 +23,24 @@ const getAlignmentClass = (i) => {
 <!-------------------------->
 
 
-<ul class="home-visual">
+<ul class="gallery">
 	{#each projects as { id, title, slug, homePageAssets }, i (id)}
 	{@const { type: assetType, files } = homePageAssets}
-	<li>
-		<div class={"row"}>
-			<a href={slug} class="no-hover">
-				<sup class="middle">({id})</sup>
-				{#if assetType === "Video"}
-					<div class="video-container">
-						<video width="100%" autoplay loop>
-							<source src={files[0].url} type="video/mp4">
-						</video>
-					</div>
-				{:else if assetType === "Image" && files.length > 1}
-					<img src={files[0].url} alt={title} loading="lazy"
-						 on:load={setImageClass}
-						 on:mouseenter={(e) => handleMultiImageHover(e, files[1].url)}
-						 on:mouseleave={(e) => handleMultiImageHover(e, files[0].url)} />
-				{:else if assetType === "Image" && files.length === 1}
-					<img src={files[0].url} alt={title} loading="lazy"
-						 on:load={setImageClass} />
-				{/if}
-			</a>
-		</div>
+	<li class="row">
+		<a href={slug} class="no-hover">
+			<sup class="middle">({id})</sup>
+			{#if assetType === "Video"}
+				<video autoplay loop>
+					<source src={files[0].url} type="video/mp4">
+				</video>
+			{:else if assetType === "Image" && files.length > 1}
+				<img src={files[0].url} alt={title} loading="lazy"
+						on:mouseenter={(e) => handleMultiImageHover(e, files[1].url)}
+						on:mouseleave={(e) => handleMultiImageHover(e, files[0].url)} />
+			{:else if assetType === "Image" && files.length === 1}
+				<img src={files[0].url} alt={title} loading="lazy" />
+			{/if}
+		</a>
 	</li>
 	{/each}
 </ul>
@@ -88,27 +58,20 @@ const getAlignmentClass = (i) => {
 
 
 <style lang="less">
-li {
-	margin: 2.5rem 0;
-}
-
-.items-left {
-	align-items: flex-start;
-}
-
-.items-right {
-	align-items: flex-end;
-}
-
-.items-center {
-	align-items: center;
-}
-
-.row {
+.gallery {
 	display: flex;
 	flex-direction: column;
-}
-.home-visual {
+
+	.row {
+		margin: 2.5rem 0;
+		&:nth-child(odd) {
+			align-self: flex-end;
+		}
+		&:nth-child(even) {
+			align-self: flex-start;
+		}
+	}
+
 	sup {
 		display: block;
 		padding: 0 0 0.3rem 0.3rem;
@@ -116,13 +79,21 @@ li {
 			padding-left: 0;
 		}
 	}
-}
 
-.video-container {
-	width: 100%;
+	video {
+		width: 100vw;
+		@media screen and (min-width: @mid-break) {
+			width: 70vw;
+			max-height: 900px;
+		}
+	}
 
-	@media screen and (min-with: @mid-break) {
-		width: 70vw;
+	img {
+		max-width: 100vw;
+		@media screen and (min-width: @mid-break) {
+			max-width: 70vw;
+			max-height: 900px;
+		}
 	}
 }
 
