@@ -133,9 +133,13 @@
 		margin-bottom: 1rem;
 
 		.thumbnail {
-			width: 48.5%;
+			width: 100%;
 			padding: 1.1rem 0;
-			margin-bottom: 1.2rem;
+
+			@media screen and (min-width: @mid-break) {
+				width: 48.5%;
+				margin-bottom: 1.2rem;
+			}
 		}
 
 		img {
