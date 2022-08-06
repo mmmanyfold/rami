@@ -1,6 +1,6 @@
 <script>
     import { page } from '$app/stores';
-	import projectsJson from '../projects.json';
+	import projectsJson from '/Users/elle/local/rami/src/projects.json';
 
 	export let tag = null;
 	export let year = null;

@@ -2,7 +2,7 @@
 </script>
 
 <script>
-import projectsJson from '../projects.json';
+import projectsJson from '/Users/elle/local/rami/src/projects.json';
 const projects = projectsJson.allProjects.sort((a, b) => a.id < b.id ? 1 : -1);
 
 const handleMultiImageHover = (e, url) => {
