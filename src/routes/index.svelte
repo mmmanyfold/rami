@@ -1,10 +1,6 @@
-<script context="module">
-</script>
-
 <script>
 	import ThumbnailGrid from '../lib/ThumbnailGrid.svelte';
-	import projectsJson from '/Users/elle/local/rami/src/projects.json';
-	const projects = projectsJson.allProjects.sort((a, b) => a.id < b.id ? 1 : -1);
+	import { projects } from '../stores.js';
 
 	$: innerWidth = 0
 
@@ -35,10 +31,10 @@
 <ul class="gallery">
 	{#if innerWidth < 770}
 		<div style="padding:1.25rem;">
-			<ThumbnailGrid projects={projects} />
+			<ThumbnailGrid projects={$projects} />
 		</div>
 	{:else}
-		{#each projects as { id, title, slug, homePageAssets }, i (id)}
+		{#each $projects as { id, title, slug, homePageAssets } (id)}
 		{@const { type: assetType, files } = homePageAssets}
 		<li class="row">
 			<a href={slug} class="no-hover">
@@ -61,7 +57,7 @@
 </ul>
 
 <section class="footnotes">
-	{#each projects as { id, title, slug } (id)}
+	{#each $projects as { id, title, slug } (id)}
 		<a href={slug}>
 			<sup class="no-hover">({id})</sup> <span>{title}</span>
 		</a>

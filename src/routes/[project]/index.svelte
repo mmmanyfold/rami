@@ -2,13 +2,13 @@
 	import ProjectView from '$lib/ProjectView.svelte';
 	import { page } from '$app/stores';
 	import { browser, dev } from '$app/env';
-	import projectsJson from '/Users/elle/local/rami/src/projects.json';
 	export const hydrate = dev;
 	export const router = browser;
 </script>
 
 <script>
-	const project = projectsJson.allProjects.find(p => p.slug === $page.params.project);
+	import { projects } from '../../stores.js';
+	const project = $projects.find(p => p.slug === $page.params.project);
 </script>
 
 <svelte:head>

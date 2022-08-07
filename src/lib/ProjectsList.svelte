@@ -1,12 +1,11 @@
 <script>
-    import { page } from '$app/stores';
 	import ThumbnailGrid from './ThumbnailGrid.svelte';
-	import projectsJson from '/Users/elle/local/rami/src/projects.json';
-
+	import { projects as data } from '../stores.js';
+	
 	export let tag = null;
 	export let year = null;
 
-	let projects = projectsJson.allProjects.sort((a, b) => a.id < b.id ? 1 : -1);
+	let projects = $data;
 	if (tag) {
 		projects = projects.filter((p) => p.tags.includes(tag));
 	} else if (year) {
@@ -24,7 +23,7 @@
 	<li>
 		<div class="title">
 			<sup class="middle">({id})</sup>
-			<a href={slug}>
+			<a href={"/" + slug}>
 				<h1>{title}</h1>
 			</a>
 		</div>

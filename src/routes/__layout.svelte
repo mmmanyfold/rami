@@ -1,12 +1,23 @@
 <script>
 	import Header from '$lib/Header.svelte';
 	import '../app.less';
+	import { getProjects, projects, loading, error } from '../stores.js';
+
+	if (!$projects.length) {
+		getProjects();
+	}
 </script>
 
 <Header />
 
 <main>
-	<slot />
+	{#if $loading}
+		<span>Loading...</span>
+	{:else if $error}
+		<span>Something went wrong.</span>
+	{:else}
+		<slot />
+	{/if}
 </main>
 
 <style lang="less">

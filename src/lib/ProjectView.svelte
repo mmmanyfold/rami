@@ -1,7 +1,7 @@
 <script>
 	import ProjectAside from '$lib/ProjectAside.svelte';
     export let project;
-    export let view;
+    export let view = "main";
 </script>
 
 

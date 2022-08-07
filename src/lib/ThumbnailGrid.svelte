@@ -11,7 +11,7 @@
 	<div class="item">
 		<img src={thumbnail} alt={title} />
 		<div class="caption">
-			<a href={slug} class="title">{title}</a>
+			<a href={"/" + slug} class="title">{title}</a>
 			<div class="tags">
 				{#each tags as tag}
 					<span>
