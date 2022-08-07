@@ -40,7 +40,7 @@
 			<a href={slug} class="no-hover">
 				<sup class="middle">({id})</sup>
 				{#if assetType === "Video"}
-					<video autoplay loop>
+					<video autoplay muted loop>
 						<source src={files[0].url} type="video/mp4">
 					</video>
 				{:else if assetType === "Image" && files.length > 1}

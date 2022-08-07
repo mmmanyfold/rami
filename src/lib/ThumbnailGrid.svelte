@@ -9,7 +9,9 @@
 <div class="grid">
 	{#each projects as { id, title, slug, tags, year, thumbnail } (id)}
 	<div class="item">
-		<img src={thumbnail} alt={title} />
+        <a href={"/" + slug} class="title">
+            <img src={thumbnail} alt={title} />
+        </a>
 		<div class="caption">
 			<a href={"/" + slug} class="title">{title}</a>
 			<div class="tags">
