@@ -5,7 +5,7 @@ export const error = writable(false)
 export const projects = writable([])
 export const cvAdditional = writable([])
 
-const baseUrl = "http://rami-notion-api.fly.dev/public/"
+const baseUrl = "https://rami-notion-api.fly.dev/public/"
 
 export function getProjects() {
 	async function get() {
