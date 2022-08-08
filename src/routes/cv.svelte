@@ -6,34 +6,9 @@
 
 <script>
 	import CVSection from '../lib/CVSection.svelte';
+	import { cvAdditional } from '../stores';
 
-	let data = [
-		{
-			tag: "Print & Digital Projects",
-			title: "Virtues Vol. 1.",
-			description: "With J. Midden & Mak Hepler-Gonzalez. Icebox Project Space. Philadelphia, PA.",
-			detail: "(solo)",
-			url: "google.com",
-		},
-		{
-			tag: "Print & Digital Projects",
-			title: "Leaning Back (2).",
-			description: "For Circling.",
-		},
-		{
-			tag: "Readings & Talks",
-			title: "Leaning Back (2).",
-			description: "For Circling.",
-			url: "google.com",
-		},
-		{
-			tag: "Readings & Talks",
-			title: "Leaning Back (2).",
-			description: "For Circling.",
-			url: "google.com",
-		},
-	]
-	data = data.reduce((ret, d) => {
+	const data = $cvAdditional.reduce((ret, d) => {
 		if (ret.itemsByTag[d.tag]) {
 			ret.itemsByTag[d.tag] = [...ret.itemsByTag[d.tag], d]
 		} else {
@@ -53,10 +28,8 @@
 <div class="page-content">
 	<section>
 		<h1>Exhibitions & Screenings</h1>
-		<h2>2021</h2>
-		<CVSection items={[]} />
-		<h2>2020</h2>
-		<CVSection items={[]} />
+		<!-- <h2>2021</h2>
+		<h2>2020</h2> -->
 	</section>
 	<hr/>
 
@@ -80,4 +53,7 @@
 	hr {
         margin: 0;
     }
+	.page-content {
+		margin-bottom: 4em;
+	}
 </style>

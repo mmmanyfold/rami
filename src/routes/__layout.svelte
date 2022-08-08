@@ -1,10 +1,13 @@
 <script>
 	import Header from '$lib/Header.svelte';
 	import '../app.less';
-	import { getProjects, projects, loading, error } from '../stores.js';
+	import { getProjects, getCvAdditional, projects, cvAdditional, loading, error } from '../stores.js';
 
 	if (!$projects.length) {
 		getProjects();
+	}
+	if (!$cvAdditional.length) {
+		getCvAdditional();
 	}
 </script>
 
@@ -12,7 +15,7 @@
 
 <main>
 	{#if $loading}
-		<span>Loading...</span>
+		<span></span>
 	{:else if $error}
 		<span>Something went wrong.</span>
 	{:else}

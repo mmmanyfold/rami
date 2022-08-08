@@ -47,10 +47,16 @@
 
 
 <style lang="less">
+    div[role=button] {
+        cursor: pointer;
+        &:hover {
+            color: @accent-color;
+        }
+    }
+
 	h1 {
 		text-transform: uppercase;
 		margin: 1.8rem 0 1.7rem 0;
-        cursor: pointer;
 	}
 
     ul {
