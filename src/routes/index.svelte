@@ -2,15 +2,7 @@
 	import ThumbnailGrid from '../lib/ThumbnailGrid.svelte';
 	import { projects } from '../stores.js';
 
-	$: innerWidth = 0
-
-	const handleMultiImageHover = (e, url) => {
-		if (e.type === "mouseenter") {
-			e.toElement.setAttribute("src", url);
-		} else if (e.type === "mouseleave") {
-			e.fromElement.setAttribute("src", url);
-		}
-	};
+	$: innerWidth = 0;
 </script>
 
 <svelte:head>
@@ -44,9 +36,8 @@
 						<source src={files[0].url} type="video/mp4">
 					</video>
 				{:else if assetType === "Image" && files.length > 1}
-					<img src={files[0].url} alt={title} loading="lazy"
-							on:mouseenter={(e) => handleMultiImageHover(e, files[1].url)}
-							on:mouseleave={(e) => handleMultiImageHover(e, files[0].url)} />
+					<img src={files[1].url} alt="" loading="lazy" class="hover-image" />
+					<img src={files[0].url} alt={title} loading="lazy" />
 				{:else if assetType === "Image" && files.length === 1}
 					<img src={files[0].url} alt={title} loading="lazy" />
 				{/if}
@@ -99,6 +90,14 @@
 	img {
 		max-width: 70vw;
 		max-height: 900px;
+
+		&.hover-image {
+			position: absolute;
+			opacity: 0;
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 }
 
