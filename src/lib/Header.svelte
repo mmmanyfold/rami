@@ -12,13 +12,15 @@
 
 <style lang="less">
 	header {
+		width: 100vw;
+		position: fixed;
+		background-color: var(--bg-color);
 		display: flex;
 		justify-content: space-between;
-		padding: 0.5rem 0.6rem;
-		padding-bottom: 0;
+		padding: 0.5rem 0.6rem 0.4rem 0.6rem;
 
 		@media screen and (min-width: @mid-break) {
-			padding: 1.25rem 1.8rem 0 1.8rem;
+			padding: 1.25rem 1.8rem 1rem 1.8rem;
 		}
 	}
 

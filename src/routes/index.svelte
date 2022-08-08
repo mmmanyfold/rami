@@ -30,7 +30,7 @@
 <div>
 <ul class="gallery">
 	{#if innerWidth < 770}
-		<div style="padding:1.25rem;">
+		<div style="padding: 0 1.25rem 0 1.25rem;">
 			<ThumbnailGrid projects={$projects} />
 		</div>
 	{:else}
@@ -76,7 +76,7 @@
 	flex-direction: column;
 
 	.row {
-		margin: 2.5rem 0;
+		margin: 1.5rem 0 3.5rem 0;
 
 		&:nth-child(odd) {
 			align-self: flex-end;
@@ -104,7 +104,7 @@
 
 .footnotes {
 	line-height: 1.5rem;
-	margin: 5rem 0 2rem 0;
+	margin: 20rem 0 2rem 0;
 
 	a {
 		margin-right: 0.45rem;

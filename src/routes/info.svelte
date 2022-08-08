@@ -53,7 +53,7 @@
 		font-size: 1.3rem;
 		
 		@media screen and (min-width: @mid-break) {
-			margin-top: 2.4rem;
+			margin-top: 1rem;
 		}
 	}
 </style>
