@@ -72,7 +72,7 @@
 <style lang="less">
 	h1 {
 		text-transform: uppercase;
-		margin: 1.7rem 0;
+		margin: 1.4rem 0 1.7rem 0;
 	}
 	h2 {
 		margin-bottom: 0;

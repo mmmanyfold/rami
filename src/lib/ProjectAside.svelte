@@ -70,11 +70,12 @@
 
 <style lang="less">
 	aside {
-		margin: 1.72rem 0;
+		margin: 1.25rem 0 6rem 0;
 
 		@media screen and (min-width: @mid-break) {
 			width: 20%;
 			margin-right: 3rem;
+            margin-top: 0.35rem;
 		}
 	}
 

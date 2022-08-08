@@ -14,7 +14,7 @@ export function getProjects() {
 		try {
 			const response = await fetch(url)
             const json = await response.json()
-            const data = json.allProjects.sort((a, b) => a.id < b.id ? 1 : -1);
+            const data = json.rows.sort((a, b) => a.id < b.id ? 1 : -1);
 			projects.set(data)
 		} catch(e) {
 			error.set(e)

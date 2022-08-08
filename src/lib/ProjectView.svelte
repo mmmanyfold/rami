@@ -27,7 +27,7 @@
 		background-color: black;
 
 		@media screen and (min-width: @mid-break) {
-			margin-top: 1.5rem
+			margin-top: 0;
 		}
 	}
 </style>

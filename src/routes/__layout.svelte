@@ -31,7 +31,7 @@
 		padding-top: 3.5rem;
 
 		@media screen and (min-width: @mid-break) {
-			padding: 5rem 1.8rem 0 1.8rem;
+			padding: 5.4rem 1.8rem 0 1.8rem;
 		}
 	}
 </style>

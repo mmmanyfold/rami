@@ -51,7 +51,7 @@
 		margin-top: 1.2rem;
 
 		@media screen and (min-width: @mid-break) {
-			margin-top: 0.25rem;
+			margin-top: 0;
 			margin-bottom: 2.5rem;
 		}
 	}
@@ -60,9 +60,18 @@
 		padding: 1rem 0;
 		border-bottom: 1px solid @accent-color;
 
+		&:nth-child(1) {
+			padding-top: 0.5rem;
+		}
+
 		@media screen and (min-width: @mid-break) {
 			display: flex;
 			justify-content: space-between;
+			padding: 1.1rem 0;
+
+			&:nth-child(1) {
+				padding-top: 0;
+			}
 		}
 
 		.title {

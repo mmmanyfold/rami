@@ -3,10 +3,10 @@
 </script>
 
 <header>
-	<a sveltekit:prefetch class="home-link no-hover" href="/">RAMI GEORGE</a>
+	<a class="home-link no-hover" href="/">RAMI GEORGE</a>
 	<div class="nav-links">
-		<a sveltekit:prefetch href="/index">INDEX</a>
-		<a sveltekit:prefetch href="/info">INFO</a>
+		<a href="/index">INDEX</a>
+		<a href="/info">INFO</a>
 	</div>
 </header>
 
