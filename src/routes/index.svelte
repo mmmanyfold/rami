@@ -1,5 +1,6 @@
 <script>
 	import ThumbnailGrid from '../lib/ThumbnailGrid.svelte';
+	import Footnotes from '../lib/Footnotes.svelte';
 	import { projects } from '../stores.js';
 
 	$: innerWidth = 0;
@@ -19,7 +20,6 @@
 {#if !innerWidth}
 <span></span>
 {:else}
-<div>
 <ul class="gallery">
 	{#if innerWidth < 770}
 		<div style="padding: 0 1.25rem 0 1.25rem;">
@@ -46,15 +46,7 @@
 		{/each}
 	{/if}
 </ul>
-
-<section class="footnotes">
-	{#each $projects as { id, title, slug } (id)}
-		<a href={slug}>
-			<sup class="no-hover">({id})</sup> <span>{title}</span>
-		</a>
-	{/each}
-</section>
-</div>
+<Footnotes projects={$projects} />
 {/if}
 
 
@@ -98,23 +90,6 @@
 				opacity: 1;
 			}
 		}
-	}
-}
-
-.footnotes {
-	line-height: 1.5rem;
-	margin: 20rem 0 2rem 0;
-
-	a {
-		margin-right: 0.45rem;
-	}
-
-	sup {
-		font-size: 0.5rem;
-	}
-
-	span {
-		font-style: italic;
 	}
 }
 </style>

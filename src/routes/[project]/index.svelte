@@ -17,7 +17,7 @@
 </svelte:head>
 
 
-<ProjectView project={project}>
+<ProjectView project={project} projects={$projects}>
 	Content
 </ProjectView>
 

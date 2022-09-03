@@ -1,9 +1,12 @@
 <script>
 	import ProjectAside from '$lib/ProjectAside.svelte';
+	import Footnotes from '$lib/Footnotes.svelte';
     export let project;
+    export let projects;
     export let view = "main";
 </script>
 
+<!-------------------------->
 
 <div class="page-content">
 	<ProjectAside project={project} view={view} />
@@ -12,7 +15,9 @@
 		<slot />
 	</section>
 </div>
+<Footnotes projects={projects} />
 
+<!-------------------------->
 
 <style lang="less">
 	.page-content {
