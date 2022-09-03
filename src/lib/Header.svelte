@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<a class="home-link no-hover" href="/">RAMI GEORGE</a>
+	<a class="home-link" href="/">RAMI GEORGE</a>
 	<div class="nav-links">
 		<a href="/index">INDEX</a>
 		<a href="/info">INFO</a>
@@ -18,6 +18,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0.5rem 0.6rem 0.4rem 0.6rem;
+		z-index: 1;
 
 		@media screen and (min-width: @mid-break) {
 			padding: 1.25rem 1.8rem 1rem 1.8rem;

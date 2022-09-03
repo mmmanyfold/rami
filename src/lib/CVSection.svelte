@@ -19,15 +19,13 @@
         {#each items as { title, description, detail, url }}
             <li>
                 {#if url}
-                    <a href={url} target="_blank" class="link">
-                        <span class="title no-hover">{title}</span>
+                    <a href={url} target="_blank">
+                        <span class="title">{title}</span>
                         {#if description}
                             <span>{description}</span>
                         {/if}
                         {#if detail}
-                            <span class="no-hover">
-                                {detail}
-                            </span>
+                            <span>{detail}</span>
                         {/if}
                     </a>
                 {:else}
@@ -70,16 +68,20 @@
 
     .title {
         font-style: italic;
+        color: var(--text-color);
+    }
+
+    a {
+        color: @secondary-color;
+        &:hover {
+            color: @accent-color !important;
+            .title {
+                color: inherit;
+            }
+        }
     }
 
     .description {
         color: @secondary-color;
-    }
-
-    .link {
-        color: @secondary-color;
-        &:hover {
-            color: @accent-color;
-        }
     }
 </style>
