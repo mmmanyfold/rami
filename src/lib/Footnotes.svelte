@@ -14,6 +14,8 @@
     section {
         line-height: 1.5rem;
         margin: 10rem 0 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
 
         a {
             margin-right: 0.45rem;

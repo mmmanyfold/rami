@@ -20,11 +20,17 @@
 <ul>
 {#if projects.length}
 	{#each projects as { id, title, slug, year, tags } (id)}
+	{@const [first, ...rest] = title.split(",")}
 	<li>
 		<div class="title">
 			<sup class="middle">({id})</sup>
 			<a href={"/" + slug}>
-				<h1>{title}</h1>
+				<h1 class="title-text">
+					<span>{`${first}${rest.length ? ", " : ""}`}</span>
+					{#if rest.length}
+						<span>{rest.join(",").substr(1)}</span>
+					{/if}
+				</h1>
 			</a>
 		</div>
 		<div class="tags">
@@ -90,6 +96,15 @@
 				margin-top: 0;
 				margin-left: 2.4rem;
 			}
+		}
+
+		span {
+			white-space: pre;
+		}
+
+		.title-text {
+			display: flex;
+			flex-wrap: wrap;
 		}
 
 		.tags {
