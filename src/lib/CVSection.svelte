@@ -1,23 +1,30 @@
 <script>
     export let name;
     export let items;
+    export let isNested;
+    export let defaultOpen;
+    export let alwaysOpen;
     
     import { slide } from "svelte/transition";
 
-    let isOpen = !name;
+    let isOpen = alwaysOpen || defaultOpen || !name;
     const toggle = () => isOpen = !isOpen
 </script>
 
 <section>
     {#if name}
-        <div role="button" on:click={toggle} aria-expanded={isOpen}>
-            <h1>{name}</h1>
-        </div>
+        {#if alwaysOpen}
+            <h1 class={isNested && "nested"}>{name}</h1>
+        {:else}
+            <div role="button" on:click={toggle} aria-expanded={isOpen}>
+                <h1 class={isNested && "nested"}>{name}</h1>
+            </div>
+        {/if}
     {/if}
     {#if isOpen}
-    <ul transition:slide={{ duration: 300 }}>
+    <ul class={isNested && "nested"} transition:slide={{ duration: 300 }}>
         {#each items as { title, description, detail, url }}
-            <li>
+            <li class={isNested && "nested"}>
                 {#if url}
                     <a href={url} target="_blank">
                         <span class="title">{title}</span>
@@ -45,25 +52,34 @@
 
 
 <style lang="less">
-    div[role=button] {
-        cursor: pointer;
-        &:hover {
-            color: @accent-color;
+    section:first-child {
+        h1 {
+            margin-top: 0;
         }
     }
-
 	h1 {
 		text-transform: uppercase;
 		margin: 1.8rem 0 1.7rem 0;
+        &.nested {
+            margin: 1.6rem 0 0 0;
+        }
 	}
 
     ul {
         padding: 0 0 1.8rem 1.5rem;
+        &.nested {
+            padding-top: 0.4rem;
+            padding-bottom: 0;
+        }
     }
 
     li {
         line-height: 1.6rem;
         margin-bottom: 0.6rem;
+        &.nested {
+            line-height: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
     }
 
     .title {

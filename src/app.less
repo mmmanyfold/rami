@@ -89,6 +89,13 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
+div[role=button] {
+	cursor: pointer;
+	&:hover {
+		color: @accent-color;
+	}
+}
+
 hr {
 	background: @accent-color;
 	height: 1px;
