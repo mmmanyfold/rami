@@ -9,7 +9,7 @@
 	import ProjectView from '$lib/ProjectView.svelte';
 	import Footnotes from '../../lib/Footnotes.svelte';
 	import { projects, getProjects } from '../../stores.js';
-	import { onMount } from "svelte";
+	import { afterUpdate } from "svelte";
 	
 	let project;
 	let nextUrl = "";
@@ -25,7 +25,7 @@
 		prevUrl = prev.slug;
 	}
 
-	onMount(() => {
+	afterUpdate(() => {
 		if ($projects.length) {
 			setProject($projects);
 		}
