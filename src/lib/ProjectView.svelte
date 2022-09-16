@@ -1,8 +1,6 @@
 <script>
 	import ProjectAside from '$lib/ProjectAside.svelte';
-	import Footnotes from '$lib/Footnotes.svelte';
     export let project;
-    export let projects;
     export let view = "main";
 </script>
 
@@ -15,7 +13,6 @@
 		<slot />
 	</section>
 </div>
-<Footnotes projects={projects} />
 
 <!-------------------------->
 

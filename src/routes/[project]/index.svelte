@@ -7,15 +7,24 @@
 
 <script>
 	import ProjectView from '$lib/ProjectView.svelte';
+	import Footnotes from '../../lib/Footnotes.svelte';
 	import { projects, getProjects } from '../../stores.js';
 	
 	let project;
+	let nextUrl = "";
+	let prevUrl = "";
 
 	projects.subscribe(list => {
 		if (!list.length) {
 			getProjects();
 		} else {
-			project = list.find(p => p.slug === $page.params.project);
+			const idx = list.findIndex(p => p.slug === $page.params.project);
+			project = list[idx];
+
+			const next = idx === list.length - 1 ? list[0] : list[idx + 1];
+			const prev = idx === 0 ? list[list.length - 1] : list[idx - 1];
+			nextUrl = next.slug;
+			prevUrl = prev.slug;
 		}
 	});
 </script>
@@ -29,8 +38,31 @@
 	<ProjectView project={project} projects={$projects}>
 		Content
 	</ProjectView>
+	<a class="arrow left" href={prevUrl} aria-label="Previous">
+		{"ᐸ"}
+	</a>
+	<a class="arrow right" href={nextUrl} aria-label="Next">
+		{"ᐳ"}
+	</a>
+{/if}
+
+{#if $projects}
+<Footnotes projects={$projects} />
 {/if}
 
 
 <style lang="less">
+	.arrow {
+		position: fixed;
+		top: 49vh;
+		color: @secondary-color;
+		font-size: 1rem;
+
+		&.left {
+			left: 2rem;
+		}
+		&.right {
+			right: 2rem;
+		}
+	}
 </style>
