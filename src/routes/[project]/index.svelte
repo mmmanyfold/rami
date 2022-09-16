@@ -1,5 +1,4 @@
 <script context="module">
-	import ProjectView from '$lib/ProjectView.svelte';
 	import { page } from '$app/stores';
 	import { browser, dev } from '$app/env';
 	export const hydrate = dev;
@@ -7,8 +6,18 @@
 </script>
 
 <script>
-	import { projects } from '../../stores.js';
-	const project = $projects.find(p => p.slug === $page.params.project);
+	import ProjectView from '$lib/ProjectView.svelte';
+	import { projects, getProjects } from '../../stores.js';
+	
+	let project;
+
+	projects.subscribe(list => {
+		if (!list.length) {
+			getProjects();
+		} else {
+			project = list.find(p => p.slug === $page.params.project);
+		}
+	});
 </script>
 
 <svelte:head>
@@ -16,10 +25,11 @@
 	<meta name="description" content="" />
 </svelte:head>
 
-
-<ProjectView project={project} projects={$projects}>
-	Content
-</ProjectView>
+{#if project}
+	<ProjectView project={project} projects={$projects}>
+		Content
+	</ProjectView>
+{/if}
 
 
 <style lang="less">

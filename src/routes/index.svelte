@@ -1,10 +1,18 @@
 <script>
 	import ThumbnailGrid from '../lib/ThumbnailGrid.svelte';
 	import Footnotes from '../lib/Footnotes.svelte';
-	import { projects } from '../stores.js';
+	import { projects, getProjects, loading, error } from '../stores.js';
 
+	projects.subscribe(list => {
+		if (!list.length) {
+			getProjects();
+		}
+	});
+	
 	$: innerWidth = 0;
 </script>
+
+<!-------------------------->
 
 <svelte:head>
 	<title>Rami George</title>
@@ -13,12 +21,14 @@
 
 <svelte:window bind:innerWidth />
 
-
 <!-------------------------->
-
 
 {#if !innerWidth}
 <span></span>
+{:else if $loading}
+Loading...
+{:else if $error}
+Error
 {:else}
 <ul class="gallery">
 	{#if innerWidth < 770}
@@ -49,9 +59,7 @@
 <Footnotes projects={$projects} />
 {/if}
 
-
 <!-------------------------->
-
 
 <style lang="less">
 .gallery {

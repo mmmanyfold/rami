@@ -5,12 +5,17 @@
 	export let tag = null;
 	export let year = null;
 
-	let projects = $data;
-	if (tag) {
-		projects = projects.filter((p) => p.tags.includes(tag));
-	} else if (year) {
-		projects = projects.filter((p) => p.year === year);
-	}
+	let projects;
+
+	data.subscribe(list => {
+		if (tag) {
+			projects = list.filter((p) => p.tags.includes(tag));
+		} else if (year) {
+			projects = list.filter((p) => p.year === year);
+		} else {
+			projects = list;	
+		}
+	});
 </script>
 
 
@@ -18,7 +23,7 @@
 
 
 <ul>
-{#if projects.length}
+{#if projects?.length}
 	{#each projects as { id, title, slug, year, tags } (id)}
 	{@const [first, ...rest] = title.split(",")}
 	<li>

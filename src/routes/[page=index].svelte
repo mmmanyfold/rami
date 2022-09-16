@@ -5,6 +5,16 @@
 	export const router = browser;
 </script>
 
+<script>
+	import { projects, getProjects, loading, error } from '../stores.js';
+	
+	projects.subscribe(list => {
+		if (!list.length) {
+			getProjects();
+		}
+	});
+</script>
+
 <svelte:head>
 	<title>INDEX</title>
 	<meta name="description" content="Projects" />

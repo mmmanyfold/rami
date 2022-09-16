@@ -6,55 +6,42 @@
 
 <script>
 	import CVSection from '../lib/CVSection.svelte';
-	import { onMount } from "svelte";
 	import { slide } from "svelte/transition";
 	import { exhibitionsAndScreenings, getExhibitionsAndScreenings,
 		     cvAdditional, getCvAdditional } from '../stores';
-
-	onMount(() => {
-		if (!$exhibitionsAndScreenings.length) {
-			getExhibitionsAndScreenings();
-		}
-		if (!$cvAdditional.length) {
-			getCvAdditional();
-		}
-	});
-
-	const processItemsByKey = (items, key) => {
-		return items.reduce((ret, item) => {
-			const v = item[key]
-			if (ret.itemsByKey[v]) {
-				ret.itemsByKey[v] = [...ret.itemsByKey[v], item]
-			} else {
-				ret.itemsByKey[v] = [item]
-				ret.values = [...ret.values, v];
-			}
-			return ret;
-		}, { itemsByKey: {}, values: [] });
-	}
+	import { processItemsByKey } from '../utils';
 
 	let openItems1 = true;
 	const toggleItems1 = () => openItems1 = !openItems1
 
-	let items1 = [];
-	let items2 = [];
+	let items1 = {};
+	let items2 = {};
 	const tags = ["Print & Digital Projects", "Readings & Talks", "Awards & Residencies", "Press & Exhibition Catalogues", "Organizing & Programming", "Teaching & Class Visits", "Education"]
 
-	exhibitionsAndScreenings.subscribe(items => {
-		const processed = processItemsByKey(items, "year");
-		const years = processed.values.sort().reverse();
-		items1 = {...processed, years}
+	exhibitionsAndScreenings.subscribe(list => {
+		if (!list.length) {
+			getExhibitionsAndScreenings();
+		} else {
+			const processed = processItemsByKey(list, "year");
+			const years = processed.values.sort().reverse();
+			items1 = { ...processed, years };
+		}
 	});
 
-	cvAdditional.subscribe(items => {
-		const processed = processItemsByKey(items, "tag");
-		items2 = {...processed, tags}
+	cvAdditional.subscribe(list => {
+		if (!list.length) {
+			getCvAdditional();
+		} else {
+			const processed = processItemsByKey(list, "tag");
+			items2 = { ...processed, tags };
+		}
 	});
 </script>
 
 <svelte:head>
 	<title>CV</title>
-	<meta name="description" content="EXHIBITIONS &amp; SCREENINGS, PRINT &amp; DIGITAL PROJECTS, READINGS &amp; TALKS, AWARDS &amp; RESIDENCIES, PRESS &amp; EXHIBITION CATALOGUES, ORGANIZING &amp; PROGRAMMING, TEACHING &amp; CLASS VISITS, EDUCATION" />
+	<meta name="description" 
+	      content="EXHIBITIONS &amp; SCREENINGS, PRINT &amp; DIGITAL PROJECTS, READINGS &amp; TALKS, AWARDS &amp; RESIDENCIES, PRESS &amp; EXHIBITION CATALOGUES, ORGANIZING &amp; PROGRAMMING, TEACHING &amp; CLASS VISITS, EDUCATION" />
 </svelte:head>
 
 
