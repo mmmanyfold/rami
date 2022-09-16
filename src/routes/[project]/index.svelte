@@ -9,22 +9,33 @@
 	import ProjectView from '$lib/ProjectView.svelte';
 	import Footnotes from '../../lib/Footnotes.svelte';
 	import { projects, getProjects } from '../../stores.js';
+	import { onMount } from "svelte";
 	
 	let project;
 	let nextUrl = "";
 	let prevUrl = "";
 
+	const setProject = (list) => {
+		const idx = list.findIndex(p => p.slug === $page.params.project);
+		project = list[idx];
+
+		const next = idx === list.length - 1 ? list[0] : list[idx + 1];
+		const prev = idx === 0 ? list[list.length - 1] : list[idx - 1];
+		nextUrl = next.slug;
+		prevUrl = prev.slug;
+	}
+
+	onMount(() => {
+		if ($projects.length) {
+			setProject($projects);
+		}
+	});
+
 	projects.subscribe(list => {
 		if (!list.length) {
 			getProjects();
 		} else {
-			const idx = list.findIndex(p => p.slug === $page.params.project);
-			project = list[idx];
-
-			const next = idx === list.length - 1 ? list[0] : list[idx + 1];
-			const prev = idx === 0 ? list[list.length - 1] : list[idx - 1];
-			nextUrl = next.slug;
-			prevUrl = prev.slug;
+			setProject(list);
 		}
 	});
 </script>
