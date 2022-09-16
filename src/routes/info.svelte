@@ -4,6 +4,29 @@
 	export const router = browser;
 </script>
 
+<script>
+	import InfoSection from '../lib/InfoSection.svelte';
+	import { info, getInfo } from '../stores.js';
+	import { processItemsByKey } from '../utils';
+
+	const tags = ["current & forthcoming", "news", "archive"];
+	let items;
+	let bio = "";
+
+	info.subscribe(list => {
+		if (!list.length) {
+			getInfo();
+		} else {
+			let processed = list.map(x => {
+				return { ...x, tag: x.tags[0] }
+			});
+			processed = processItemsByKey(processed, "tag");
+			items = { ...processed, tags }
+			bio = items.itemsByKey.bio[0]["line-1"];
+		}
+	});
+</script>
+
 <svelte:head>
 	<title>INFO</title>
 	<meta name="description" content="Bio and news" />
@@ -12,7 +35,7 @@
 
 <div class="page-content">
 	<section>
-		<p class="bio">Rami George (b. 1989, USA) is an interdisciplinary artist currently based on Lenape land in what is now called Philadelphia. They have exhibited and screened broadly and remain motivated by political struggles and fractured narratives.</p>
+		<p class="bio">{bio}</p>
 		<p>
 			<a href="/cv">CV</a>
 			<br>
@@ -20,24 +43,17 @@
 		</p>
 	</section>
 
-	<hr/>
-	<section>
-		<h1>Current & Forthcoming</h1>
-	</section>
-
-	<hr/>
-	<section>
-		<h1>News</h1>
-	</section>
-
-	<hr/>
-	<section>
-		<h1>Archive</h1>
-	</section>
+	{#if items}
+	{#each items.tags as tag}
+		<hr />
+		<InfoSection name={tag} items={items.itemsByKey[tag]} />
+	{/each}
+	{/if}
 
 	<hr/>
 	<section>
 		<a href="/imprint"><h1>Imprint</h1></a>
+		<br />
 	</section>
 </div>
 
