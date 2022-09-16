@@ -13,9 +13,14 @@
 <style lang="less">
     section {
         line-height: 1.5rem;
-        margin: 10rem 0 2rem 0;
+        margin: 10rem 1.25rem 2rem 1.25rem;
         display: flex;
         flex-wrap: wrap;
+
+        @media screen and (min-width: @mid-break) {
+			margin-left: 0;
+            margin-right: 0;
+		}
 
         a {
             margin-right: 0.45rem;
