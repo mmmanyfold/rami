@@ -1,7 +1,9 @@
 <script>
-	import { page } from '$app/stores';
 	export let project;
     export let view = "main";
+
+    import RichTextCollection from './notion/RichTextCollection.svelte';
+	import { page } from '$app/stores';
 
     const isSubview = view !== "main";
 </script>
@@ -19,7 +21,7 @@
 
     {#if !isSubview}
         <div class="meta">
-            <pre>{project.medium}</pre>
+            <RichTextCollection objects={project.medium} />
             <div class="tags">
                 {#each project.tags as tag}
                     <span>
@@ -32,7 +34,7 @@
 
             <hr />
 
-            <small><pre>{project.description}</pre></small>
+            <small><RichTextCollection objects={project.description} /></small>
         </div>
     {/if}
 

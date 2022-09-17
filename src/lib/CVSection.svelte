@@ -1,10 +1,11 @@
 <script>
     export let name;
     export let items;
-    export let isNested;
-    export let defaultOpen;
-    export let alwaysOpen;
+    export let isNested = false;
+    export let defaultOpen = false;
+    export let alwaysOpen = false;
     
+    import RichTextCollection from './notion/RichTextCollection.svelte';
     import { slide } from "svelte/transition";
 
     let isOpen = alwaysOpen || defaultOpen || !name;
@@ -27,21 +28,29 @@
             <li class={isNested && "nested"}>
                 {#if url}
                     <a href={url} target="_blank">
-                        <span class="title">{title}</span>
+                        <span class="title">
+                            <RichTextCollection objects={title} />
+                        </span>
                         {#if description}
-                            <span>{description}</span>
+                            <RichTextCollection objects={description} />
                         {/if}
                         {#if detail}
-                            <span>{detail}</span>
+                            <span class="detail">
+                                <RichTextCollection objects={detail} />
+                            </span>
                         {/if}
                     </a>
                 {:else}
-                    <span class="title">{title}</span>
+                    <span class="title">
+                        <RichTextCollection objects={title} />
+                    </span>
                     {#if description}
-                        <span class="description">{description}</span>
+                        <span class="description">
+                            <RichTextCollection objects={description} />
+                        </span>
                     {/if}
                     {#if detail}
-                        <span>{detail}</span>
+                        <RichTextCollection objects={detail} />
                     {/if}
                 {/if}
             </li>
@@ -87,11 +96,15 @@
         color: var(--text-color);
     }
 
+    .detail {
+        color: var(--text-color);
+    }
+
     a {
         color: @secondary-color;
         &:hover {
             color: @accent-color !important;
-            .title {
+            .title, .detail {
                 color: inherit;
             }
         }

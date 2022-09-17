@@ -6,6 +6,7 @@
 
 <script>
 	import InfoSection from '../lib/InfoSection.svelte';
+	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
 	import { info, getInfo } from '../stores.js';
 	import { processItemsByKey } from '../utils';
 
@@ -32,7 +33,7 @@
 
 <div class="page-content">
 	<section>
-		<p class="bio">{bio}</p>
+		<p class="bio"><RichTextCollection objects={bio} /></p>
 		<p>
 			<a href="/cv">CV</a>
 			<br>

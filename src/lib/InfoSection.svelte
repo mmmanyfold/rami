@@ -1,6 +1,8 @@
 <script>
     export let name;
     export let items;
+    
+    import RichTextCollection from "./notion/RichTextCollection.svelte";
 </script>
 
 <section>
@@ -11,42 +13,42 @@
         {#if item["url"] || item["download"]}
             <a href={item["url"] || item["download"][0]["url"]}>
                 {#if item["line-1"]}
-                    <span>{item["line-1"]}</span>
+                    <RichTextCollection objects={item["line-1"]} />
                     <br />
                 {/if}
 
                 {#if item["line-2"]}
-                    <span>{item["line-2"]}</span>
+                    <RichTextCollection objects={item["line-2"]} />
                     <br />
                 {/if}
                 
                 {#if item["line-3"]}
-                    <span>{item["line-3"]}</span>
+                    <RichTextCollection objects={item["line-3"]} />
                     <br />
                 {/if}
                 
                 {#if item["line-4"]}
-                    <span>{item["line-4"]}</span>
+                    <RichTextCollection objects={item["line-4"]} />
                 {/if}
             </a>
         {:else}
             {#if item["line-1"]}
-                <span>{item["line-1"]}</span>
+                <RichTextCollection objects={item["line-1"]} />
                 <br />
             {/if}
 
             {#if item["line-2"]}
-                <span>{item["line-2"]}</span>
+                <RichTextCollection objects={item["line-2"]} />
                 <br />
             {/if}
             
             {#if item["line-3"]}
-                <span>{item["line-3"]}</span>
+                <RichTextCollection objects={item["line-3"]} />
                 <br />
             {/if}
             
             {#if item["line-4"]}
-                <span>{item["line-4"]}</span>
+                <RichTextCollection objects={item["line-4"]} />
             {/if}
         {/if}
     </li>

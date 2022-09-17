@@ -14,8 +14,8 @@
 	let openItems1 = true;
 	const toggleItems1 = () => openItems1 = !openItems1
 
-	let items1 = {};
-	let items2 = {};
+	let items1;
+	let items2;
 	const tags = ["Print & Digital Projects", "Readings & Talks", "Awards & Residencies", "Press & Exhibition Catalogues", "Organizing & Programming", "Teaching & Class Visits", "Education"]
 
 	exhibitionsAndScreenings.subscribe(list => {
@@ -50,7 +50,7 @@
 		<div role="button" on:click={toggleItems1} aria-expanded={openItems1}>
 			<h1>Exhibitions & Screenings</h1>
 		</div>
-		{#if openItems1}
+		{#if items1 && openItems1}
 			<div class="exhibitions-screenings" transition:slide={{ duration: 300 }}>
 				{#each items1.years as year}
 					<CVSection name={year} 
@@ -64,12 +64,14 @@
 	
 	<hr/>
 
-	{#each items2.tags as tag, i}
-		<CVSection name={tag} items={items2.itemsByKey[tag]} />
-		{#if i < items2.tags.length - 1}
-			<hr />
-		{/if}
-	{/each}
+	{#if items2}
+		{#each items2.tags as tag, i}
+			<CVSection name={tag} items={items2.itemsByKey[tag]} />
+			{#if i < items2.tags.length - 1}
+				<hr />
+			{/if}
+		{/each}
+	{/if}
 </div>
 
 
