@@ -9,7 +9,7 @@
 	import { info, getInfo } from '../stores.js';
 	import { processItemsByKey } from '../utils';
 
-	const tags = ["current & forthcoming", "news", "archive"];
+	const tags = ["Current & Forthcoming", "News", "Archive"];
 	let items;
 	let bio = "";
 
@@ -17,12 +17,9 @@
 		if (!list.length) {
 			getInfo();
 		} else {
-			let processed = list.map(x => {
-				return { ...x, tag: x.tags[0] }
-			});
-			processed = processItemsByKey(processed, "tag");
+			const processed = processItemsByKey(list, "tag");
 			items = { ...processed, tags }
-			bio = items.itemsByKey.bio[0]["line-1"];
+			bio = items.itemsByKey.Bio[0]["line-1"];
 		}
 	});
 </script>
