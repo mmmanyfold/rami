@@ -59,26 +59,24 @@
 <style lang="less">
 	h1 {
 		text-transform: uppercase;
+        font-size: 0.95rem;
 	}
+
+    ul {
+        padding-left: 1.5rem;
+    }
 
 	li {
 		margin-top: 1rem;
 		margin-bottom: 1.5rem;
-        line-height: 1.5;
+        line-height: 1.35;
         color: @secondary-color;
-
-        span:first-child {
-            color: var(--text-color);
-        }
 	}
 
     a {
         color: @secondary-color;
         &:hover {
             color: @accent-color !important;
-            span:first-child {
-                color: inherit;
-            }
         }
     }
 </style>

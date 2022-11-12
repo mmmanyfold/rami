@@ -22,7 +22,7 @@
 </svelte:head>
 
 
-<div class="page-content">
+<div>
 	<ProjectsList tag={$page.params.tag} />
 </div>
 

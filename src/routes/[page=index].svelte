@@ -21,7 +21,7 @@
 </svelte:head>
 
 
-<div class="page-content">
+<div>
 	<ProjectsList />
 </div>
 

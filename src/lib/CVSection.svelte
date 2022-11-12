@@ -68,9 +68,10 @@
     }
 	h1 {
 		text-transform: uppercase;
-		margin: 1.8rem 0 1.7rem 0;
+        font-size: 0.95rem;
+		margin: 1.2rem 0 1.1rem 0;
         &.nested {
-            margin: 1.6rem 0 0 0;
+            margin: 1.2rem 0 0 0;
         }
 	}
 
@@ -89,6 +90,10 @@
             line-height: 1.5rem;
             margin-bottom: 0.5rem;
         }
+    }
+
+    hr {
+        margin: 1.2rem 0;
     }
 
     .title {

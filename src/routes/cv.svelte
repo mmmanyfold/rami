@@ -78,7 +78,7 @@
 <style lang="less">
 	h1 {
 		text-transform: uppercase;
-		margin: 1.8rem 0;;
+		margin: 1.8rem 0;
 	}
 	hr {
         margin: 0;
