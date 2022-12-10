@@ -1,14 +1,14 @@
 <script>
 	export let project;
-    export let view = "main";
+    export let view = "Project";
 
     import RichTextCollection from './notion/RichTextCollection.svelte';
 	import { page } from '$app/stores';
 
-    const isSubview = view !== "main";
+    const isSubview = view !== "Project";
 </script>
 
-
+{#if project}
 <aside>
     <sup>({project.id})</sup>
     {#if isSubview}
@@ -68,6 +68,7 @@
         {/if}
     </div>
 </aside>
+{/if}
 
 
 <style lang="less">

@@ -1,7 +1,22 @@
 <script>
 	import ProjectAside from '$lib/ProjectAside.svelte';
+	import PageContent from '$lib/PageContent.svelte';
     export let project;
-    export let view = "main";
+    export let view = "Project";
+
+	let blocks;
+
+	switch (view) {
+		case "Project":
+			blocks = [];
+			break;
+		case "Transcript":
+			blocks = project.transcript.blocks;
+			break;
+		case "Press":
+			blocks = [];
+			break;
+	}
 </script>
 
 <!-------------------------->
@@ -10,7 +25,7 @@
 	<ProjectAside project={project} view={view} />
 
 	<section class="content">
-		<slot />
+		<PageContent blocks={blocks} />
 	</section>
 </div>
 
@@ -26,7 +41,6 @@
 	.content {
 		flex: 1;
 		margin: 3.6rem 0;
-		background-color: black;
 
 		@media screen and (min-width: @mid-break) {
 			margin-top: 0;
