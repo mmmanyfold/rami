@@ -14,8 +14,8 @@
 		     cvAdditional, getCvAdditional } from '../stores';
 	import { processItemsByKey } from '../utils';
 
-	const infoTags = ["Current & Forthcoming", "News", "Archive"];
-	const cvTags = ["Print & Digital Projects", "Readings & Talks", "Awards & Residencies", "Press & Exhibition Catalogues", "Organizing & Programming", "Teaching & Class Visits", "Education"]
+	const infoTags = ["Bio", "Current & Forthcoming"];
+	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education"]
 
 	let bio = "";
 	let infoItems;
@@ -71,7 +71,8 @@
 				<div class="exhibitions-screenings" transition:slide={{ duration: 300 }}>
 					{#each cvItems1.years as year}
 						<CVSection name={year} 
-								   items={cvItems1.itemsByKey[year]} 
+								   items={cvItems1.itemsByKey[year]}
+								   defaultOpen={true}
 								   isNested={true} />
 					{/each}
 				</div>
