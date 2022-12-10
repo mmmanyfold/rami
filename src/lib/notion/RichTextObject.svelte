@@ -32,6 +32,7 @@
     }
     .italic {
         font-style: italic;
+        font-weight: 500;
     }
     .strikethrough {
         text-decoration: line-through;
