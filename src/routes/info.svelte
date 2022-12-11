@@ -5,7 +5,6 @@
 </script>
 
 <script>
-	import { slide } from "svelte/transition";
 	import InfoSection from '../lib/InfoSection.svelte';
 	import CVSection from '../lib/CVSection.svelte';
 	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
@@ -21,9 +20,15 @@
 	let infoItems;
 	let cvItems1;
 	let cvItems2;
-	
-	let openCvItems1 = false;
-	const toggleCvItems1 = () => openCvItems1 = !openCvItems1
+
+	let activeSection = "Info";
+	const toggleSection = (name) => {
+		if (activeSection === name) {
+			activeSection = "Info";
+		} else {
+			activeSection = name;
+		}
+	}
 
 	info.subscribe(list => {
 		if (!list.length) {
@@ -63,54 +68,57 @@
 
 <div class="page">
 	<div class="column">
-		<section>
-			<div role="button" on:click={toggleCvItems1} aria-expanded={openCvItems1}>
-				<h1>Exhibitions & Screenings</h1>
-			</div>
-			{#if cvItems1 && openCvItems1}
-				<div class="exhibitions-screenings" transition:slide={{ duration: 300 }}>
-					{#each cvItems1.years as year}
-						<CVSection name={year} 
-								   items={cvItems1.itemsByKey[year]}
-								   defaultOpen={true}
-								   isNested={true} />
-					{/each}
-				</div>
-			{/if}
-		</section>
+		<div role="button" on:click={() => toggleSection("Exhibitions & Screenings")}>
+			<h1>Exhibitions & Screenings</h1>
+		</div>
 		
 		<hr/>
 	
 		{#if cvItems2}
 			{#each cvItems2.tags as tag, i}
-				<CVSection name={tag} items={cvItems2.itemsByKey[tag]} />
+				<CVSection name={tag} 
+						   items={cvItems2.itemsByKey[tag]}
+						   onToggle={() => toggleSection(tag)} />
 				{#if i < cvItems2.tags.length - 1}
 					<hr />
 				{/if}
 			{/each}
 		{/if}
 	</div>
-	<div class="column">
-		<section>
-			<h1>About</h1>
-			<p><RichTextCollection objects={bio} /></p>
-			<hr />
-			<h1>Contact</h1>
-			<p><a href="mailto:ramimgeorge@gmail.com">rami.m.george (at) gmail.com</a></p>
-		</section>
-	
-		{#if infoItems}
-		{#each infoItems.tags as tag}
-			<hr />
-			<InfoSection name={tag} items={infoItems.itemsByKey[tag]} />
-		{/each}
+	<div class="column content">
+		{#if activeSection === "Info"}
+			<section>
+				<h1>About</h1>
+				<p><RichTextCollection objects={bio} /></p>
+				<hr />
+				<h1>Contact</h1>
+				<p><a href="mailto:ramimgeorge@gmail.com">rami.m.george (at) gmail.com</a></p>
+			</section>
+		
+			{#if infoItems}
+				{#each infoItems.tags as tag}
+					<hr />
+					<InfoSection name={tag} items={infoItems.itemsByKey[tag]} />
+				{/each}
+			{/if}
+		
+			<hr/>
+			<section>
+				<a href="/imprint"><h1>Imprint</h1></a>
+				<br />
+			</section>
+		{:else if activeSection === "Exhibitions & Screenings"}
+			{#each cvItems1.years as year}
+				<CVSection name={year} 
+						   items={cvItems1.itemsByKey[year]}
+						   isNested={true}
+						   alwaysOpen={true} />
+			{/each}
+		{:else}
+			<CVSection name={activeSection} 
+					   alwaysOpen={true} 
+					   items={cvItems2.itemsByKey[activeSection]} />
 		{/if}
-	
-		<hr/>
-		<section>
-			<a href="/imprint"><h1>Imprint</h1></a>
-			<br />
-		</section>
 	</div>
 </div>
 
@@ -146,6 +154,9 @@
 		}
 		&:nth-child(2) {
 			padding-left: 2.5rem;
+		}
+		&:content {
+			padding-top: 2rem;
 		}
 	}
 </style>

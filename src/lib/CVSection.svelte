@@ -4,28 +4,27 @@
     export let isNested = false;
     export let defaultOpen = false;
     export let alwaysOpen = false;
+    export let onToggle = null;
     
     import RichTextCollection from './notion/RichTextCollection.svelte';
-    import { slide } from "svelte/transition";
 
     let isOpen = alwaysOpen || defaultOpen || !name;
-    const toggle = () => isOpen = !isOpen
 </script>
 
 <section>
     {#if name}
         {#if alwaysOpen}
-            <h1 class={isNested && "nested"}>{name}</h1>
+            <h1 class={isNested ? "nested" : ""}>{name}</h1>
         {:else}
-            <div role="button" on:click={toggle} aria-expanded={isOpen}>
-                <h1 class={isNested && "nested"}>{name}</h1>
+            <div role="button" on:click={onToggle} aria-expanded={isOpen}>
+                <h1 class={isNested ? "nested" : ""}>{name}</h1>
             </div>
         {/if}
     {/if}
     {#if isOpen}
-    <ul class={isNested && "nested"} transition:slide={{ duration: 300 }}>
+    <ul class={isNested ? "nested" : ""}>
         {#each items as { title, description, detail, url }}
-            <li class={isNested && "nested"}>
+            <li class={isNested ? "nested" : ""}>
                 {#if url}
                     <a href={url} target="_blank">
                         <span class="title">
@@ -61,11 +60,6 @@
 
 
 <style lang="less">
-    section:first-child {
-        h1 {
-            margin-top: 0;
-        }
-    }
 	h1 {
 		text-transform: uppercase;
         font-size: 0.95rem;
@@ -81,6 +75,10 @@
             padding-top: 0.4rem;
             padding-bottom: 0;
         }
+
+        @media screen and (min-width: @mid-break) {
+			padding-bottom: 0;
+		}
     }
 
     li {
@@ -90,10 +88,6 @@
             line-height: 1.5rem;
             margin-bottom: 0.5rem;
         }
-    }
-
-    hr {
-        margin: 1.2rem 0;
     }
 
     .title {
