@@ -17,7 +17,8 @@
 		background-color: var(--bg-color);
 		display: flex;
 		justify-content: space-between;
-		padding: 0.5rem 0.6rem 0.4rem 0.6rem;
+		padding: 0.5rem 1rem;
+		height: 56.4px;
 		z-index: 1;
 
 		@media screen and (min-width: @mid-break) {

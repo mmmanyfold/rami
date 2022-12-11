@@ -1,9 +1,22 @@
 <script>
 	import Header from '$lib/Header.svelte';
 	import '../app.less';
+	import MobileMenu from '../lib/navigation/MobileMenu.svelte';
+	import MobileMenuIcon from '../lib/navigation/MobileMenuIcon.svelte';
+
+	let mobileMenuOpen = false;
+    const toggleMobileMenu = () => {
+        if (mobileMenuOpen) {
+            mobileMenuOpen = false;
+        } else {
+            mobileMenuOpen = true;
+        }
+    }
 </script>
 
+<MobileMenuIcon isOpen={mobileMenuOpen} onToggle={toggleMobileMenu} />
 <Header />
+<MobileMenu isOpen={mobileMenuOpen} />
 
 <main>
 	<slot />
