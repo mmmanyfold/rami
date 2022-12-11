@@ -24,10 +24,4 @@
 </svelte:head>
 
 
-<div>
-	<ProjectsList tag={tag} />
-</div>
-
-
-<style lang="less">
-</style>
+<ProjectsList />

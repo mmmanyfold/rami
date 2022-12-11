@@ -22,10 +22,4 @@
 </svelte:head>
 
 
-<div>
-	<ProjectsList year={$page.params.year} />
-</div>
-
-
-<style lang="less">
-</style>
+<ProjectsList />
