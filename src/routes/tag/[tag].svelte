@@ -14,16 +14,18 @@
 			getProjects();
 		}
 	});
+
+	let tag = $page.params.tag;
 </script>
 
 <svelte:head>
-	<title>{$page.params.tag.toUpperCase()}</title>
-	<meta name="description" content="{$page.params.tag} work" />
+	<title>{tag.toUpperCase()}</title>
+	<meta name="description" content="{tag} work" />
 </svelte:head>
 
 
 <div>
-	<ProjectsList tag={$page.params.tag} />
+	<ProjectsList tag={tag} />
 </div>
 
 
