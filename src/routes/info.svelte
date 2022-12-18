@@ -1,25 +1,55 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
+	import { loadData } from '../api';
+	import { processItemsByKey } from '../utils';
+
 	export const hydrate = dev;
 	export const router = browser;
+
+	export async function load({ fetch, params }) {
+		const info = await loadData(fetch, "info.json");
+		const exhibitionsScreenings = await loadData(fetch, "cv-exhibitions-and-screenings.json");
+		const cvAdditional = await loadData(fetch, "cv-additional.json");
+		return {
+			props: {
+				info: info?.data && processInfo(info.data),
+				exhibitionsScreenings: exhibitionsScreenings?.data && processExhibitionsScreenings(exhibitionsScreenings.data),
+				cvAdditional: cvAdditional?.data && processCvAdditional(cvAdditional.data)
+			} 
+		};
+	}
+
+	const infoTags = ["Bio", "Current & Forthcoming"];
+	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education"]
+
+	function processInfo(data) {
+		const sorted = data.rows.sort((a, b) => a.id < b.id ? 1 : -1);
+		const processed = processItemsByKey(sorted, "tag");
+		return { ...processed, tags: infoTags };
+	}
+
+	function processCvAdditional(data) {
+		const processed = processItemsByKey(data.rows, "tag");
+		return { ...processed, tags: cvTags };
+	}
+
+	function processExhibitionsScreenings(data) {
+		const processed = processItemsByKey(data.rows, "year");
+		const years = processed.values.sort().reverse();
+		return { ...processed, years };
+	}
 </script>
 
 <script>
 	import InfoSection from '../lib/InfoSection.svelte';
 	import CVSection from '../lib/CVSection.svelte';
 	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
-	import { info, getInfo,
-			 exhibitionsAndScreenings, getExhibitionsAndScreenings,
-		     cvAdditional, getCvAdditional } from '../stores';
-	import { processItemsByKey } from '../utils';
 
-	const infoTags = ["Bio", "Current & Forthcoming"];
-	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education"]
+	export let info;
+	export let exhibitionsScreenings;
+	export let cvAdditional;
 
-	let bio = "";
-	let infoItems;
-	let cvItems1;
-	let cvItems2;
+	const bio = info.itemsByKey.Bio[0]["line-1"];
 
 	let activeSection = "Info";
 	const toggleSection = (name) => {
@@ -29,35 +59,6 @@
 			activeSection = name;
 		}
 	}
-
-	info.subscribe(list => {
-		if (!list.length) {
-			getInfo();
-		} else {
-			const processed = processItemsByKey(list, "tag");
-			infoItems = { ...processed, tags: infoTags };
-			bio = infoItems.itemsByKey.Bio[0]["line-1"];
-		}
-	});
-
-	exhibitionsAndScreenings.subscribe(list => {
-		if (!list.length) {
-			getExhibitionsAndScreenings();
-		} else {
-			const processed = processItemsByKey(list, "year");
-			const years = processed.values.sort().reverse();
-			cvItems1 = { ...processed, years };
-		}
-	});
-
-	cvAdditional.subscribe(list => {
-		if (!list.length) {
-			getCvAdditional();
-		} else {
-			const processed = processItemsByKey(list, "tag");
-			cvItems2 = { ...processed, tags: cvTags };
-		}
-	});
 </script>
 
 <svelte:head>
@@ -74,12 +75,12 @@
 		
 		<hr/>
 	
-		{#if cvItems2}
-			{#each cvItems2.tags as tag, i}
+		{#if cvAdditional}
+			{#each cvAdditional.tags as tag, i}
 				<CVSection name={tag} 
-						   items={cvItems2.itemsByKey[tag]}
+						   items={cvAdditional.itemsByKey[tag]}
 						   onToggle={() => toggleSection(tag)} />
-				{#if i < cvItems2.tags.length - 1}
+				{#if i < cvAdditional.tags.length - 1}
 					<hr />
 				{/if}
 			{/each}
@@ -95,10 +96,10 @@
 				<p><a href="mailto:ramimgeorge@gmail.com">rami.m.george (at) gmail.com</a></p>
 			</section>
 		
-			{#if infoItems}
-				{#each infoItems.tags as tag}
+			{#if info}
+				{#each info.tags as tag}
 					<hr />
-					<InfoSection name={tag} items={infoItems.itemsByKey[tag]} />
+					<InfoSection name={tag} items={info.itemsByKey[tag]} />
 				{/each}
 			{/if}
 		
@@ -108,16 +109,16 @@
 				<br />
 			</section>
 		{:else if activeSection === "Exhibitions & Screenings"}
-			{#each cvItems1.years as year}
+			{#each exhibitionsScreenings.years as year}
 				<CVSection name={year} 
-						   items={cvItems1.itemsByKey[year]}
+						   items={exhibitionsScreenings.itemsByKey[year]}
 						   isNested={true}
 						   alwaysOpen={true} />
 			{/each}
 		{:else}
 			<CVSection name={activeSection} 
 					   alwaysOpen={true} 
-					   items={cvItems2.itemsByKey[activeSection]} />
+					   items={cvAdditional.itemsByKey[activeSection]} />
 		{/if}
 	</div>
 </div>
