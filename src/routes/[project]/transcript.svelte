@@ -37,7 +37,7 @@
 </svelte:head>
 
 {#if project}
-	<ProjectView project={project} view="Transcript" />
+	<ProjectView project={project} blocks={project.transcript.blocks} view="Transcript" />
 {/if}
 
 <style lang="less">

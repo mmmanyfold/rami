@@ -46,7 +46,7 @@
 </svelte:head>
 
 {#if project}
-	<ProjectView project={project} />
+	<ProjectView project={project} blocks={project.blocks} />
 	<a class="arrow left" href={prevUrl} aria-label="Previous">
 		{"ᐸ"}
 	</a>

@@ -2,21 +2,8 @@
 	import ProjectAside from '$lib/ProjectAside.svelte';
 	import PageContent from '$lib/PageContent.svelte';
     export let project;
+	export let blocks = [];
     export let view = "Project";
-
-	let blocks;
-
-	switch (view) {
-		case "Project":
-			blocks = project.blocks || [];
-			break;
-		case "Transcript":
-			blocks = project.transcript.blocks || [];
-			break;
-		case "Press":
-			blocks = [];
-			break;
-	}
 </script>
 
 <!-------------------------->
