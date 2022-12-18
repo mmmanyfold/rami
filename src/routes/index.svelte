@@ -1,15 +1,38 @@
+<script context="module">
+	import { loadData } from '../api';
+
+	export async function load({ fetch, params }) {
+		const { data } = await loadData(fetch, "projects.json");
+		const projects = data?.rows.sort((a, b) => a.id < b.id ? 1 : -1);
+		return {
+			props: { projects }
+		};
+	}
+</script>
+
 <script>
 	import ThumbnailGrid from '../lib/ThumbnailGrid.svelte';
 	import Footnotes from '../lib/Footnotes.svelte';
-	import { projects, getProjects, loading, error } from '../stores.js';
 
-	projects.subscribe(list => {
-		if (!list.length) {
-			getProjects();
+	export let projects;
+
+	const assetUrls = projects.reduce((acc, p) => {
+		const assets = p.homePageAssets;
+		const urls = assets.files?.map(f => f.url) || [];
+		if (assets.type === "Image") {
+			const images = [...acc.images, urls].flat();
+			return {...acc, images}
+		} else if (assets.type === "Video") {
+			const videos = [...acc.videos, urls].flat();
+			return {...acc, videos}
+		} else {
+			return acc;	
 		}
-	});
-	
+	}, { images: [], videos: []});
+
 	$: innerWidth = 0;
+	$: preloadImageUrls = assetUrls.images;
+	$: preloadVideoUrls = assetUrls.videos;
 </script>
 
 <!-------------------------->
@@ -17,6 +40,12 @@
 <svelte:head>
 	<title>Rami George</title>
 	<meta name="description" content="Artist Archive" />
+	{#each preloadImageUrls as image}
+    	<link rel="preload" as="image" href={image} />
+    {/each}
+	{#each preloadVideoUrls as video}
+    	<link rel="preload" as="video" href={video} />
+    {/each}
 </svelte:head>
 
 <svelte:window bind:innerWidth />
@@ -25,18 +54,18 @@
 
 {#if !innerWidth}
 <span></span>
-{:else if $loading}
+<!-- {:else if $loading}
 Loading...
 {:else if $error}
-Error
+Error -->
 {:else}
 <ul class="gallery">
 	{#if innerWidth < 770}
 		<div style="padding: 0 1.25rem 0 1.25rem;">
-			<ThumbnailGrid projects={$projects} />
+			<ThumbnailGrid projects={projects} />
 		</div>
 	{:else}
-		{#each $projects as { id, title, slug, homePageAssets } (id)}
+		{#each projects as { id, title, slug, homePageAssets } (id)}
 		{@const { type: assetType, files } = homePageAssets}
 		<li class="row">
 			<a href={slug} class="no-hover">
@@ -56,7 +85,7 @@ Error
 		{/each}
 	{/if}
 </ul>
-<Footnotes projects={$projects} />
+<Footnotes projects={projects} />
 {/if}
 
 <!-------------------------->
