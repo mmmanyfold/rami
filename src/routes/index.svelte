@@ -31,8 +31,8 @@
 	}, { images: [], videos: []});
 
 	$: innerWidth = 0;
-	$: preloadImageUrls = assetUrls.images;
-	$: preloadVideoUrls = assetUrls.videos;
+	$: preloadImageUrls = assetUrls.images.slice(0, 3);
+	$: preloadVideoUrls = assetUrls.videos.slice(0, 3);
 </script>
 
 <!-------------------------->
