@@ -1,5 +1,5 @@
 <script>
-    export let objects;
+    export let objects = [];
     import RichTextObject from "./RichTextObject.svelte";
 </script>
 

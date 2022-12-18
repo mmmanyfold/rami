@@ -8,10 +8,10 @@
 
 	switch (view) {
 		case "Project":
-			blocks = [];
+			blocks = project.blocks || [];
 			break;
 		case "Transcript":
-			blocks = project.transcript.blocks;
+			blocks = project.transcript.blocks || [];
 			break;
 		case "Press":
 			blocks = [];

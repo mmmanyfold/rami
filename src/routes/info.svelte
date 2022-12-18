@@ -157,6 +157,7 @@
 		}
 		&:content {
 			padding-top: 2rem;
+			height: calc(100% - 56.4px);
 		}
 	}
 </style>

@@ -12,13 +12,13 @@
 
 	let project;
 
-	const setProject = (list) => {
+	const setProject = () => {
 		project = $projects.find(p => p.slug === $page.params.project);
 	}
 
 	afterUpdate(() => {
 		if ($projects.length) {
-			setProject($projects);
+			setProject();
 		}
 	});
 
@@ -26,7 +26,7 @@
 		if (!list.length) {
 			getProjects();
 		} else {
-			setProject(list);
+			setProject();
 		}
 	});
 </script>

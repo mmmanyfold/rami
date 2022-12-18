@@ -1,5 +1,5 @@
 <script>
-    export let object;
+    export let object = {};
 
     let textObject;
     let className = "";
