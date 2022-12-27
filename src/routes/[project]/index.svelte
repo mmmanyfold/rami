@@ -7,7 +7,10 @@
 
 <script>
 	import ProjectView from '$lib/ProjectView.svelte';
-	import Footnotes from '../../lib/Footnotes.svelte';
+	import CaretLeft from '$lib/icon/CaretLeft.svelte';
+	import CaretRight from '$lib/icon/CaretRight.svelte';
+	import Footnotes from '$lib/Footnotes.svelte';
+
 	import { projects, getProjects } from '../../stores.js';
 	import { afterUpdate } from "svelte";
 	
@@ -47,31 +50,68 @@
 
 {#if project}
 	<ProjectView project={project} blocks={project.blocks} />
-	<a class="arrow left" href={prevUrl} aria-label="Previous">
-		{"ᐸ"}
+	<a class="desktop arrow left" href={prevUrl} aria-label="Previous">
+		<CaretLeft />
 	</a>
-	<a class="arrow right" href={nextUrl} aria-label="Next">
-		{"ᐳ"}
+	<a class="desktop arrow right" href={nextUrl} aria-label="Next">
+		<CaretRight />
 	</a>
+	
+	<div class="mobile-arrows">
+		<a class="arrow left" href={prevUrl} aria-label="Previous">
+			<CaretLeft />
+		</a>
+		<a class="arrow right" href={nextUrl} aria-label="Next">
+			<CaretRight />
+		</a>
+	</div>
 {/if}
 
 {#if $projects}
-<Footnotes projects={$projects} />
+<div class="footnotes">
+	<Footnotes projects={$projects} />
+</div>
 {/if}
 
 
 <style lang="less">
 	.arrow {
-		position: fixed;
-		top: 49vh;
 		color: @secondary-color;
-		font-size: 1rem;
 
+		&.desktop {
+			display: none;
+			@media (min-width: @mid-break) {
+				display: block;
+				position: fixed;
+				top: 49vh;
+			}
+		}
 		&.left {
-			left: 2rem;
+			padding-left: 2rem;
+			@media (min-width: @mid-break) {
+				left: 0;
+			}
 		}
 		&.right {
-			right: 2rem;
+			padding-right: 2rem;
+			@media (min-width: @mid-break) {
+				right: 0;
+			}
 		}
+	}
+
+	.mobile-arrows {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--bg-color);
+	}
+
+	.footnotes {
+		margin-bottom: 3rem;
 	}
 </style>
