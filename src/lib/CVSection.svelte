@@ -2,26 +2,14 @@
     export let name;
     export let items;
     export let isNested = false;
-    export let defaultOpen = false;
-    export let alwaysOpen = false;
-    export let onToggle = null;
     
     import RichTextCollection from './notion/RichTextCollection.svelte';
-
-    let isOpen = alwaysOpen || defaultOpen || !name;
 </script>
 
 <section>
     {#if name}
-        {#if alwaysOpen}
-            <h1 class={isNested ? "nested" : ""}>{name}</h1>
-        {:else}
-            <div role="button" on:click={onToggle} aria-expanded={isOpen}>
-                <h1 class={isNested ? "nested" : ""}>{name}</h1>
-            </div>
-        {/if}
+        <h1 class={isNested ? "nested" : ""}>{name}</h1>
     {/if}
-    {#if isOpen}
     <ul class={isNested ? "nested" : ""}>
         {#each items as { title, description, detail, url }}
             <li class={isNested ? "nested" : ""}>
@@ -55,7 +43,6 @@
             </li>
         {/each}
     </ul>
-    {/if}
 </section>
 
 
@@ -70,10 +57,11 @@
 	}
 
     ul {
-        padding: 0 0 1.8rem 1.5rem;
+        padding-bottom: 1.8rem;
         &.nested {
             padding-top: 0.4rem;
             padding-bottom: 0;
+            padding-left: 1.5rem;
         }
 
         @media screen and (min-width: @mid-break) {

@@ -20,7 +20,7 @@
 	}
 
 	const infoTags = ["Bio", "Current & Forthcoming"];
-	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education"]
+	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education"] // TODO: add Imprint
 
 	function processInfo(data) {
 		const sorted = data.rows.sort((a, b) => a.id < b.id ? 1 : -1);
@@ -44,6 +44,8 @@
 	import InfoSection from '../lib/InfoSection.svelte';
 	import CVSection from '../lib/CVSection.svelte';
 	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
+	import CaretRight from '../lib/icon/CaretRight.svelte';
+	import CaretDown from '../lib/icon/CaretDown.svelte';
 
 	export let info;
 	export let exhibitionsScreenings;
@@ -69,18 +71,17 @@
 
 <div class="page">
 	<div class="column">
-		<div role="button" on:click={() => toggleSection("Exhibitions & Screenings")}>
-			<h1>Exhibitions & Screenings</h1>
-		</div>
-		
-		<hr/>
-	
 		{#if cvAdditional}
-			{#each cvAdditional.tags as tag, i}
-				<CVSection name={tag} 
-						   items={cvAdditional.itemsByKey[tag]}
-						   onToggle={() => toggleSection(tag)} />
-				{#if i < cvAdditional.tags.length - 1}
+			{#each ["Exhibitions & Screenings", ...cvAdditional.tags] as tag, i}
+				<div role="button" class="info-menu-item" on:click={() => toggleSection(tag)}>
+					{#if activeSection === tag}
+						<CaretDown />
+					{:else}
+						<CaretRight />
+					{/if}
+					<h1>{tag}</h1>
+				</div>
+				{#if i < cvAdditional.tags.length}
 					<hr />
 				{/if}
 			{/each}
@@ -102,22 +103,15 @@
 					<InfoSection name={tag} items={info.itemsByKey[tag]} />
 				{/each}
 			{/if}
-		
-			<hr/>
-			<section>
-				<a href="/imprint"><h1>Imprint</h1></a>
-				<br />
-			</section>
+
 		{:else if activeSection === "Exhibitions & Screenings"}
 			{#each exhibitionsScreenings.years as year}
 				<CVSection name={year} 
 						   items={exhibitionsScreenings.itemsByKey[year]}
-						   isNested={true}
-						   alwaysOpen={true} />
+						   isNested={true} />
 			{/each}
 		{:else}
-			<CVSection name={activeSection} 
-					   alwaysOpen={true} 
+			<CVSection name={activeSection}
 					   items={cvAdditional.itemsByKey[activeSection]} />
 		{/if}
 	</div>
@@ -142,23 +136,50 @@
 	}
 
 	.page {
+		width: 100%;
+
 		@media (min-width: @mid-break) {
 			display: flex;
+			height: calc(100% - 56.4px);
+			position: fixed;
 		}
 	}
 
 	.column {
-		width: 50%;
+		@media (min-width: @mid-break) {
+			overflow: scroll;
+			padding-bottom: 4rem;;
+		}
 
 		&:first-child {
+			width: 48%;
 			padding-right: 2.5rem;
+			color: @secondary-color;
+
+			h1 {
+				margin: 0 1.5rem;
+			}
+
+			.info-menu-item {
+				margin-top: 1.2rem;
+				display: flex;
+				align-items: center;
+				color: @secondary-color;
+
+				&:hover {
+					color: @accent-color;
+				}
+			}
 		}
+
 		&:nth-child(2) {
+			width: 52%;
 			padding-left: 2.5rem;
+			padding-right: 4rem;
 		}
+
 		&:content {
 			padding-top: 2rem;
-			height: calc(100% - 56.4px);
 		}
 	}
 </style>
