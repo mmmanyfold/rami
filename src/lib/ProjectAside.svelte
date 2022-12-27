@@ -25,11 +25,11 @@
             <div class="tags">
                 {#each project.tags as tag}
                     <span>
-                        <a href={"/tag/" + tag}>{tag}</a>,
+                        <a href={"/index/" + tag}>{tag}</a>,
                         {""}
                     </span>
                 {/each}
-                <a href={"/tag/" + project.year}>{project.year}</a>
+                <a href={"/index/" + project.year}>{project.year}</a>
             </div>
 
             <hr />

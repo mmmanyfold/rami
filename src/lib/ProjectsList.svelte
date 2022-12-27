@@ -47,9 +47,9 @@
 		</div>
 		<div class="tags">
 			{#each tags as tag}
-			<div><a href={"/tag/" + tag}>{tag}</a></div>
+			<div><a href={"/index/" + tag}>{tag}</a></div>
 			{/each}
-			<div><a href={"/tag/" + year}>{year}</a></div>
+			<div><a href={"/index/" + year}>{year}</a></div>
 		</div>
 	</li>
 	{/each}

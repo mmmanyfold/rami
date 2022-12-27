@@ -17,11 +17,11 @@
 			<div class="tags">
 				{#each tags as tag}
 					<span>
-						<a href={"/tag/" + tag}>{tag}</a>,
+						<a href={"/index/" + tag}>{tag}</a>,
 						{""}
 					</span>
 				{/each}
-				<a href={"/tag/" + year}>{year}</a>
+				<a href={"/index/" + year}>{year}</a>
 			</div>
 		</div>
 	</div>
