@@ -23,6 +23,7 @@
 
 		@media screen and (min-width: @mid-break) {
 			padding: 1.25rem 1.8rem 1rem 1.8rem;
+			height: 80px;
 		}
 	}
 

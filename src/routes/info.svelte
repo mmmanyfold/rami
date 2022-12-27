@@ -140,7 +140,7 @@
 
 		@media (min-width: @mid-break) {
 			display: flex;
-			height: calc(100% - 56.4px);
+			height: calc(100% - 80px);
 			position: fixed;
 		}
 	}

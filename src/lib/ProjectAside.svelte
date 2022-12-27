@@ -54,7 +54,7 @@
             {/if}
             
             {#if project.exhibitionGuide}
-                <a href="#">
+                <a href={project.exhibitionGuide} target="_blank">
                     Exhibition Guide
                 </a>
                 <br><br>
@@ -112,7 +112,6 @@
 	}
 
 	hr {
-		width: 50%;
         margin: 1.2rem 0;
 	}
 </style>
