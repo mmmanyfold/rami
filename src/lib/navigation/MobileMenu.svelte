@@ -1,11 +1,13 @@
 <script>
 	export let isOpen;
+    export let onToggle;
 
-    import { slide } from "svelte/transition";
+    import { slide, fade } from "svelte/transition";
 </script>
 
 {#if isOpen}
-<div class="container" in:slide out:slide>    
+<div in:fade out:fade class="overlay" on:click={onToggle}></div>
+<div in:slide out:slide class="container" on:click={onToggle}>
     <ul>
         <li><a href="/index">INDEX</a></li>
         <li><a href="/info">INFO</a></li>
@@ -14,6 +16,14 @@
 {/if}
 
 <style lang="less">
+    .overlay {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        opacity: 0.5;
+    }
+
     .container {
         position: fixed;
         width: 100vw;

@@ -10,11 +10,7 @@
 
 <style lang="less">
     .wrapper {
-        position: fixed;
-        z-index: 2;
-        top: 15px;
-        right: 18px;
-        border: 0;
+        margin-top: 0.3rem;
         @media screen and (min-width: @mid-break) {
 			display: none;
 		}

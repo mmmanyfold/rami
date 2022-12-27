@@ -1,5 +1,8 @@
 <script>
-	import { page } from '$app/stores';
+	export let mobileMenuOpen;
+    export let toggleMobileMenu;
+
+	import MobileMenuIcon from '../lib/navigation/MobileMenuIcon.svelte';
 </script>
 
 <header>
@@ -8,6 +11,7 @@
 		<a href="/index">INDEX</a>
 		<a href="/info">INFO</a>
 	</div>
+	<MobileMenuIcon isOpen={mobileMenuOpen} onToggle={toggleMobileMenu} />
 </header>
 
 <style lang="less">
