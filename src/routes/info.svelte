@@ -42,10 +42,10 @@
 
 <script>
 	import InfoSection from '../lib/InfoSection.svelte';
+	import SectionToggle from '../lib/SectionToggle.svelte';
 	import CVSection from '../lib/CVSection.svelte';
+	import SectionAccordion from '../lib/SectionAccordion.svelte';
 	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
-	import CaretRight from '../lib/icon/CaretRight.svelte';
-	import CaretDown from '../lib/icon/CaretDown.svelte';
 
 	export let info;
 	export let exhibitionsScreenings;
@@ -70,7 +70,9 @@
 
 
 <div class="page">
+	<!-- column 1 -->
 	<div class="column">
+		<!-- mobile -->
 		<div class="hide-desktop">
 			<section>
 				<h1>About</h1>
@@ -80,25 +82,34 @@
 				<p><a href="mailto:ramimgeorge@gmail.com">rami.m.george (at) gmail.com</a></p>
 			</section>
 			<hr />
-			<CVSection name="Current & Forthcoming"
-					   items={info.itemsByKey["Current & Forthcoming"]} />
-		</div>
-		{#if cvAdditional}
-			{#each ["Exhibitions & Screenings", ...cvAdditional.tags] as tag, i}
-				<div role="button" class="info-menu-item" on:click={() => toggleSection(tag)}>
-					{#if activeSection === tag}
-						<CaretDown />
-					{:else}
-						<CaretRight />
-					{/if}
-					<h1>{tag}</h1>
-				</div>
+
+			<SectionAccordion name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
+			<hr />
+
+			{#each cvAdditional.tags as tag, i}
+				<SectionAccordion name={tag} type="cv" items={cvAdditional.itemsByKey[tag]} />
 				{#if i < cvAdditional.tags.length}
 					<hr />
 				{/if}
 			{/each}
-		{/if}
+		</div>
+
+		<!-- desktop -->
+		<div class="hide-mobile">
+			{#if cvAdditional}
+				{#each ["Exhibitions & Screenings", ...cvAdditional.tags] as tag, i}
+					<SectionToggle label={tag}
+									isActive={activeSection === tag}
+									onToggle={() => toggleSection(tag)} />
+					{#if i < cvAdditional.tags.length}
+						<hr />
+					{/if}
+				{/each}
+			{/if}
+		</div>
 	</div>
+	
+	<!-- column 2 -->
 	<div class="column content">
 		{#if activeSection === "Info"}
 			<section>
@@ -122,6 +133,7 @@
 						   items={exhibitionsScreenings.itemsByKey[year]}
 						   isNested={true} />
 			{/each}
+
 		{:else}
 			<CVSection name={activeSection}
 					   items={cvAdditional.itemsByKey[activeSection]} />
@@ -141,19 +153,25 @@
 	}
 
 	p {
+		margin-top: 0.7rem;
+		margin-bottom: 1.5rem;
+
 		@media (min-width: @mid-break) {
 			margin-top: 1rem;
-			margin-bottom: 1.5rem;
 			padding-left: 2.25rem;
 		}
 	}
 
 	hr {
-		margin: 1.2rem 0;
+		margin: 0.5rem 0;
+
+		@media (min-width: @mid-break) {
+			margin: 1.2rem 0;
+		}
 	}
 
 	.page {
-		padding: 0 1rem;
+		padding: 0 1.35rem;
 
 		@media (min-width: @mid-break) {
 			display: flex;
@@ -181,7 +199,7 @@
 
 		&:first-child {
 			h1 {
-				margin: 0;
+				margin: 1.5rem 0 0 0;
 			}
 		}
 

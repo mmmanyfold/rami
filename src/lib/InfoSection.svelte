@@ -6,7 +6,9 @@
 </script>
 
 <section>
-    <h1>{name}</h1>
+    {#if name}
+        <h1>{name}</h1>
+    {/if}
     <ul>
     {#each items as item}
     <li>
