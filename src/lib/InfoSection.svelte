@@ -63,7 +63,9 @@
 	}
 
     ul {
-        padding-left: 1.5rem;
+        @media (min-width: @mid-break) {
+            padding-left: 1.5rem;
+        }
     }
 
 	li {

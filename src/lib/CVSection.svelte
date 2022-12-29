@@ -57,11 +57,10 @@
 	}
 
     ul {
-        padding-bottom: 1.8rem;
+        padding: 0 0 1.8rem 1.5rem;
         &.nested {
             padding-top: 0.4rem;
             padding-bottom: 0;
-            padding-left: 1.5rem;
         }
 
         @media screen and (min-width: @mid-break) {

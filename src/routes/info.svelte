@@ -71,6 +71,18 @@
 
 <div class="page">
 	<div class="column">
+		<div class="hide-desktop">
+			<section>
+				<h1>About</h1>
+				<p><RichTextCollection objects={bio} /></p>
+				<hr />
+				<h1>Contact</h1>
+				<p><a href="mailto:ramimgeorge@gmail.com">rami.m.george (at) gmail.com</a></p>
+			</section>
+			<hr />
+			<CVSection name="Current & Forthcoming"
+					   items={info.itemsByKey["Current & Forthcoming"]} />
+		</div>
 		{#if cvAdditional}
 			{#each ["Exhibitions & Screenings", ...cvAdditional.tags] as tag, i}
 				<div role="button" class="info-menu-item" on:click={() => toggleSection(tag)}>
@@ -122,13 +134,18 @@
 	h1 {
 		text-transform: uppercase;
 		font-size: 0.95rem;
-		margin: 1.2rem 0;
+		
+		@media (min-width: @mid-break) {
+			margin: 1.2rem 0;
+		}
 	}
 
 	p {
-		margin-top: 1rem;
-		margin-bottom: 1.5rem;
-		padding-left: 2.25rem;
+		@media (min-width: @mid-break) {
+			margin-top: 1rem;
+			margin-bottom: 1.5rem;
+			padding-left: 2.25rem;
+		}
 	}
 
 	hr {
@@ -136,50 +153,64 @@
 	}
 
 	.page {
-		width: 100%;
+		padding: 0 1rem;
 
 		@media (min-width: @mid-break) {
 			display: flex;
+			width: 100%;
 			height: calc(100% - 80px);
 			position: fixed;
 		}
 	}
 
 	.column {
-		@media (min-width: @mid-break) {
-			overflow: scroll;
-			padding-bottom: 4rem;;
+		&:content {
+			padding-top: 2rem;
+		}
+
+		&:nth-child(2) {
+			display: none;
+		}
+
+		.info-menu-item {
+			margin-top: 1.2rem;
+			display: flex;
+			align-items: center;
+			color: @secondary-color;
 		}
 
 		&:first-child {
-			width: 48%;
-			padding-right: 2.5rem;
-			color: @secondary-color;
-
 			h1 {
-				margin: 0 1.5rem;
+				margin: 0;
+			}
+		}
+
+		@media (min-width: @mid-break) {
+			overflow: scroll;
+			padding-bottom: 4rem;
+
+			&:first-child {
+				width: 48%;
+				padding-right: 2.5rem;
+				color: @secondary-color;
+
+				h1 {
+					margin: 0 1.5rem;
+				}
+			}
+
+			&:nth-child(2) {
+				display: block;
+				width: 52%;
+				padding-left: 2.5rem;
+				padding-right: 4rem;
 			}
 
 			.info-menu-item {
-				margin-top: 1.2rem;
-				display: flex;
-				align-items: center;
-				color: @secondary-color;
-
 				&:hover {
 					color: @accent-color;
 				}
 			}
-		}
-
-		&:nth-child(2) {
-			width: 52%;
-			padding-left: 2.5rem;
-			padding-right: 4rem;
-		}
-
-		&:content {
-			padding-top: 2rem;
 		}
 	}
 </style>
