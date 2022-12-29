@@ -1,8 +1,10 @@
 <script>
     export let objects = [];
+    export let color;
+
     import RichTextObject from "./RichTextObject.svelte";
 </script>
 
 {#each objects as object}
-    <RichTextObject object={object} />
+    <RichTextObject object={object} color={color} />
 {/each}

@@ -10,7 +10,7 @@
     {#if name}
         <h1 class={isNested ? "nested" : ""}>{name}</h1>
     {/if}
-    <ul class={(isNested || !name) ? "nested" : ""}>
+    <ul class={isNested ? "nested" : ""}>
         {#each items as { title, description, detail, url }}
             <li class={isNested ? "nested" : ""}>
                 {#if url}
@@ -57,15 +57,17 @@
 	}
 
     ul {
-        padding-bottom: 1.8rem;
+        padding-top: 1.1rem;
+        padding-bottom: 1rem;
         padding-left: 0.2rem;
 
         @media screen and (min-width: @mid-break) {
+            padding-top: 0;
+            padding-bottom: 1.8rem;
 			padding-left: 1.1rem;
 		}
 
         &.nested {
-            padding-top: 1.1rem;
             padding-bottom: 0;
 
             @media screen and (min-width: @mid-break) {

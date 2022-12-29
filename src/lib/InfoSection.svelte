@@ -15,7 +15,7 @@
         {#if item["url"] || item["download"]}
             <a href={item["url"] || item["download"][0]["url"]}>
                 {#if item["line-1"]}
-                    <RichTextCollection objects={item["line-1"]} />
+                    <RichTextCollection objects={item["line-1"]} color="#000000" />
                     <br />
                 {/if}
 
@@ -35,7 +35,7 @@
             </a>
         {:else}
             {#if item["line-1"]}
-                <RichTextCollection objects={item["line-1"]} />
+                <RichTextCollection objects={item["line-1"]} color="#000000" />
                 <br />
             {/if}
 
@@ -65,6 +65,8 @@
 	}
 
     ul {
+        padding-left: 0.2rem;
+
         @media (min-width: @mid-break) {
             padding-left: 1.5rem;
         }

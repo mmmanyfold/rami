@@ -41,11 +41,12 @@
 </script>
 
 <script>
-	import InfoSection from '../lib/InfoSection.svelte';
 	import SectionToggle from '../lib/SectionToggle.svelte';
-	import CVSection from '../lib/CVSection.svelte';
 	import SectionAccordion from '../lib/SectionAccordion.svelte';
+	import InfoSection from '../lib/InfoSection.svelte';
+	import CVSection from '../lib/CVSection.svelte';
 	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
+	import { slide } from "svelte/transition";
 
 	export let info;
 	export let exhibitionsScreenings;
@@ -84,6 +85,22 @@
 			<hr />
 
 			<SectionAccordion name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
+			<hr />
+
+			<section>
+				<SectionToggle label="Exhibitions & Screenings"
+							   isActive={activeSection === "Exhibitions & Screenings"}
+							   onToggle={() => toggleSection("Exhibitions & Screenings")} />
+				{#if activeSection === "Exhibitions & Screenings"}
+					<div transition:slide={{ duration: 300 }}>
+						{#each exhibitionsScreenings.years as year}
+							<CVSection name={year} 
+								       items={exhibitionsScreenings.itemsByKey[year]}
+									   isNested={true} />
+						{/each}
+					</div>
+				{/if}
+			</section>
 			<hr />
 
 			{#each cvAdditional.tags as tag, i}
@@ -128,6 +145,7 @@
 			{/if}
 
 		{:else if activeSection === "Exhibitions & Screenings"}
+			<h1>Exhibitions & Screenings</h1>
 			{#each exhibitionsScreenings.years as year}
 				<CVSection name={year} 
 						   items={exhibitionsScreenings.itemsByKey[year]}
@@ -163,7 +181,7 @@
 	}
 
 	hr {
-		margin: 0.5rem 0;
+		margin: 0.55rem 0;
 
 		@media (min-width: @mid-break) {
 			margin: 1.2rem 0;
@@ -179,6 +197,10 @@
 			height: calc(100% - 80px);
 			position: fixed;
 		}
+	}
+
+	.hide-desktop {
+		padding-bottom: 2rem;
 	}
 
 	.column {

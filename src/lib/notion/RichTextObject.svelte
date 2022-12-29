@@ -1,5 +1,6 @@
 <script>
     export let object = {};
+    export let color;
 
     let textObject;
     let className = "";
@@ -16,11 +17,11 @@
 
 {#if textObject}
     {#if hasNewlines}
-        <pre class={className}>
+        <pre class={className} style={color? `color:${color}` : ""}>
             {textObject.content}
         </pre>
     {:else}
-        <span class={className}>
+        <span class={className} style={color? `color:${color}` : ""}>
             {textObject.content}
         </span>
     {/if}
