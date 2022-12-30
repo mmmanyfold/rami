@@ -25,7 +25,7 @@
 			{@const vimeoId = urlSegments[urlSegments.length - 1]}
 			
 			<div class="video-container">
-				<iframe src={`https://player.vimeo.com/video/${vimeoId}`} frameborder="0" allow="autoplay; fullscreen" allowfullscreen />
+				<iframe title="Project Video" src={`https://player.vimeo.com/video/${vimeoId}`} frameborder="0" allow="autoplay; fullscreen" allowfullscreen />
 			</div>
 			{#if block.video.caption}
 				<p class="video-caption">

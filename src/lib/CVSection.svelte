@@ -1,5 +1,5 @@
 <script>
-    export let name;
+    export let name = null;
     export let items;
     export let isNested = false;
     

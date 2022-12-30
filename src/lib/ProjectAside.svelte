@@ -6,6 +6,7 @@
 	import { page } from '$app/stores';
 
     const isSubview = view !== "Project";
+    const hasPress = Boolean(project?.pressExhibitions || project?.pressAdditional);
 </script>
 
 {#if project}
@@ -60,7 +61,7 @@
                 <br><br>
             {/if}
 
-            {#if project.press}
+            {#if hasPress}
                 <a href={"/" + $page.params.project + "/press"}>
                     Press
                 </a>

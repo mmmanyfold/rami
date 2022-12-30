@@ -1,6 +1,7 @@
 <script>
 	import ProjectAside from '$lib/ProjectAside.svelte';
 	import PageContent from '$lib/PageContent.svelte';
+	import CVSection from './CVSection.svelte';
     export let project;
 	export let blocks = [];
     export let view = "Project";
@@ -12,7 +13,11 @@
 	<ProjectAside project={project} view={view} />
 
 	<section class="content">
-		<PageContent blocks={blocks} />
+		{#if view === "Press"}
+			<CVSection items={blocks} />
+		{:else}
+			<PageContent blocks={blocks} />
+		{/if}
 	</section>
 </div>
 

@@ -1,6 +1,6 @@
 <script>
     export let object = {};
-    export let color;
+    export let color = null;
 
     let textObject;
     let className = "";

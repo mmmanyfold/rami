@@ -1,11 +1,35 @@
 <script context="module">
 	import ProjectView from '$lib/ProjectView.svelte';
-	import { page } from '$app/stores';
 	import { browser, dev } from '$app/env';
+	import { loadData } from '../../api';
+
 	export const hydrate = dev;
 	export const router = browser;
 
-	const project = {press: "foo"}
+	export async function load({ fetch, params }) {
+		const resProjects = await loadData(fetch, "projects.json");
+		const resExhibitions = await loadData(fetch, "cv-exhibitions-and-screenings.json");
+		const resCvAdditional = await loadData(fetch, "cv-additional.json");
+
+		const projects = resProjects?.data?.rows || [];
+		const exhibitions = resExhibitions?.data.rows || [];
+		const cvAdditional = resCvAdditional?.data.rows || [];
+		const pressItems = [...exhibitions, ...cvAdditional];
+
+		const project = projects.find(p => p.slug === params.project);
+		const pressIDs = [...project?.pressExhibitions, ...project?.pressAdditional];
+		
+		const blocks = pressIDs.map(id => pressItems.find(item => item.uuid === id));
+
+		return {
+			props: { project, blocks }
+		};
+	}
+</script>
+
+<script>
+	export let project;
+	export let blocks;
 </script>
 
 <svelte:head>
@@ -14,9 +38,9 @@
 </svelte:head>
 
 
-<ProjectView project={project} view="Press">
-	Content
-</ProjectView>
+{#if project}
+	<ProjectView project={project} blocks={blocks} view="Press" />
+{/if}
 
 
 <style lang="less">

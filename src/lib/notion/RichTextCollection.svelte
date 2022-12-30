@@ -1,6 +1,6 @@
 <script>
     export let objects = [];
-    export let color;
+    export let color = null;
 
     import RichTextObject from "./RichTextObject.svelte";
 </script>
