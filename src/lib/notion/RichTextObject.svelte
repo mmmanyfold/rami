@@ -3,12 +3,16 @@
     export let color = null;
 
     let textObject;
+    let content;
+    let linkUrl;
     let className = "";
     let hasNewlines;
 
     if (object.type === "text") {
         textObject = object.text;
-        hasNewlines = object.text.content.includes("\n");
+        linkUrl = textObject.link?.url;
+        content = textObject.content.replace(/(^\n)/gi, "");
+        hasNewlines = content.includes("\n");
         const annotations = object.annotations;
         const classes = Object.keys(annotations).filter(k => annotations[k] === true);
         className = classes.join(" ");
@@ -17,13 +21,29 @@
 
 {#if textObject}
     {#if hasNewlines}
-        <pre class={className} style={color? `color:${color}` : ""}>
-            {textObject.content}
-        </pre>
+        {#if linkUrl}
+            <a href={linkUrl}>
+                <pre class={className} style={color? `color:${color}` : ""}>
+                    {content}
+                </pre>
+            </a>
+        {:else}
+            <pre class={className} style={color? `color:${color}` : ""}>
+                {content}
+            </pre>
+        {/if}
     {:else}
-        <span class={className} style={color? `color:${color}` : ""}>
-            {textObject.content}
-        </span>
+        {#if linkUrl}
+            <a href={linkUrl}>
+                <span class={className} style={color? `color:${color}` : ""}>
+                    {content}
+                </span>
+            </a>
+        {:else}
+            <span class={className} style={color? `color:${color}` : ""}>
+                {content}
+            </span>
+        {/if}
     {/if}
 {/if}
 

@@ -10,17 +10,19 @@
 		const info = await loadData(fetch, "info.json");
 		const exhibitionsScreenings = await loadData(fetch, "cv-exhibitions-and-screenings.json");
 		const cvAdditional = await loadData(fetch, "cv-additional.json");
+		const imprint = await loadData(fetch, "imprint.json");
 		return {
 			props: {
 				info: info?.data && processInfo(info.data),
 				exhibitionsScreenings: exhibitionsScreenings?.data && processExhibitionsScreenings(exhibitionsScreenings.data),
-				cvAdditional: cvAdditional?.data && processCvAdditional(cvAdditional.data)
+				cvAdditional: cvAdditional?.data && processCvAdditional(cvAdditional.data),
+				imprint: imprint?.data?.blocks
 			} 
 		};
 	}
 
 	const infoTags = ["Bio", "Current & Forthcoming"];
-	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education"] // TODO: add Imprint
+	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education", "Imprint"] // TODO: add Imprint
 
 	function processInfo(data) {
 		const sorted = data.rows.sort((a, b) => a.id < b.id ? 1 : -1);
@@ -51,6 +53,7 @@
 	export let info;
 	export let exhibitionsScreenings;
 	export let cvAdditional;
+	export let imprint;
 
 	const bio = info.itemsByKey.Bio[0]["line-1"];
 
@@ -151,6 +154,10 @@
 						   items={exhibitionsScreenings.itemsByKey[year]}
 						   isNested={true} />
 			{/each}
+
+		{:else if activeSection === "Imprint"}
+			<h1>Site Credits</h1>
+			<RichTextCollection objects={imprint} />
 
 		{:else}
 			<CVSection name={activeSection}
