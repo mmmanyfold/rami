@@ -1,17 +1,16 @@
 <script context="module">
 	import ProjectView from '$lib/ProjectView.svelte';
 	import { browser, dev } from '$app/env';
-	import { loadData } from '../../api';
+	import { loadProjects } from '../../api';
 
 	export const hydrate = dev;
 	export const router = browser;
 
 	export async function load({ fetch, params }) {
-		const resProjects = await loadData(fetch, "projects.json");
 		const resExhibitions = await loadData(fetch, "cv-exhibitions-and-screenings.json");
 		const resCvAdditional = await loadData(fetch, "cv-additional.json");
-
-		const projects = resProjects?.data?.rows || [];
+		const projects = await loadProjects(fetch);
+		
 		const exhibitions = resExhibitions?.data.rows || [];
 		const cvAdditional = resCvAdditional?.data.rows || [];
 		const pressItems = [...exhibitions, ...cvAdditional];

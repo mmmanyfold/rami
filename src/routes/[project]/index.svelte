@@ -1,46 +1,35 @@
 <script context="module">
-	import { page } from '$app/stores';
-	import { browser, dev } from '$app/env';
-	export const hydrate = dev;
-	export const router = browser;
-</script>
-
-<script>
 	import ProjectView from '$lib/ProjectView.svelte';
 	import CaretLeft from '$lib/icon/CaretLeft.svelte';
 	import CaretRight from '$lib/icon/CaretRight.svelte';
 	import Footnotes from '$lib/Footnotes.svelte';
+	import { loadProjects } from '../../api';
+	import { browser, dev } from '$app/env';
 
-	import { projects, getProjects } from '../../stores.js';
-	import { afterUpdate } from "svelte";
-	
-	let project;
-	let nextUrl = "";
-	let prevUrl = "";
+	export const hydrate = dev;
+	export const router = browser;
 
-	const setProject = (list) => {
-		const idx = list.findIndex(p => p.slug === $page.params.project);
-		project = list[idx];
-
-		const next = idx === list.length - 1 ? list[0] : list[idx + 1];
-		const prev = idx === 0 ? list[list.length - 1] : list[idx - 1];
-		nextUrl = next.slug;
-		prevUrl = prev.slug;
+	export async function load({ fetch, params }) {
+		const projects = await loadProjects(fetch);
+		const currentIndex = projects.findIndex(p => p.slug === params.project);
+		const next = currentIndex === projects.length - 1 ? projects[0] : projects[currentIndex + 1];
+		const prev = currentIndex === 0 ? projects[projects.length - 1] : projects[currentIndex - 1];
+		return {
+			props: {
+				projects,
+				project: projects[currentIndex],
+				nextUrl: next.slug,
+				prevUrl: prev.slug
+			} 
+		};
 	}
+</script>
 
-	afterUpdate(() => {
-		if ($projects.length) {
-			setProject($projects);
-		}
-	});
-
-	projects.subscribe(list => {
-		if (!list.length) {
-			getProjects();
-		} else {
-			setProject(list);
-		}
-	});
+<script>
+	export let projects = [];
+	export let project = {};
+	export let nextUrl = "";
+	export let prevUrl = "";
 </script>
 
 <svelte:head>
@@ -67,9 +56,9 @@
 	</div>
 {/if}
 
-{#if $projects}
+{#if projects}
 <div class="footnotes">
-	<Footnotes projects={$projects} />
+	<Footnotes projects={projects} />
 </div>
 {/if}
 

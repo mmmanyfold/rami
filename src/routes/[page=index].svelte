@@ -1,17 +1,15 @@
 <script context="module">
 	import ProjectsList from '$lib/ProjectsList.svelte';
-	import { loadData } from '../api';
+	import { loadProjects } from '../api';
 	import { browser, dev } from '$app/env';
 
 	export const hydrate = dev;
 	export const router = browser;
 
 	export async function load({ fetch, params }) {
-		const projects = await loadData(fetch, "projects.json");
+		const projects = await loadProjects(fetch);
 		return {
-			props: {
-				projects: projects?.data?.rows || []
-			} 
+			props: { projects } 
 		};
 	}
 </script>

@@ -1,9 +1,10 @@
 <script context="module">
-	import { loadData } from '../api';
+	import ProjectsGrid from '../lib/ProjectsGrid.svelte';
+	import Footnotes from '../lib/Footnotes.svelte';
+	import { loadProjects } from '../api';
 
 	export async function load({ fetch, params }) {
-		const { data } = await loadData(fetch, "projects.json");
-		const projects = data?.rows.sort((a, b) => a.id < b.id ? 1 : -1);
+		const projects = await loadProjects(fetch);
 		return {
 			props: { projects }
 		};
@@ -11,9 +12,6 @@
 </script>
 
 <script>
-	import ThumbnailGrid from '../lib/ThumbnailGrid.svelte';
-	import Footnotes from '../lib/Footnotes.svelte';
-
 	export let projects;
 
 	const assetUrls = projects.reduce((acc, p) => {
@@ -62,7 +60,7 @@ Error -->
 <ul class="gallery">
 	{#if innerWidth < 770}
 		<div style="padding: 0 1.25rem 0 1.25rem;">
-			<ThumbnailGrid projects={projects} />
+			<ProjectsGrid projects={projects} />
 		</div>
 	{:else}
 		{#each projects as { id, title, slug, homePageAssets } (id)}

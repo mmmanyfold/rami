@@ -1,5 +1,5 @@
 <script>
-	import ThumbnailGrid from './ThumbnailGrid.svelte';
+	import ProjectsGrid from './ProjectsGrid.svelte';
 
 	export let projects;
 </script>
@@ -37,7 +37,7 @@
 {/if}
 </ul>
 
-<ThumbnailGrid projects={projects} />
+<ProjectsGrid projects={projects} />
 
 
 <!-------------------------->
