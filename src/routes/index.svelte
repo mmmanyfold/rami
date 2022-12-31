@@ -5,32 +5,34 @@
 
 	export async function load({ fetch, params }) {
 		const projects = await loadProjects(fetch);
+
+		const assetUrls = projects.reduce((acc, p) => {
+			const assets = p.homePageAssets;
+			const urls = assets.files?.map(f => f.url) || [];
+			if (assets.type === "Image") {
+				const images = [...acc.images, urls].flat();
+				return {...acc, images}
+			} else if (assets.type === "Video") {
+				const videos = [...acc.videos, urls].flat();
+				return {...acc, videos}
+			} else {
+				return acc;
+			}
+		}, { images: [], videos: []});
+
 		return {
-			props: { projects }
+			props: { projects, assetUrls }
 		};
 	}
 </script>
 
 <script>
 	export let projects;
-
-	const assetUrls = projects.reduce((acc, p) => {
-		const assets = p.homePageAssets;
-		const urls = assets.files?.map(f => f.url) || [];
-		if (assets.type === "Image") {
-			const images = [...acc.images, urls].flat();
-			return {...acc, images}
-		} else if (assets.type === "Video") {
-			const videos = [...acc.videos, urls].flat();
-			return {...acc, videos}
-		} else {
-			return acc;	
-		}
-	}, { images: [], videos: []});
+	export let assetUrls;
 
 	$: innerWidth = 0;
-	$: preloadImageUrls = assetUrls.images.slice(0, 3);
-	$: preloadVideoUrls = assetUrls.videos.slice(0, 3);
+	$: preloadImageUrls = assetUrls.images.slice(0, 5);
+	$: preloadVideoUrls = assetUrls.videos.slice(0, 5);
 </script>
 
 <!-------------------------->
@@ -61,8 +63,8 @@
 		</div>
 	{:else}
 		{#each projects as { id, title, slug, homePageAssets } (id)}
-		{@const { type: assetType, files } = homePageAssets}
-		<li class="row">
+		{@const { type: assetType, files, align, width } = homePageAssets}
+		<li class={`row ${align ? align : ""} ${width ? "w-" + width : ""}`}>
 			<a href={slug} class="no-hover">
 				<sup class="middle">({id})</sup>
 				{#if assetType === "Video"}
@@ -70,10 +72,19 @@
 						<source src={files[0].url} type="video/mp4">
 					</video>
 				{:else if assetType === "Image" && files.length > 1}
-					<img src={files[1].url} alt="" loading="lazy" class="hover-image" />
-					<img src={files[0].url} alt={title} loading="lazy" />
+					<img class={`hover-image ${width ? "w-" + width : ""}`} 
+						 src={files[1].url} 
+						 alt="" 
+						 loading="lazy" />
+					<img class={width ? "w-" + width : ""} 
+					     src={files[0].url}
+						 alt={title} 
+						 loading="lazy" />
 				{:else if assetType === "Image" && files.length === 1}
-					<img src={files[0].url} alt={title} loading="lazy" />
+					<img class={width ? "w-" + width : ""} 
+					     src={files[0].url} 
+						 alt={title} 
+						 loading="lazy" />
 				{/if}
 			</a>
 		</li>
@@ -91,29 +102,42 @@
 	flex-direction: column;
 
 	.row {
+		position: relative;
+		width: 50vw;
 		margin: 1.5rem 0 3.5rem 0;
-
-		&:nth-child(odd) {
-			align-self: flex-end;
-		}
-		&:nth-child(even) {
-			align-self: flex-start;
-		}
 
 		sup {
 			display: block;
 			padding-bottom: 0.3rem;
 		}
+
+		&.w-1 {
+			width: 33%;
+		}
+		&.w-2 {
+			width: 66%;
+		}
+		&.w-3 {
+			width: 100%;
+		}
+
+		&.left {
+			align-self: flex-start;
+		}
+		&.center {
+			align-self: center;
+		}
+		&.right {
+			align-self: flex-end;
+		}
 	}
 
 	video {
-		width: 70vw;
-		max-height: 900px;
+		width: 100%;
 	}
 
 	img {
-		max-width: 70vw;
-		max-height: 900px;
+		width: 100%;
 
 		&.hover-image {
 			position: absolute;
