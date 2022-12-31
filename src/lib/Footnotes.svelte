@@ -13,7 +13,7 @@
 <style lang="less">
     section {
         line-height: 1.5rem;
-        margin: 10rem 1.25rem 2rem 1.25rem;
+        margin: 100vh 1.25rem 2rem 1.25rem;
         display: flex;
         flex-wrap: wrap;
 
