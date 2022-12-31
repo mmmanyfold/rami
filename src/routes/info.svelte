@@ -77,40 +77,42 @@
 	<div class="column">
 		<!-- mobile -->
 		<div class="hide-desktop">
-			<section>
+			<section class="bio">
 				<h1>About</h1>
 				<p><RichTextCollection objects={bio} /></p>
 				<hr />
 				<h1>Contact</h1>
 				<p><a href="mailto:ramimgeorge@gmail.com">rami.m.george (at) gmail.com</a></p>
+				<hr />
 			</section>
-			<hr />
+			
+			<div class="accordion">
+				<SectionAccordion name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
+				<hr />
 
-			<SectionAccordion name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
-			<hr />
+				<section>
+					<SectionToggle label="Exhibitions & Screenings"
+								   isActive={activeSection === "Exhibitions & Screenings"}
+								   onToggle={() => toggleSection("Exhibitions & Screenings")} />
+					{#if activeSection === "Exhibitions & Screenings"}
+						<div transition:slide={{ duration: 300 }}>
+							{#each exhibitionsScreenings.years as year}
+								<CVSection name={year} 
+										   items={exhibitionsScreenings.itemsByKey[year]}
+										   isNested={true} />
+							{/each}
+						</div>
+					{/if}
+				</section>
+				<hr />
 
-			<section>
-				<SectionToggle label="Exhibitions & Screenings"
-							   isActive={activeSection === "Exhibitions & Screenings"}
-							   onToggle={() => toggleSection("Exhibitions & Screenings")} />
-				{#if activeSection === "Exhibitions & Screenings"}
-					<div transition:slide={{ duration: 300 }}>
-						{#each exhibitionsScreenings.years as year}
-							<CVSection name={year} 
-								       items={exhibitionsScreenings.itemsByKey[year]}
-									   isNested={true} />
-						{/each}
-					</div>
-				{/if}
-			</section>
-			<hr />
-
-			{#each cvAdditional.tags as tag, i}
-				<SectionAccordion name={tag} type="cv" items={cvAdditional.itemsByKey[tag]} />
-				{#if i < cvAdditional.tags.length}
-					<hr />
-				{/if}
-			{/each}
+				{#each cvAdditional.tags as tag, i}
+					<SectionAccordion name={tag} type="cv" items={cvAdditional.itemsByKey[tag]} />
+					{#if i < cvAdditional.tags.length}
+						<hr />
+					{/if}
+				{/each}
+			</div>
 		</div>
 
 		<!-- desktop -->
@@ -195,18 +197,32 @@
 	}
 
 	.page {
-		padding: 0 1.35rem;
+		padding-bottom: 2rem;
 
 		@media (min-width: @mid-break) {
 			display: flex;
 			width: 100%;
 			height: calc(100% - 80px);
+			padding: 0 1.35rem;
 			position: fixed;
 		}
 	}
 
 	.hide-desktop {
-		padding-bottom: 2rem;
+		position: relative;
+
+		.bio {
+			position: fixed;
+			background-color: var(--bg-color);
+			padding: 0 1.35rem;
+			hr {
+				margin: 0;
+			}
+		}
+		.accordion {
+			padding: 0 1.35rem;
+			padding-top: 20.1rem;
+		}
 	}
 
 	.column {

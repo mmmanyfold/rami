@@ -8,7 +8,11 @@
 </script>
 
 
-<div role="button" class="container" on:click={onToggle} aria-expanded={isActive}>
+<div role="button" 
+     class={`container ${isActive ? "active" : ""}`} 
+     on:click={onToggle} 
+     aria-expanded={isActive}
+>
     {#if isActive}
         <CaretDown />
     {:else}
@@ -36,6 +40,10 @@
 
         @media (min-width: @mid-break) {
             margin-top: 1.2rem;
+        }
+
+        &.active {
+            color: #000;
         }
 
         &:hover {
