@@ -1,19 +1,26 @@
 <script context="module">
 	import ProjectsList from '$lib/ProjectsList.svelte';
+	import { loadData } from '../../api';
 	import { page } from '$app/stores';
 	import { browser, dev } from '$app/env';
+
 	export const hydrate = dev;
 	export const router = browser;
+
+	export async function load({ fetch, params }) {
+		const res = await loadData(fetch, "projects.json");
+		const projects = res.data?.rows || [];
+		const filtered = projects.filter(p => p.tags.includes(params.tag));
+		return {
+			props: {
+				projects: filtered
+			} 
+		};
+	}
 </script>
 
 <script>
-	import { projects, getProjects, loading, error } from '../../stores.js';
-
-	projects.subscribe(list => {
-		if (!list.length) {
-			getProjects();
-		}
-	});
+	export let projects = [];
 
 	let tag = $page.params.tag;
 </script>
@@ -24,4 +31,4 @@
 </svelte:head>
 
 
-<ProjectsList />
+<ProjectsList projects={projects} />

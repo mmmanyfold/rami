@@ -1,28 +1,7 @@
 <script>
 	import ThumbnailGrid from './ThumbnailGrid.svelte';
-	import { projects as data } from '../stores.js';
-	import { page } from '$app/stores';
 
-	let projects;
-
-	const setProjects = (allProjects, { tag, year }) => {
-		if (tag) {
-			projects = allProjects.filter((p) => p.tags.includes(tag));
-		} else if (year) {
-			projects = allProjects.filter((p) => p.year === year);
-		} else {
-			projects = allProjects;	
-		}
-	}
-	
-	data.subscribe(list => {
-		setProjects(list, $page.params);
-	});
-
-	page.subscribe(({ params }) => {
-		setProjects($data, params);
-	});
-
+	export let projects;
 </script>
 
 

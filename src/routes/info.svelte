@@ -1,4 +1,10 @@
 <script context="module">
+	import SectionToggle from '../lib/SectionToggle.svelte';
+	import SectionAccordion from '../lib/SectionAccordion.svelte';
+	import InfoSection from '../lib/InfoSection.svelte';
+	import CVSection from '../lib/CVSection.svelte';
+	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
+	import { slide } from "svelte/transition";
 	import { browser, dev } from '$app/env';
 	import { loadData } from '../api';
 	import { processItemsByKey } from '../utils';
@@ -43,13 +49,6 @@
 </script>
 
 <script>
-	import SectionToggle from '../lib/SectionToggle.svelte';
-	import SectionAccordion from '../lib/SectionAccordion.svelte';
-	import InfoSection from '../lib/InfoSection.svelte';
-	import CVSection from '../lib/CVSection.svelte';
-	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
-	import { slide } from "svelte/transition";
-
 	export let info;
 	export let exhibitionsScreenings;
 	export let cvAdditional;
