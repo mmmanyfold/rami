@@ -52,10 +52,7 @@
 
 {#if !innerWidth}
 <span></span>
-<!-- {:else if $loading}
-Loading...
-{:else if $error}
-Error -->
+
 {:else}
 <ul class="gallery">
 	{#if innerWidth < 770}

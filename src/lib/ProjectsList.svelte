@@ -10,72 +10,93 @@
 	const onChangeView = (view) => {
 		activeView = view;
 	}
+
+	$: innerWidth = 0;
 </script>
 
+<svelte:window bind:innerWidth />
 
 <!-------------------------->
 
-
-<div class="header">
-	<div role="button" 
-	     class={activeView === "list" ? "active" : ""} 
-		 on:click={() => onChangeView("list")}>
-		TEXT <span /> <RowsIcon />
+<div class="container">
+	<div class="header">
+		<div role="button"
+			 class={activeView === "list" ? "active" : ""} 
+			 on:click={() => onChangeView("list")}>
+			TEXT <span /> <RowsIcon />
+		</div>
+		<div role="button"
+			 class={activeView === "gallery" ? "active" : ""} 
+			 on:click={() => onChangeView("gallery")}>
+			<GridIcon /> <span /> GALLERY
+		</div>
 	</div>
-	<div role="button" 
-	     class={activeView === "gallery" ? "active" : ""} 
-		 on:click={() => onChangeView("gallery")}>
-		<GridIcon /> <span /> GALLERY
-	</div>
-</div>
-
-{#if activeView === "list"}
-<ul>
-	{#if projects?.length}
-		{#each projects as { id, title, slug, year, tags } (id)}
-		{@const [first, ...rest] = title.split(",")}
-		<li>
-			<div class="title">
-				<sup class="middle">({id})</sup>
-				<a href={"/" + slug}>
-					<h1 class="title-text">
-						<span>{`${first}${rest.length ? ", " : ""}`}</span>
-						{#if rest.length}
-							<span>{rest.join(",").substr(1)}</span>
+	
+	{#if activeView === "list"}
+	<ul>
+		{#if projects?.length}
+			{#each projects as { id, title, slug, year, tags } (id)}
+			{@const [first, ...rest] = title.split(",")}
+			<li>
+				<div class="title">
+					<sup class="middle">({id})</sup>
+					<a href={"/" + slug}>
+						{#if innerWidth < 820}
+							<h1 class="title-text">{title}</h1>
+						{:else}
+							<h1 class="title-text">
+								<span>{`${first}${rest.length ? ", " : ""}`}</span>
+								{#if rest.length}
+									<span>{rest.join(",").substr(1)}</span>
+								{/if}
+							</h1>
 						{/if}
-					</h1>
-				</a>
-			</div>
-			<div class="tags">
-				{#each tags as tag}
-				<div><a href={"/index/" + tag}>{tag}</a></div>
-				{/each}
-				<div><a href={"/index/" + year}>{year}</a></div>
-			</div>
-		</li>
-		{/each}
-	{:else}
-		404
+					</a>
+				</div>
+				<div class="tags">
+					{#each tags as tag}
+					<div><a href={"/index/" + tag}>{tag}</a></div>
+					{/each}
+					<div><a href={"/index/" + year}>{year}</a></div>
+				</div>
+			</li>
+			{/each}
+		{:else}
+			404
+		{/if}
+	</ul>
+	
+	{:else if activeView === "gallery"}
+	<ProjectsGrid projects={projects} />
+	
 	{/if}
-</ul>
-
-{:else if activeView === "gallery"}
-<ProjectsGrid projects={projects} />
-
-{/if}
+</div>
 
 
 <!-------------------------->
 
 
 <style lang="less">
+	.container {
+		padding: 1.35rem;
+		padding-top: 0;
+		
+		@media screen and (min-width: @mid-break) {
+			padding: 0;
+		}
+	}
+
 	.header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		color: @secondary-color;
 		padding-top: 1rem;
-		padding-bottom: 2.5rem;
+		padding-bottom: 1.5rem;
+
+		@media screen and (min-width: @mid-break) {
+			padding-bottom: 2.5rem;
+		}
 
 		div {
 			display: flex;
