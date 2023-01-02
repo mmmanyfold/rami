@@ -32,6 +32,10 @@
 					<RichTextCollection objects={block.video.caption} />
 				</p>
 			{/if}
+		{:else if block.type === "embed"}
+			<div class="embed-container">
+				<iframe src={block.embed.url} title="Embedded content" />
+			</div>
 		{/if}
 	{/each}
 </div>
@@ -53,6 +57,12 @@
 			right: 0;
 			width: 100%;
 			height: 100%;
+		}
+	}
+	.embed-container {
+		iframe {
+			width: 100%;
+			height: 75vh;
 		}
 	}
 </style>
