@@ -31,8 +31,7 @@
 	export let assetUrls;
 
 	$: innerWidth = 0;
-	$: preloadImageUrls = assetUrls.images.slice(0, 5);
-	$: preloadVideoUrls = assetUrls.videos.slice(0, 5);
+	$: preloadImageUrls = assetUrls.images;
 </script>
 
 <!-------------------------->
@@ -42,9 +41,6 @@
 	<meta name="description" content="Artist Archive" />
 	{#each preloadImageUrls as image}
     	<link rel="preload" as="image" href={image} />
-    {/each}
-	{#each preloadVideoUrls as video}
-    	<link rel="preload" as="video" href={video} />
     {/each}
 </svelte:head>
 
