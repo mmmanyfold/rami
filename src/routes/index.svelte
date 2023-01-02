@@ -68,7 +68,7 @@
 						<div class="loading">
 							loading...
 						</div>
-						<video autoplay muted loop>
+						<video autoplay loop>
 							<source src={files[0].url} type="video/mp4">
 						</video>
 					</div>
