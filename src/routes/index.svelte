@@ -64,9 +64,14 @@
 			<a href={slug} class="no-hover">
 				<sup class="middle">({id})</sup>
 				{#if assetType === "Video"}
-					<video autoplay muted loop>
-						<source src={files[0].url} type="video/mp4">
-					</video>
+					<div class="video-container">
+						<div class="loading">
+							loading...
+						</div>
+						<video autoplay muted loop>
+							<source src={files[0].url} type="video/mp4">
+						</video>
+					</div>
 				{:else if assetType === "Image" && files.length > 1}
 					<img class={`hover-image ${width ? "w-" + width : ""}`} 
 						 src={files[1].url} 
@@ -128,10 +133,6 @@
 		}
 	}
 
-	video {
-		width: 100%;
-	}
-
 	img {
 		width: 100%;
 
@@ -141,6 +142,28 @@
 			&:hover {
 				opacity: 1;
 			}
+		}
+	}
+
+	.video-container {
+		position: relative;
+
+		.loading {
+			position: absolute;
+			width: 100%;
+			height: 98%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: -1;
+			background-color: @accent-color;
+			opacity: 0.5;
+			color: @secondary-color;
+			font-style: italic;
+		}
+
+		video {
+			width: 100%;
 		}
 	}
 }
