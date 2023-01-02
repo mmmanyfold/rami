@@ -46,7 +46,7 @@
 		<CaretRight />
 	</a>
 	
-	<div class="mobile-arrows">
+	<div class="mobile-arrows hide-desktop">
 		<a class="arrow left" href={prevUrl} aria-label="Previous">
 			<CaretLeft />
 		</a>
@@ -98,9 +98,5 @@
 		align-items: center;
 		justify-content: space-between;
 		background-color: var(--bg-color);
-	}
-
-	.footnotes {
-		margin-bottom: 3rem;
 	}
 </style>
