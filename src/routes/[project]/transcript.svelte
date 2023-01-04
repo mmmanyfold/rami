@@ -1,7 +1,7 @@
 <script context="module">
 	import { page } from '$app/stores';
-	import { browser, dev } from '$app/env';
-	export const hydrate = dev;
+	import { browser } from '$app/env';
+	export const hydrate = true;
 	export const router = browser;
 </script>
 
@@ -13,7 +13,7 @@
 	let project;
 
 	const setProject = () => {
-		project = $projects.find(p => p.slug === $page.params.project);
+		project = $projects.find(p => p?.slug === $page.params.project);
 	}
 
 	afterUpdate(() => {

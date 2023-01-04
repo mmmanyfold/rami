@@ -2,9 +2,9 @@
 	import ProjectsList from '$lib/ProjectsList.svelte';
 	import { loadProjects } from '../../api';
 	import { page } from '$app/stores';
-	import { browser, dev } from '$app/env';
+	import { browser } from '$app/env';
 
-	export const hydrate = dev;
+	export const hydrate = true;
 	export const router = browser;
 
 	export async function load({ fetch, params }) {

@@ -2,20 +2,18 @@
 	import CaretRight from '../lib/icon/CaretRight.svelte';
 	import CaretDown from '../lib/icon/CaretDown.svelte';
 
-	export let onToggle;
+    export let onToggle;
     export let isActive = null;
 	export let activeSection = null;
 	export let label;
-
-    console.log({onToggle, activeSection, label, isActive})
 
     const active = activeSection ? activeSection === label : isActive;
 </script>
 
 
-<div role="button" 
-     class={`container ${active ? "active" : ""}`} 
-     on:click={() => onToggle(label)} 
+<div on:click={onToggle}
+     role="button"
+     class={`container ${active ? "active" : ""}`}
      aria-expanded={active}
 >
     {#if active}

@@ -1,9 +1,9 @@
 <script context="module">
 	import ProjectView from '$lib/ProjectView.svelte';
-	import { browser, dev } from '$app/env';
+	import { browser } from '$app/env';
 	import { loadData, loadProjects } from '../../api';
 
-	export const hydrate = dev;
+	export const hydrate = true;
 	export const router = browser;
 
 	export async function load({ fetch, params }) {
@@ -15,7 +15,7 @@
 		const cvAdditional = resCvAdditional?.data.rows || [];
 		const pressItems = [...exhibitions, ...cvAdditional];
 
-		const project = projects.find(p => p.slug === params.project);
+		const project = projects.find(p => p?.slug === params.project);
 		let blocks;
 
 		if (project) {

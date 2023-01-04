@@ -1,6 +1,6 @@
 <script context="module">
-	import { browser, dev } from '$app/env';
-	export const hydrate = dev;
+	import { browser } from '$app/env';
+	export const hydrate = true;
 	export const router = browser;
 </script>
 

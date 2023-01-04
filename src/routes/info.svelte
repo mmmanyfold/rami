@@ -1,6 +1,6 @@
 <script context="module">
 	import SectionToggle from '../lib/SectionToggle.svelte';
-	import SectionAccordion from '../lib/SectionAccordion.svelte';
+	import SectionDrawer from '../lib/SectionDrawer.svelte';
 	import InfoSection from '../lib/InfoSection.svelte';
 	import CVSection from '../lib/CVSection.svelte';
 	import RichTextCollection from '../lib/notion/RichTextCollection.svelte';
@@ -9,7 +9,7 @@
 	import { loadData } from '../api';
 	import { processItemsByKey } from '../utils';
 
-	export const hydrate = dev;
+	export const hydrate = true;
 	export const router = browser;
 
 	export async function load({ fetch, params }) {
@@ -61,14 +61,10 @@
 	const toggleSection = (selected) => {
 		if (activeSection === selected) {
 			activeSection = "Info";
-			console.log("toggle 1: ", selected)
 		} else {
 			activeSection = selected;
-			console.log("toggle 2: ", selected)
 		}
 	}
-
-	console.log("active section:", activeSection)
 </script>
 
 <svelte:head>
@@ -92,13 +88,13 @@
 			</section>
 			
 			<div class="accordion">
-				<SectionAccordion name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
+				<SectionDrawer name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
 				<hr />
 
 				<section>
 					<SectionToggle label="Exhibitions & Screenings"
-								   activeSection={activeSection}
-								   onToggle={toggleSection} />
+								   isActive={activeSection === "Exhibitions & Screenings"}
+								   onToggle={() => toggleSection("Exhibitions & Screenings")} />
 					{#if activeSection === "Exhibitions & Screenings"}
 						<div transition:slide={{ duration: 300 }}>
 							{#each exhibitionsScreenings.years as year}
@@ -112,7 +108,7 @@
 				<hr />
 
 				{#each cvAdditional.tags as tag, i}
-					<SectionAccordion name={tag} type="cv" items={cvAdditional.itemsByKey[tag]} />
+					<SectionDrawer name={tag} type="cv" items={cvAdditional.itemsByKey[tag]} />
 					{#if i < cvAdditional.tags.length}
 						<hr />
 					{/if}
@@ -125,8 +121,8 @@
 			{#if cvAdditional}
 				{#each ["Exhibitions & Screenings", ...cvAdditional.tags] as tag, i}
 					<SectionToggle label={tag}
-					               activeSection={activeSection}
-								   onToggle={toggleSection} />
+					               isActive={activeSection === tag}
+								   onToggle={() => toggleSection(tag)} />
 					{#if i < cvAdditional.tags.length}
 						<hr />
 					{/if}
@@ -239,13 +235,6 @@
 			display: none;
 		}
 
-		.info-menu-item {
-			margin-top: 1.2rem;
-			display: flex;
-			align-items: center;
-			color: @secondary-color;
-		}
-
 		&:first-child {
 			h1 {
 				margin: 1.5rem 0 0 0;
@@ -271,12 +260,6 @@
 				width: 52%;
 				padding-left: 2.5rem;
 				padding-right: 4rem;
-			}
-
-			.info-menu-item {
-				&:hover {
-					color: @accent-color;
-				}
 			}
 		}
 	}

@@ -4,22 +4,22 @@
 	import CaretRight from '$lib/icon/CaretRight.svelte';
 	import Footnotes from '$lib/Footnotes.svelte';
 	import { loadProjects } from '../../api';
-	import { browser, dev } from '$app/env';
+	import { browser } from '$app/env';
 
-	export const hydrate = dev;
+	export const hydrate = true;
 	export const router = browser;
 
 	export async function load({ fetch, params }) {
 		const projects = await loadProjects(fetch);
-		const currentIndex = projects.findIndex(p => p.slug === params.project);
+		const currentIndex = projects.findIndex(p => p?.slug === params.project);
 		const next = currentIndex === projects.length - 1 ? projects[0] : projects[currentIndex + 1];
 		const prev = currentIndex === 0 ? projects[projects.length - 1] : projects[currentIndex - 1];
 		return {
 			props: {
 				projects,
 				project: projects[currentIndex],
-				nextUrl: next.slug,
-				prevUrl: prev.slug
+				nextUrl: next?.slug,
+				prevUrl: prev?.slug
 			} 
 		};
 	}
