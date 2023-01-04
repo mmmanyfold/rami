@@ -24,13 +24,17 @@
         <div class="meta">
             <RichTextCollection objects={project.medium} />
             <div class="tags">
-                {#each project.tags as tag}
-                    <span>
-                        <a href={"/index/" + tag}>{tag}</a>,
-                        {""}
-                    </span>
-                {/each}
-                <a href={"/index/" + project.year}>{project.year}</a>
+                {#if project.tags?.length}
+                    {#each project.tags as tag}
+                        <span>
+                            <a href={"/index/" + tag}>{tag}</a>,
+                            {""}
+                        </span>
+                    {/each}
+                {/if}
+                {#if project.year}
+                    <a href={"/index/" + project.year}>{project.year}</a>
+                {/if}
             </div>
 
             <hr />
@@ -39,7 +43,7 @@
         </div>
     {/if}
 
-    {#if project.transcript.uuid || project.exhibitionGuide || project.press}
+    {#if project.transcript?.uuid || project.exhibitionGuide || project.press}
     <hr />
     {/if}
 
@@ -47,7 +51,7 @@
         {#if isSubview}
             {view}
         {:else}
-            {#if project.transcript.uuid}
+            {#if project.transcript?.uuid}
                 <a href={"/" + $page.params.project + "/transcript"}>
                     Transcript
                 </a>

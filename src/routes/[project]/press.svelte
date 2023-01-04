@@ -1,7 +1,7 @@
 <script context="module">
 	import ProjectView from '$lib/ProjectView.svelte';
 	import { browser, dev } from '$app/env';
-	import { loadProjects } from '../../api';
+	import { loadData, loadProjects } from '../../api';
 
 	export const hydrate = dev;
 	export const router = browser;
