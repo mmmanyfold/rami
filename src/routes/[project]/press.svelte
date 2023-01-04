@@ -10,13 +10,10 @@
 		const resExhibitions = await loadData(fetch, "cv-exhibitions-and-screenings.json");
 		const resCvAdditional = await loadData(fetch, "cv-additional.json");
 		const projects = await loadProjects(fetch);
-		// console.log({resExhibitions, resCvAdditional, projects})
 		
 		const exhibitions = resExhibitions?.data.rows || [];
 		const cvAdditional = resCvAdditional?.data.rows || [];
 		const pressItems = [...exhibitions, ...cvAdditional];
-
-		// console.log({exhibitions, cvAdditional, pressItems})
 
 		const project = projects.find(p => p.slug === params.project);
 		let blocks;

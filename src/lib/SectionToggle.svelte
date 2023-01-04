@@ -3,17 +3,20 @@
 	import CaretDown from '../lib/icon/CaretDown.svelte';
 
 	export let onToggle;
-	export let isActive;
+    export let isActive = null;
+	export let activeSection = null;
 	export let label;
+
+    const active = activeSection ? activeSection === label : isActive;
 </script>
 
 
 <div role="button" 
-     class={`container ${isActive ? "active" : ""}`} 
-     on:click={onToggle} 
-     aria-expanded={isActive}
+     class={`container ${active ? "active" : ""}`} 
+     on:click={() => onToggle(label)} 
+     aria-expanded={active}
 >
-    {#if isActive}
+    {#if active}
         <CaretDown />
     {:else}
         <CaretRight />

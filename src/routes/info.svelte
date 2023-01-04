@@ -57,11 +57,12 @@
 	const bio = info.itemsByKey.Bio[0]["line-1"];
 
 	let activeSection = "Info";
-	const toggleSection = (name) => {
-		if (activeSection === name) {
+
+	const toggleSection = (selected) => {
+		if (activeSection === selected) {
 			activeSection = "Info";
 		} else {
-			activeSection = name;
+			activeSection = selected;
 		}
 	}
 </script>
@@ -92,8 +93,8 @@
 
 				<section>
 					<SectionToggle label="Exhibitions & Screenings"
-								   isActive={activeSection === "Exhibitions & Screenings"}
-								   onToggle={() => toggleSection("Exhibitions & Screenings")} />
+								   activeSection={activeSection}
+								   onToggle={toggleSection} />
 					{#if activeSection === "Exhibitions & Screenings"}
 						<div transition:slide={{ duration: 300 }}>
 							{#each exhibitionsScreenings.years as year}
@@ -120,8 +121,8 @@
 			{#if cvAdditional}
 				{#each ["Exhibitions & Screenings", ...cvAdditional.tags] as tag, i}
 					<SectionToggle label={tag}
-									isActive={activeSection === tag}
-									onToggle={() => toggleSection(tag)} />
+					               activeSection={activeSection}
+								   onToggle={toggleSection} />
 					{#if i < cvAdditional.tags.length}
 						<hr />
 					{/if}
