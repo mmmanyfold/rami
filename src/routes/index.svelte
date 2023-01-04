@@ -38,7 +38,7 @@
 
 <svelte:head>
 	<title>Rami George</title>
-	<meta name="description" content="Artist Archive" />
+	<meta name="description" content="" />
 	{#each preloadImageUrls as image}
     	<link rel="preload" as="image" href={image} />
     {/each}

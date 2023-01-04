@@ -23,8 +23,8 @@
 </script>
 
 <svelte:head>
-	<title>{$page.params.year}</title>
-	<meta name="description" content="{$page.params.year} work" />
+	<title>INDEX - {$page.params.year}</title>
+	<meta name="description" content="Rami George Archive - {$page.params.year}" />
 </svelte:head>
 
 

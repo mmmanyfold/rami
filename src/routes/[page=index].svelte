@@ -20,7 +20,7 @@
 
 <svelte:head>
 	<title>INDEX</title>
-	<meta name="description" content="Projects" />
+	<meta name="description" content="Rami George Archive" />
 </svelte:head>
 
 

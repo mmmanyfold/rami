@@ -22,11 +22,12 @@
 	export let projects = [];
 
 	let tag = $page.params.tag;
+	let displayName = tag.charAt(0).toUpperCase() + tag.slice(1);
 </script>
 
 <svelte:head>
-	<title>{tag.toUpperCase()}</title>
-	<meta name="description" content="{tag} work" />
+	<title>INDEX - {displayName}</title>
+	<meta name="description" content="Rami George Archive - {displayName}" />
 </svelte:head>
 
 

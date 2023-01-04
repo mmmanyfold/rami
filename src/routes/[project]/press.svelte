@@ -32,13 +32,13 @@
 </script>
 
 <script>
-	export let project;
+	export let project = {};
 	export let blocks;
 </script>
 
 <svelte:head>
-	<title>Press</title>
-	<meta name="description" content="" />
+	<title>{project.title}</title>
+	<meta name="description" content="Press for {project.title}" />
 </svelte:head>
 
 

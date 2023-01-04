@@ -69,7 +69,7 @@
 
 <svelte:head>
 	<title>INFO</title>
-	<meta name="description" content="About / CV / News" />
+	<meta name="description" content="Rami George - Bio / CV / News" />
 </svelte:head>
 
 
