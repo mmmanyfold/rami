@@ -61,10 +61,14 @@
 	const toggleSection = (selected) => {
 		if (activeSection === selected) {
 			activeSection = "Info";
+			console.log("toggle 1: ", selected)
 		} else {
 			activeSection = selected;
+			console.log("toggle 2: ", selected)
 		}
 	}
+
+	console.log("active section:", activeSection)
 </script>
 
 <svelte:head>

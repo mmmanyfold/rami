@@ -7,6 +7,8 @@
 	export let activeSection = null;
 	export let label;
 
+    console.log({onToggle, activeSection, label, isActive})
+
     const active = activeSection ? activeSection === label : isActive;
 </script>
 
