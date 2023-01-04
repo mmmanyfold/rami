@@ -102,6 +102,7 @@
         margin-top: 1.45rem;
 
         .tags {
+            margin-top: 1rem;
             text-transform: capitalize;
         }
     }
