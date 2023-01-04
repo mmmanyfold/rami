@@ -1,43 +1,32 @@
 <script context="module">
-	import { page } from '$app/stores';
+	import ProjectView from '$lib/ProjectView.svelte';
 	import { browser } from '$app/env';
+	import { loadProjects } from '../../api';
+
 	export const hydrate = true;
 	export const router = browser;
+
+	export async function load({ fetch, params }) {
+		const projects = await loadProjects(fetch);
+		const project = projects.find(p => p?.slug === params.project);
+
+		return {
+			props: { project } 
+		};
+	}
 </script>
 
 <script>
-	import ProjectView from '$lib/ProjectView.svelte';
-	import { projects, getProjects } from '../../stores.js';
-	import { afterUpdate } from "svelte";
-
-	let project;
-
-	const setProject = () => {
-		project = $projects.find(p => p?.slug === $page.params.project);
-	}
-
-	afterUpdate(() => {
-		if ($projects.length) {
-			setProject();
-		}
-	});
-
-	projects.subscribe(list => {
-		if (!list.length) {
-			getProjects();
-		} else {
-			setProject();
-		}
-	});
+	export let project;
 </script>
 
 <svelte:head>
-	<title>Transcript</title>
-	<meta name="description" content="" />
+	<title>{project.title}</title>
+	<meta name="description" content="Transcript — {project.title}" />
 </svelte:head>
 
 {#if project}
-	<ProjectView project={project} blocks={project.transcript.blocks} view="Transcript" />
+	<ProjectView project={project} blocks={project.transcript?.blocks} view="Transcript" />
 {/if}
 
 <style lang="less">

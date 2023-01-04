@@ -34,7 +34,7 @@
 
 <svelte:head>
 	<title>{project.title}</title>
-	<meta name="description" content="{project.title} by Rami George" />
+	<meta name="description" content="Rami George — {project.title}" />
 </svelte:head>
 
 {#if project}

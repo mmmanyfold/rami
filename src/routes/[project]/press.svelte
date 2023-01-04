@@ -16,6 +16,7 @@
 		const pressItems = [...exhibitions, ...cvAdditional];
 
 		const project = projects.find(p => p?.slug === params.project);
+		
 		let blocks;
 
 		if (project) {
@@ -38,7 +39,7 @@
 
 <svelte:head>
 	<title>{project.title}</title>
-	<meta name="description" content="Press for {project.title}" />
+	<meta name="description" content="Press — {project.title}" />
 </svelte:head>
 
 
