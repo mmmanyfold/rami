@@ -43,7 +43,7 @@
         </div>
     {/if}
 
-    {#if project.transcript?.uuid || project.exhibitionGuide || project.press}
+    {#if project.transcript?.uuid || project.exhibitionGuide || hasPress}
     <hr />
     {/if}
 
