@@ -3,9 +3,15 @@
     export let toggleMobileMenu;
 
 	import MobileMenuIcon from '../lib/navigation/MobileMenuIcon.svelte';
+
+	$: scrollY = 0;
 </script>
 
-<header>
+<svelte:window bind:scrollY />
+
+<!-------------------------->
+
+<header class={scrollY > 0 && !mobileMenuOpen ? "border" : ""}>
 	<a class="home-link" href="/">RAMI GEORGE</a>
 	<div class="nav-links">
 		<a href="/index">INDEX</a>
@@ -24,16 +30,25 @@
 		padding: 0.5rem 1rem;
 		height: 56.4px;
 		z-index: 1;
+		border: 1px solid var(--bg-color);
 
 		@media screen and (min-width: @mid-break) {
-			padding: 1.25rem 1.8rem 1rem 1.8rem;
+			padding: 1rem 1.8rem;
 			height: 80px;
+		}
+
+		&.border {
+			border: 1px solid @accent-color;
 		}
 	}
 
 	.home-link {
 		font-size: 1.75rem;
-		line-height: 1.5;
+		line-height: 1.4;
+
+		@media screen and (min-width: @mid-break) {
+			line-height: 1.8;
+		}
 	}
 
 	.nav-links {

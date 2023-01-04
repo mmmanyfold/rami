@@ -21,7 +21,7 @@
         height: 100vh;
         width: 100vw;
         background-color: white;
-        opacity: 0.5;
+        opacity: 0.6;
     }
 
     .container {

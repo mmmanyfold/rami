@@ -10,7 +10,7 @@
 
 <style lang="less">
     .wrapper {
-        margin-top: 0.3rem;
+        margin-top: 0.2rem;
         @media screen and (min-width: @mid-break) {
 			display: none;
 		}
