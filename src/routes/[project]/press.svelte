@@ -10,15 +10,23 @@
 		const resExhibitions = await loadData(fetch, "cv-exhibitions-and-screenings.json");
 		const resCvAdditional = await loadData(fetch, "cv-additional.json");
 		const projects = await loadProjects(fetch);
+		// console.log({resExhibitions, resCvAdditional, projects})
 		
 		const exhibitions = resExhibitions?.data.rows || [];
 		const cvAdditional = resCvAdditional?.data.rows || [];
 		const pressItems = [...exhibitions, ...cvAdditional];
 
+		// console.log({exhibitions, cvAdditional, pressItems})
+
 		const project = projects.find(p => p.slug === params.project);
-		const pressIDs = [...project?.pressExhibitions, ...project?.pressAdditional];
-		
-		const blocks = pressIDs.map(id => pressItems.find(item => item.uuid === id));
+		let blocks;
+
+		if (project) {
+			const pressExhibitions = project.pressExhibitions || [];
+			const pressAdditional = project.pressAdditional || [];
+			const pressIDs = [...pressExhibitions, ...pressAdditional];
+			blocks = pressIDs.map(id => pressItems.find(item => item.uuid === id));
+		}
 
 		return {
 			props: { project, blocks }
