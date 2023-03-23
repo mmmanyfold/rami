@@ -55,7 +55,9 @@
 	export let imprint;
 
 	const bio = info.itemsByKey.Bio[0]["line-1"];
-
+	
+	let bioHeight;
+	$: innerHeight = 0;
 	$: activeSection = "Info";
 
 	const toggleSection = (selected) => {
@@ -72,13 +74,14 @@
 	<meta name="description" content="Rami George - Bio / CV / News" />
 </svelte:head>
 
+<svelte:window bind:innerHeight />
 
 <div class="page">
 	<!-- column 1 -->
 	<div class="column">
 		<!-- mobile -->
-		<div class="hide-desktop">
-			<section class="bio">
+		<div class="hide-desktop" style={`height: ${innerHeight - 56.4}px`}>
+			<section class="bio" bind:clientHeight={bioHeight}>
 				<h1>About</h1>
 				<p><RichTextCollection objects={bio} /></p>
 				<hr />
@@ -87,7 +90,7 @@
 				<hr />
 			</section>
 			
-			<div class="accordion">
+			<div class="accordion" style={`padding-top: ${bioHeight + 10}px`}>
 				<SectionDrawer name="Current & Forthcoming" type="info" items={info.itemsByKey["Current & Forthcoming"]} />
 				<hr />
 
@@ -210,7 +213,9 @@
 	}
 
 	.hide-desktop {
-		position: relative;
+		position: fixed;
+		width: 100%;
+		overflow-y: scroll;
 
 		.bio {
 			position: fixed;
@@ -221,8 +226,7 @@
 			}
 		}
 		.accordion {
-			padding: 0 1.35rem;
-			padding-top: 20.1rem;
+			padding: 1.35rem;
 		}
 	}
 

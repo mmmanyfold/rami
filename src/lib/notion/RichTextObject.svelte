@@ -23,24 +23,24 @@
     {#if hasNewlines}
         {#if linkUrl}
             <a href={linkUrl}>
-                <pre class={className} style={color? `color:${color}` : ""}>
+                <pre class={className} style={color ? `color:${color}` : ""}>
                     {content}
                 </pre>
             </a>
         {:else}
-            <pre class={className} style={color? `color:${color}` : ""}>
+            <pre class={className} style={color ? `color:${color}` : ""}>
                 {content}
             </pre>
         {/if}
     {:else}
         {#if linkUrl}
             <a href={linkUrl}>
-                <span class={className} style={color? `color:${color}` : ""}>
+                <span class={className} style={color ? `color:${color}` : ""}>
                     {content}
                 </span>
             </a>
         {:else}
-            <span class={className} style={color? `color:${color}` : ""}>
+            <span class={className} style={color ? `color:${color}` : ""}>
                 {content}
             </span>
         {/if}
