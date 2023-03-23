@@ -18,9 +18,6 @@
         </a>
     {:else}
         <h1 class="title">{project.title}</h1>
-    {/if}
-
-    {#if !isSubview}
         <div class="meta">
             <RichTextCollection objects={project.medium} />
             <div class="tags">
