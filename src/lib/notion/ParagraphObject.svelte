@@ -17,7 +17,7 @@
 
 {#if textObjects}
     <p class={className} style={color ? `color:${color}` : ""}>
-        <RichTextCollection objects={textObjects} />
+        <RichTextCollection bind:objects={textObjects} />
     </p>
 {/if}
 

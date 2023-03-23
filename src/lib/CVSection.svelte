@@ -16,28 +16,28 @@
                 {#if url}
                     <a href={url} target="_blank">
                         <span class="title">
-                            <RichTextCollection objects={title} />
+                            <RichTextCollection bind:objects={title} />
                         </span>
                         {#if description}
-                            <RichTextCollection objects={description} />
+                            <RichTextCollection bind:objects={description} />
                         {/if}
                         {#if detail}
                             <span class="detail">
-                                <RichTextCollection objects={detail} />
+                                <RichTextCollection bind:objects={detail} />
                             </span>
                         {/if}
                     </a>
                 {:else}
                     <span class="title">
-                        <RichTextCollection objects={title} />
+                        <RichTextCollection bind:objects={title} />
                     </span>
                     {#if description}
                         <span class="description">
-                            <RichTextCollection objects={description} />
+                            <RichTextCollection bind:objects={description} />
                         </span>
                     {/if}
                     {#if detail}
-                        <RichTextCollection objects={detail} />
+                        <RichTextCollection bind:objects={detail} />
                     {/if}
                 {/if}
             </li>

@@ -14,7 +14,7 @@
 			{@html block.code.rich_text[0].plain_text}
 
 		{:else if block.type === "paragraph"}
-			<p><RichTextObject object={block.paragraph.rich_text[0]} /></p>
+			<p><RichTextObject bind:object={block.paragraph.rich_text[0]} /></p>
 
 		{:else if block.type === "image"}
 			{@const caption = block.image.caption}
@@ -29,7 +29,7 @@
 			</div>
 			{#if block.video.caption}
 				<p class="video-caption">
-					<RichTextCollection objects={block.video.caption} />
+					<RichTextCollection bind:objects={block.video.caption} />
 				</p>
 			{/if}
 		{:else if block.type === "embed"}

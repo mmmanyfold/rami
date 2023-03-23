@@ -159,7 +159,7 @@
 
 		{:else if activeSection === "Imprint"}
 			<h1>Site Credits</h1>
-			<RichTextCollection objects={imprint} />
+			<RichTextCollection bind:objects={imprint} />
 
 		{:else}
 			<CVSection name={activeSection}

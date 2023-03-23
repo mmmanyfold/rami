@@ -19,7 +19,7 @@
     {:else}
         <h1 class="title">{project.title}</h1>
         <div class="meta">
-            <RichTextCollection objects={project.medium} />
+            <RichTextCollection bind:objects={project.medium} />
             <div class="tags">
                 {#if project.tags?.length}
                     {#each project.tags as tag}
@@ -36,7 +36,7 @@
 
             <hr />
 
-            <small><RichTextCollection objects={project.description} /></small>
+            <small><RichTextCollection bind:objects={project.description} /></small>
         </div>
     {/if}
 

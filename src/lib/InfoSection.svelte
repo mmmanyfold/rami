@@ -15,42 +15,42 @@
         {#if item["url"] || item["download"]}
             <a href={item["url"] || item["download"][0]["url"]}>
                 {#if item["line-1"]}
-                    <RichTextCollection objects={item["line-1"]} color="#000000" />
+                    <RichTextCollection bind:objects={item["line-1"]} color="#000000" />
                     <br />
                 {/if}
 
                 {#if item["line-2"]}
-                    <RichTextCollection objects={item["line-2"]} />
+                    <RichTextCollection bind:objects={item["line-2"]} />
                     <br />
                 {/if}
                 
                 {#if item["line-3"]}
-                    <RichTextCollection objects={item["line-3"]} />
+                    <RichTextCollection bind:objects={item["line-3"]} />
                     <br />
                 {/if}
                 
                 {#if item["line-4"]}
-                    <RichTextCollection objects={item["line-4"]} />
+                    <RichTextCollection bind:objects={item["line-4"]} />
                 {/if}
             </a>
         {:else}
             {#if item["line-1"]}
-                <RichTextCollection objects={item["line-1"]} color="#000000" />
+                <RichTextCollection bind:objects={item["line-1"]} color="#000000" />
                 <br />
             {/if}
 
             {#if item["line-2"]}
-                <RichTextCollection objects={item["line-2"]} />
+                <RichTextCollection bind:objects={item["line-2"]} />
                 <br />
             {/if}
             
             {#if item["line-3"]}
-                <RichTextCollection objects={item["line-3"]} />
+                <RichTextCollection bind:objects={item["line-3"]} />
                 <br />
             {/if}
             
             {#if item["line-4"]}
-                <RichTextCollection objects={item["line-4"]} />
+                <RichTextCollection bind:objects={item["line-4"]} />
             {/if}
         {/if}
     </li>
