@@ -67,7 +67,7 @@
 	</ul>
 	
 	{:else if activeView === "gallery"}
-	<ProjectsGrid projects={projects} />
+	<ProjectsGrid bind:projects={projects} />
 	
 	{/if}
 </div>

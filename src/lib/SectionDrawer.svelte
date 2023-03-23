@@ -15,17 +15,17 @@
 
 <section>
     {#if name}
-        <SectionToggle label={name}
-                       isActive={isOpen}
+        <SectionToggle bind:label={name}
+                       bind:isActive={isOpen}
                        onToggle={toggle} />
     {/if}
 
     {#if isOpen}
         <div transition:slide={{ duration: 300 }}>
             {#if type === "cv"}
-                <CVSection items={items} isNested={isNested} />
+                <CVSection bind:items={items} bind:isNested={isNested} />
             {:else if type === "info"}
-                <InfoSection items={items} />
+                <InfoSection bind:items={items} />
             {/if}
         </div>
     {/if}

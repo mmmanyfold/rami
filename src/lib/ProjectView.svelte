@@ -10,13 +10,13 @@
 <!-------------------------->
 
 <div class="page-content">
-	<ProjectAside project={project} view={view} />
+	<ProjectAside bind:project={project} bind:view={view} />
 
 	<section class="content">
 		{#if view === "Press"}
-			<CVSection items={blocks} />
+			<CVSection bind:items={blocks} />
 		{:else}
-			<ProjectContent blocks={blocks} />
+			<ProjectContent bind:blocks={blocks} />
 		{/if}
 	</section>
 </div>
