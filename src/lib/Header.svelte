@@ -3,11 +3,9 @@
     export let toggleMobileMenu;
 
 	import MobileMenuIcon from '../lib/navigation/MobileMenuIcon.svelte';
-
-	$: scrollY = 0;
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window />
 
 <!-------------------------->
 

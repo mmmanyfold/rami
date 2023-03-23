@@ -7,7 +7,7 @@
 	export let activeSection = null;
 	export let label;
 
-    const active = activeSection ? activeSection === label : isActive;
+    $: active = activeSection ? activeSection === label : isActive;
 </script>
 
 

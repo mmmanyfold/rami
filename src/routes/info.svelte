@@ -56,7 +56,7 @@
 
 	const bio = info.itemsByKey.Bio[0]["line-1"];
 
-	let activeSection = "Info";
+	$: activeSection = "Info";
 
 	const toggleSection = (selected) => {
 		if (activeSection === selected) {
