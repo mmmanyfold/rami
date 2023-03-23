@@ -11,7 +11,7 @@
 
 <!-------------------------->
 
-<header class={scrollY > 0 && !mobileMenuOpen ? "border" : ""}>
+<header>
 	<a class="home-link" href="/">RAMI GEORGE</a>
 	<div class="nav-links">
 		<a href="/index">INDEX</a>
@@ -30,15 +30,10 @@
 		padding: 0.5rem 1rem;
 		height: 56.4px;
 		z-index: 1;
-		border: 1px solid var(--bg-color);
 
 		@media screen and (min-width: @mid-break) {
 			padding: 1rem 1.8rem;
 			height: 80px;
-		}
-
-		&.border {
-			border: 1px solid @accent-color;
 		}
 	}
 
