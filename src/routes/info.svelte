@@ -27,7 +27,7 @@
 		};
 	}
 
-	const infoTags = ["Bio", "Current & Forthcoming"];
+	const infoTags = ["Current & Forthcoming"];
 	const cvTags = ["Publishing", "Awards & Residencies", "Press", "Programming", "Teaching & Talks", "Education", "Imprint"] // TODO: add Imprint
 
 	function processInfo(data) {
